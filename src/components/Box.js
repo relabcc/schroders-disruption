@@ -12,6 +12,10 @@ import {
   flex,
   opacity,
   style,
+  background,
+  backgroundImage,
+  backgroundPosition,
+  backgroundSize,
 } from 'styled-system';
 
 import { cleanConfig } from './utils/blacklist';
@@ -23,6 +27,10 @@ const Box = styled.div.withConfig(cleanConfig)`
   ${space}
   ${layout}
   ${position}
+  ${background}
+  ${backgroundImage}
+  ${backgroundPosition}
+  ${backgroundSize}
   ${typography}
   ${color}
   ${position}
@@ -53,6 +61,11 @@ Box.SubTitle = forwardRef((props, ref) => <Box ref={ref} fontWeight="bold" color
 Box.Title = forwardRef(({ children , ...props}, ref) => (
   <Box ref={ref} pb="0.25em" mb="2rem" borderBottom={responsive('5px solid', '10px solid')} color="titleBlue" {...props}>
     <Text.Title>{children}</Text.Title>
+  </Box>
+))
+Box.BgTitle = forwardRef(({ children, titleColor, ...props }, ref) => (
+  <Box ref={ref} bg="prussianBlue" px="1em" pb="1em" pt="3.2rem" {...props}>
+    <Text.Title color={titleColor}>{children}</Text.Title>
   </Box>
 ))
 

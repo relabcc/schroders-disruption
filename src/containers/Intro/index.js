@@ -7,29 +7,31 @@ import Text from '../../components/Text'
 
 import { responsive } from '../../components/ThemeProvider/theme'
 import Video from './Video'
+import mobile_banner from './mobile_banner.png'
 
-const Intro = ({ onLoad }) => {
+const Intro = () => {
   return (
-    <Box bg="darkGreen">
+    <Box
+      background={`url(${mobile_banner}) center no-repeat`}
+      backgroundSize="768px auto"
+      height="336px"
+    >
       <Container
-        pt={responsive('2em', '4em')}
+        pt={responsive('4rem', '4em')}
         px={30}
-        pb={responsive('2em', '4em')}
-        color="white"
+        color="prussianBlue"
+        position="relative"
       >
-        <Flex alignItems="center" flexDirection={responsive('column', 'row')}>
-          <Box textAlign="center">
-            <Text fontSize={responsive('3em', '3.5em', '4em')} lineHeight="1.2" fontWeight="bold">
-              顛覆創新<br />投資未來
-            </Text>
-            <Text my="1em" fontSize={responsive('1.25em', '1.5em', '1.75em')}>
-              投資不僅可追求財富增長，更能對世界發揮影響力。<br />
-              我們相信永續投資追求的不僅是獲利，更能讓社會受益。
-            </Text>
-          </Box>
-          <Box width={responsive(1, 1 / 2)} ml={responsive(0, '3rem')}>
-          </Box>
-        </Flex>
+        <Box textAlign="center">
+          <Text.Bold fontSize={responsive('4.8rem', '3.5em', '4em')} lineHeight={1.2}>
+            顛覆創新<br />投資未來
+          </Text.Bold>
+          <Text.Bold mt="11.4rem" lineHeight={19/14} fontSize={responsive('1.9em', '2.25em', '2.25em')}>
+            施羅德環球顛覆未來股票
+          </Text.Bold>
+        </Box>
+        <Box width={responsive(1, 1 / 2)} ml={responsive(0, '3rem')}>
+        </Box>
       </Container>
     </Box>
   )
