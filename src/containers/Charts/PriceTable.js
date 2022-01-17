@@ -1,6 +1,6 @@
 import React from 'react';
 import get from 'lodash/get'
-import { range } from 'lodash';
+import range from 'lodash/range'
 
 import Table from './Table'
 

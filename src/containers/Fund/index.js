@@ -13,7 +13,7 @@ const Fund = ({ onLoad }) => {
   useEffect(() => onLoad(), [])
 
   return (
-    <Container pt={responsive('2.86em', '7.143em')}>
+    <Container pt={responsive('2.86em', '7.143em')} pb="4em">
       <Box.Title>基金資料</Box.Title>
       <FundTabs selectedIndex={activeTab} onSelect={setActiveTab} />
     </Container>

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { isArray } from 'lodash'
+import isArray from 'lodash/isArray'
 
 import Container from '../../../components/Container'
 import Box from '../../../components/Box'

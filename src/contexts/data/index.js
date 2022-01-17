@@ -8,14 +8,13 @@ import Loading from '../../components/Loading'
 const Data = ({ path, children }) => {
   const { error, data } = useSWR(path) // onMount
   if (error) console.error(error)
-
   return (
     <Box position="relative">
       {error && 'Error!'}
-      {data ? isFunction(children) ? children(data) : children : (
-        <Box.fullAbs bg="rgba(255,255,255,0.5)">
-          <Box.absCenter><Loading color="prussianBlue" /></Box.absCenter>
-        </Box.fullAbs>
+      {data ? (isFunction(children) ? children(data) : children) : (
+        <Box.FullAbs bg="rgba(255,255,255,0.5)">
+          <Box.AbsCenter><Loading color="prussianBlue" /></Box.AbsCenter>
+        </Box.FullAbs>
       )}
     </Box>
   )

@@ -76,7 +76,7 @@ const FundTabs = ({ selectedIndex, onSelect, secPt, sticky }) => {
       selectedIndex={selectedIndex}
       onSelect={onSelect}
     >
-      <Box is={sticky || isMobile ? Sticky : 'div'}>
+      <Box as={sticky || isMobile ? Sticky : 'div'}>
         <Box mx={responsive(-10, 0)}>
           <StyleTabList>
             {sets.map(({ name }, i) => (

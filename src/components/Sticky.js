@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo } from 'react';
 import stickybits from 'stickybits'
-import shortid from 'shortid'
+import { nanoid } from 'nanoid'
 
 import Box from './Box'
 
@@ -17,7 +17,7 @@ const Sticky = ({
   useFixed,
   useGetBoundingClientRect,
 }) => {
-  const className = useMemo(() => `sticky-${shortid()}`, [])
+  const className = useMemo(() => `sticky-${nanoid()}`, [])
   useEffect(() => {
     window[className] = stickybits(`.${className}`, {
       useStickyClasses,

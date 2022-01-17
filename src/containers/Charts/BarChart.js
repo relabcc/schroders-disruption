@@ -1,5 +1,6 @@
 import React from 'react';
-import { last, max } from 'lodash';
+import last from 'lodash/last';
+import max from 'lodash/max';
 
 import Data from '../../contexts/data'
 

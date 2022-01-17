@@ -89,7 +89,7 @@ const allProps = [
   'left',
 ];
 
-export default [
+const blacklist = [
   ...allProps,
   'transform',
   'transition',
@@ -103,3 +103,12 @@ export default [
   'pointerEvents',
   'whiteSpace',
 ];
+
+export default blacklist
+
+export const cleanConfig = {
+  shouldForwardProp: (prop, defaultValidatorFn) =>
+    !blacklist.includes(prop)
+    && defaultValidatorFn(prop),
+}
+

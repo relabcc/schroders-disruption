@@ -1,6 +1,5 @@
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
-import tag from 'clean-tag';
 import {
   space,
   layout,
@@ -15,12 +14,12 @@ import {
   style,
 } from 'styled-system';
 
-import blacklist from './utils/blacklist';
+import { cleanConfig } from './utils/blacklist';
 import injectProps from './utils/injectProps';
 import { responsive } from './ThemeProvider/theme';
 import Text from './Text';
 
-const Box = styled(tag)`
+const Box = styled.div.withConfig(cleanConfig)`
   ${space}
   ${layout}
   ${position}
@@ -45,15 +44,11 @@ const Box = styled(tag)`
   ${({ onClick }) => onClick && 'cursor: pointer;'}
 `;
 
-Box.defaultProps = {
-  blacklist,
-};
-
 Box.displayName = 'Box';
 
-Box.inline = (props) => <Box is="span" display="inline-block" verticalAlign="middle" {...props} />;
-Box.fullAbs = (props) => <Box position="absolute" top="0" bottom="0" left="0" right="0" {...props} />;
-Box.absCenter = (props) => <Box position="absolute" top="50%" left="50%" {...props} />;
+Box.Inline = (props) => <Box as="span" display="inline-block" verticalAlign="middle" {...props} />;
+Box.FullAbs = (props) => <Box position="absolute" top="0" bottom="0" left="0" right="0" {...props} />;
+Box.AbsCenter = (props) => <Box position="absolute" top="50%" left="50%" {...props} />;
 Box.SubTitle = forwardRef((props, ref) => <Box ref={ref} fontWeight="bold" color="titleBlue" fontSize={responsive('1.5em', '1.875em')} {...props} />)
 Box.Title = forwardRef(({ children , ...props}, ref) => (
   <Box ref={ref} pb="0.25em" mb="2rem" borderBottom={responsive('5px solid', '10px solid')} color="titleBlue" {...props}>

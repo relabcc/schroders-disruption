@@ -7,8 +7,9 @@ import themeGet from '@styled-system/theme-get';
 import Flex from './Flex';
 import Box from './Box';
 import Text from './Text';
+import { cleanConfig } from './utils/blacklist';
 
-const TextInput = styled.input`
+const TextInput = styled.input.withConfig(cleanConfig)`
   font-family: inherit;
   width: 100%;
   padding: 0;
@@ -41,7 +42,7 @@ const Input = ({
   step,
   ...props
 }) => (
-  <Flex is="label" {...props}>
+  <Flex as="label" {...props}>
     {label && (
       <Box mr="1em" w={labelWidth}>
         <Text fontWeight="bold">{label}</Text>

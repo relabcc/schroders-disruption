@@ -1,17 +1,15 @@
 import styled from 'styled-components';
 import { space, layout, opacity } from 'styled-system';
-import tag from 'clean-tag';
 
-import blacklist from './utils/blacklist';
+import { cleanConfig } from './utils/blacklist';
 
-const Image = styled(tag.img)`
+const Image = styled.img.withConfig(cleanConfig)`
   ${space}
   ${layout}
   ${opacity}
 `;
 
 Image.defaultProps = {
-  blacklist,
   width: 1,
 };
 

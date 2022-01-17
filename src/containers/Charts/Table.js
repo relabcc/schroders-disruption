@@ -6,12 +6,12 @@ import { responsive } from '../../components/ThemeProvider/theme'
 const Table = ({ nowData, thAlign, tbodyAlign, fontSize = '1.143em', bg = 'darkGreen', noMobile }) => {
   const getResponsive = useCallback((mobile, desk) => noMobile ? desk : responsive(mobile, desk), [noMobile])
   return (
-    <Box is="table" fontSize={fontSize}>
-      <Box is="thead">
-        <Box is="tr">
+    <Box as="table" fontSize={fontSize}>
+      <Box as="thead">
+        <Box as="tr">
           {nowData.th.map((h, i, { length }) => (
             <Box
-              is="th"
+              as="th"
               color={getResponsive(i ? i == length - 1 ? 'numberGreen' : 'black' : 'white', 'white')}
               bg={getResponsive(i ? 'white' : bg, bg)}
               px="0.5em"
@@ -27,12 +27,12 @@ const Table = ({ nowData, thAlign, tbodyAlign, fontSize = '1.143em', bg = 'darkG
         </Box>
       </Box>
       {nowData.tbody.map((h, i) => (
-        <Box is="tbody" key={i}>
-          <Box is="tr">
+        <Box as="tbody" key={i}>
+          <Box as="tr">
             {h.map((n, k) => (
               <Box
                 whiteSpace="pre-wrap"
-                is="td"
+                as="td"
                 px="0.5em"
                 py="1em"
                 fontWeight="bold"

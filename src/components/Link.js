@@ -9,9 +9,8 @@ import {
   letterSpacing,
   display,
 } from 'styled-system';
-import tag from 'clean-tag';
 
-import blacklist from './utils/blacklist';
+import { cleanConfig } from './utils/blacklist';
 import { customColor } from './utils/getColor';
 
 const linkStyle = css`
@@ -31,7 +30,7 @@ const linkStyle = css`
   }
 `;
 
-const NomalLink = styled(tag)`
+const NomalLink = styled.a.withConfig(cleanConfig)`
   ${linkStyle}
 `;
 
@@ -39,7 +38,6 @@ const NomalLink = styled(tag)`
 const Link = ({ button, blacklist, ...props }) => {
   return (
     <NomalLink
-      is="a"
       target="_blank"
       blacklist={blacklist}
       { ...props }
@@ -50,7 +48,6 @@ const Link = ({ button, blacklist, ...props }) => {
 Link.displayName = 'Link';
 
 Link.defaultProps = {
-  blacklist,
   fontWeight: 'bold',
 };
 

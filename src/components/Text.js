@@ -8,13 +8,12 @@ import {
   display,
   position,
 } from 'styled-system';
-import tag from 'clean-tag';
 
-import blacklist from './utils/blacklist';
+import { cleanConfig } from './utils/blacklist';
 import injectProps from './utils/injectProps';
 import { responsive } from './ThemeProvider/theme';
 
-const Text = styled(tag)`
+const Text = styled.p.withConfig(cleanConfig)`
   margin-top: 0;
   margin-bottom: 0;
   ${typography}
@@ -27,15 +26,13 @@ const Text = styled(tag)`
 `;
 
 Text.defaultProps = {
-  is: 'p',
   fontSize: responsive('1.6rem', '2rem'),
   lineHeight: 1.5,
-  blacklist,
 };
 
-Text.inline = (props) => <Text is="span" {...props} />;
-Text.bold = (props) => <Text fontWeight="bold" {...props} />;
-Text.thin = (props) => <Text fontWeight="200" {...props} />;
+Text.Inline = (props) => <Text as="span" {...props} />;
+Text.Bold = (props) => <Text fontWeight="bold" {...props} />;
+Text.Thin = (props) => <Text fontWeight="200" {...props} />;
 Text.Desc = (props) => <Text fontWeight="500" fontSize={responsive('1.8rem', '2.4rem')} {...props} />;
 Text.Title = forwardRef((props, ref) => <Text ref={ref} fontWeight="900" color="titleBlue" fontSize={responsive('2.4rem', '3.6rem')} {...props} />)
 Text.SubTitle = forwardRef((props, ref) => <Text.Title ref={ref} fontWeight="bold" color="darkGreen" fontSize={props.titleFontSize || responsive('2rem', '2.8rem')} {...props} />)
@@ -46,7 +43,7 @@ range(1, 7).forEach((key) => {
   const h = `h${key}`;
   Text[h] = (props) => (
     <Text
-      is={h}
+      as={h}
       fontSize={`${1 + ((6 - key) * 0.125)}em`}
       {...props}
     />

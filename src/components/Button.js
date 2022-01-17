@@ -10,13 +10,12 @@ import {
   position,
 } from 'styled-system';
 import themeGet from '@styled-system/theme-get';
-import tag from 'clean-tag';
 
 import Box from './Box';
 import { responsive } from './ThemeProvider/theme'
 
 import { customColor } from './utils/getColor';
-import blacklist from './utils/blacklist';
+import { cleanConfig } from './utils/blacklist';
 
 const active = css`
   ${customColor('hoverColor')};
@@ -54,11 +53,11 @@ export const buttonStyle = css`
   `}
 `;
 
-const ButtonBase = styled(tag)`
+const ButtonBase = styled.button.withConfig(cleanConfig)`
   ${buttonStyle};
 `;
 
-const InButtonSpan = props => <Box is="span" {...props} />;
+const InButtonSpan = props => <Box as="span" {...props} />;
 
 const Button = forwardRef(({
   leftIcon,
@@ -70,18 +69,16 @@ const Button = forwardRef(({
 }, ref) => (
   <ButtonBase {...props} ref={ref}>
     {leftIcon ? (
-      <Box is={leftIcon} mr={iconSpacing} verticalAlign={verticalAlign} />
+      <Box as={leftIcon} mr={iconSpacing} verticalAlign={verticalAlign} />
     ) : null}
     <InButtonSpan verticalAlign={verticalAlign}>{children}</InButtonSpan>
     {rightIcon ? (
-      <Box is={rightIcon} ml={iconSpacing} verticalAlign={verticalAlign} />
+      <Box as={rightIcon} ml={iconSpacing} verticalAlign={verticalAlign} />
     ) : null}
   </ButtonBase>
 ));
 
 Button.defaultProps = {
-  blacklist,
-  is: 'button',
   border: '2px solid',
   borderColor: 'primary',
   bg: 'primary',
