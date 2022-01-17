@@ -4,6 +4,8 @@ import loadable from '@loadable/component'
 import useSWR from 'swr'
 
 import AspectRatio from './AspectRatio'
+import Box from './Box'
+// import withLazyload from '../utils/withLazyload'
 
 const Lottie = loadable.lib(() => import('lottie-web'))
 
@@ -25,7 +27,7 @@ const LottieAnia = ({ lottie, data }) => {
     }
   }, [data])
   return (
-    <div ref={ref} />
+    <Box.FullAbs ref={ref} />
   )
 }
 
@@ -42,4 +44,4 @@ const LottieAnima = forwardRef(({ src, ratio = 1, ...props }, ref) => {
   )
 })
 
-export default LottieAnima
+export default (LottieAnima)

@@ -1,3 +1,4 @@
+import React from 'react'
 import { flexbox } from 'styled-system';
 import styled from 'styled-components';
 
@@ -14,5 +15,7 @@ Flex.defaultProps = {
 };
 
 Flex.displayName = 'Flex';
+
+Flex.Relative = props => <Flex position="relative" overflow="hidden" {...props} />
 
 export default Flex;

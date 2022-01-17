@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Box from './Box';
 
 const AspectRatioBox = styled(Box)`
-  ${(props) => props.height ? '' : `padding-top: ${props.ratio * 100}%;`}
+  ${(props) => props.height ? '' : `padding-top: ${1 / props.ratio * 100}%;`}
 `;
 
 const AspectRatio = forwardRef(({ children, ...props }, ref) => (
