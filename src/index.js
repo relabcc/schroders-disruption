@@ -13,6 +13,7 @@ import ThemeProvider from './components/ThemeProvider'
 import MediaProvider from './contexts/mediaQuery/MediaProvider'
 import DataProvider from './contexts/data/DataProvider'
 import App from './App';
+import reportWebVitals from './reportWebVitals';
 
 smoothscroll.polyfill();
 
@@ -39,12 +40,16 @@ const getContianer = () => {
 
 setTimeout(() => {
   ReactDOM.render(
-    <ThemeProvider>
-      <MediaProvider>
-        <DataProvider>
-          <App />
-        </DataProvider>
-      </MediaProvider>
-    </ThemeProvider>
-  , getContianer());
+    <React.StrictMode>
+      <ThemeProvider>
+        <MediaProvider>
+          <DataProvider>
+            <App />
+          </DataProvider>
+        </MediaProvider>
+      </ThemeProvider>
+    </React.StrictMode>
+    , getContianer());
 })
+
+reportWebVitals(console.log);
