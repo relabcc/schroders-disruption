@@ -14,7 +14,7 @@ const HomePage = () => {
   return (
     <>
       <Intro isLaptop={isLaptop} isMobile={isMobile} onLoad={handleLoaded} />
-      {loaded > 0 && <Sections isMobile={isMobile} onLoad={handleLoaded} />}
+      <Sections isMobile={isMobile} onLoad={handleLoaded} />
       {loaded > 1 && <Fund noSticky onLoad={handleLoaded} />}
       {loaded > 2 && <BackToTop zIndex={999} />}
     </>

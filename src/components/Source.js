@@ -6,7 +6,6 @@ import { responsive } from './ThemeProvider/theme'
 const Source = ({ children, ...props }) => {
   return (
     <Box
-      mt="1.5em"
       mb={responsive('8.5rem', '10em')}
       borderTop="1px solid"
       pt="1em"
