@@ -11,6 +11,7 @@ import LottieAnima from '../../components/LottieAnima'
 import BackgroundImage from '../../components/BackgroundImage'
 import { responsive } from '../../components/ThemeProvider/theme'
 
+import useResponsive from '../../contexts/mediaQuery/useResponsive'
 import chart_1_3 from './1-3.png'
 import Keywords from './Keywords'
 
@@ -18,11 +19,11 @@ const secs = [
   {
     title: '善變　才能領先新多頭',
     subTitle: '顛覆性創新遍地開展\n多成長時代加速來臨',
-    desc: '技術破壞性爆發，市場從單一趨勢加速轉向多主題成長。施羅德洞析巨量數據，搶佔多成長先機。',
+    desc: '技術破壞性爆發，市場從單一趨勢加速轉向多主題成長。\n施羅德洞析巨量數據，搶佔多成長先機。',
     Comp: Flex.Relative,
     isFlex: true,
     chart: (
-      <Box mt="-28%">
+      <Box mt={responsive('-32.5%', '-25%')} mr={responsive("-1.5em", 0)}>
         <Box width="100%">
           <LottieAnima src={`${process.env.PUBLIC_URL}/chart-1.json`} ratio={352 / 300} />
         </Box>
@@ -48,6 +49,7 @@ const secs = [
 ]
 
 const Sections = () => {
+  const { isMobile } = useResponsive()
   return (
     <Box id="fund-head" pt={responsive(0, '2em')}>
       {secs.map(({ title, chart, source, isFlex, subTitle, desc }, i) => (
@@ -55,13 +57,20 @@ const Sections = () => {
           <Box.BgTitle titleColor="white">
             {title}
           </Box.BgTitle>
-          <Box pt="2rem" px="1em">
-            <Box width={isFlex ? 5 / 9 : 'auto'}>
-              <Text.SubTitle whiteSpace="pre-wrap" color="purple">{subTitle}</Text.SubTitle>
-              <Text mt="1rem" fontSize="1.5rem">{desc}</Text>
+          <Flex mx="auto" maxWidth={responsive('48rem', '114rem')} px={responsive('1.6rem', '2rem')} pt={responsive('2em', '4.5rem')}>
+            <Box width={responsive('100%', '84.25%')} pr={responsive(0, "8.3rem")}>
+              <Box width={isFlex ? responsive('55%', '47%') : 'auto'}>
+                <Text.SubTitle whiteSpace="pre-wrap" color="purple">{subTitle}</Text.SubTitle>
+                <Text textAlign="justify" mt="1rem" whiteSpace="pre-wrap" fontSize={responsive('1.4rem', '2rem')}>{desc}</Text>
+              </Box>
+              <Box>{isString(chart) ? <Image src={chart} /> : chart}</Box>
             </Box>
-            <Box>{isString(chart) ? <Image src={chart} /> : chart}</Box>
-          </Box>
+            {!isMobile && (
+              <Box flex={1}>
+                段落
+              </Box>
+            )}
+          </Flex>
           <Source>{source}</Source>
         </Box>
       ))}
