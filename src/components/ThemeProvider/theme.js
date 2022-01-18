@@ -3,7 +3,7 @@ import range from 'lodash/range'
 
 import memorize from '../../utils/memorize'
 
-export const breakpoints = [352, 768, 1024, 1280, 1920, 2400].map(n => `${n}px`);
+export const breakpoints = [352, 769, 1024, 1280, 1920, 2400].map(n => `${n}px`);
 
 export const responsiveIndex = [
   2, // mobile

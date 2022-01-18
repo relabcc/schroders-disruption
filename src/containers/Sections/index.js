@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import isString from 'lodash/isString'
 import loadable from '@loadable/component'
 
@@ -107,10 +107,10 @@ const Sections = () => {
     <Box id="fund-head" pt={responsive(0, '2em')}>
       {secs.map(({ title, chart, source, isFlex, subTitle, desc }, i) => (
         <Box key={i}>
-          <Box.BgTitle titleColor="white">
+          <Box.BgTitle>
             {title}
           </Box.BgTitle>
-          <Flex overflowX="hidden" mx="auto" maxWidth={responsive('48rem', '114rem')} px={responsive('1.6rem', '2rem')} pt={responsive('2em', '4.5rem')}>
+          <Flex overflowX="hidden" mx="auto" maxWidth={responsive('48rem', '116rem')} px={responsive('1.6rem', '2rem')} pt={responsive('2em', '4.5rem')}>
             <Box width={responsive('100%', '84.25%')} pr={responsive(0, "8.3rem")}>
               <Box width={isFlex ? responsive('55%', '47%') : 'auto'}>
                 <Text.SubTitle whiteSpace="pre-wrap" color="purple">{subTitle}</Text.SubTitle>
@@ -135,7 +135,7 @@ const Sections = () => {
           button="基金中心"
         />
       </Flex>
-      <Box.BgTitle titleColor="white" smallTitle="施羅德環球顛覆未來股票型基金">
+      <Box.BgTitle smallTitle="施羅德環球顛覆未來股票型基金">
         三大特色為您超前部署未來
       </Box.BgTitle>
       <Box px="1.6rem">
@@ -149,13 +149,12 @@ const Sections = () => {
                   src={d.src}
                   title={d.title}
                   desc={d.desc}
-                  key={k}
                 />
               </Box>
             ))}
           </Flex>
         </Flex>
-        <Box mt="3.2rem" borderRadius="1em" overflow="hidden" bg="rgba(0, 42, 94, 0.12)">
+        <Box mt="3.2rem" maxWidth={responsive('48rem', '116rem')} mx="auto" borderRadius="1em" overflow="hidden" bg="rgba(0, 42, 94, 0.12)">
           {futures.map((d, i) => (
             <Box pt="3rem" key={i}>
               <Box px="2.6rem">
@@ -165,7 +164,7 @@ const Sections = () => {
                   </Box>
                   <Text.SubTitle>{d.shortTitle || d.title}</Text.SubTitle>
                 </Box>
-                <Text mt="2rem" fontSize={responsive('1.8rem', '2rem')}>{d.subTitle}</Text>
+                <Text.Bold color="prussianBlue" mt="2rem" whiteSpace="pre-wrap" fontSize={responsive('1.8rem', '2rem')}>{d.subTitle}</Text.Bold>
                 <Text mt="1rem" fontSize={responsive('1.3rem', '1.5rem')}>{d.text}</Text>
                 <Box pt={isString(d.chart) && "2rem"} pb={isString(d.chart) && "2.4rem"} mx="-1rem">{isString(d.chart) ? <Image src={d.chart} /> : d.chart}</Box>
               </Box>
