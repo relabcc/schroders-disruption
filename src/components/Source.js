@@ -13,7 +13,12 @@ const Source = ({ children, ...props }) => {
       fontSize={responsive('1.2rem', '1.6rem')}
       {...props}
     >
-      資料來源：{children}
+      <Box
+        mx="auto"
+        maxWidth={responsive('48rem', '112rem')}
+      >
+        資料來源：{children}
+      </Box>
     </Box>
   )
 }

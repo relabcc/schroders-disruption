@@ -7,25 +7,27 @@ import Text from '../../components/Text'
 import FadeSlideshow from '../../components/FadeSlideshow'
 import { responsive } from '../../components/ThemeProvider/theme'
 
-import mobile_banner_1 from './mobile_banner.png'
+import mobile_banner from './mobile_banner.png'
+import desk_banner from './desk_banner.png'
 
 const Banner = ({ url, color }) => (
   <Box
     background={`url(${url}) center no-repeat`}
-    backgroundSize="768px auto"
-    height="336px"
+    backgroundSize={responsive('768px auto', '1710px auto')}
+    height={responsive('336px', '700px')}
+    bg="lightBlue"
   >
     <Container
-      pt={responsive('4rem', '4em')}
+      pt={responsive('4rem', '10rem')}
       px={30}
       color={color}
       position="relative"
     >
       <Box textAlign="center">
-        <Text.Bold fontSize={responsive('4.8rem', '3.5em', '4em')} lineHeight={1.2}>
-          顛覆創新<br />投資未來
+        <Text.Bold whiteSpace={responsive('pre-wrap', 'normal')} fontSize={responsive('4.8rem', '8rem')} lineHeight={1.2}>
+          {`顛覆創新\n投資未來`}
         </Text.Bold>
-        <Text.Bold mt="11.4rem" lineHeight={19/14} fontSize={responsive('1.9em', '2.25em', '2.25em')}>
+        <Text.Bold mt={responsive('11.4rem', '33rem')} lineHeight={19/14} fontSize={responsive('1.9em', '6rem')}>
           施羅德環球顛覆未來股票
         </Text.Bold>
       </Box>
@@ -35,12 +37,9 @@ const Banner = ({ url, color }) => (
   </Box>
 )
 
-const Intro = () => {
+const Intro = ({ isMobile }) => {
   return (
-    <FadeSlideshow>
-      <Banner url={mobile_banner_1} color="prussianBlue" />
-      {/* <Banner url={mobile_banner_1} color="white" /> */}
-    </FadeSlideshow>
+    <Banner url={isMobile ? mobile_banner : desk_banner} color="prussianBlue" />
   )
 }
 

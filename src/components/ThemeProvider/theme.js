@@ -36,6 +36,7 @@ const mustard = '#FFDC53'
 const pinkSalmon = '#FF90A1'
 const mandy = '#df536A'
 const disco = '#B71962'
+const lightBlue = '#d7e4f3'
 const titleBlue = '#19376d'
 const bgGreen = '#00796D'
 const darkGreen = '#18776c'
@@ -62,6 +63,7 @@ export default {
     mandy,
     gigas,
     titleBlue,
+    lightBlue,
     lightGreen,
     numberGreen,
     blue: prussianBlue,

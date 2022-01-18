@@ -66,7 +66,7 @@ Box.Title = forwardRef(({ children , ...props}, ref) => (
 ))
 Box.BgTitle = forwardRef(({ children, smallTitle, ...props }, ref) => (
   <Box ref={ref} bg="prussianBlue" px="1.6rem" pb="1.6rem" pt="3.2rem" {...props}>
-    <Box maxWidth="112rem" mx="auto">
+    <Box maxWidth={responsive('48rem', '112rem')} mx="auto">
       <Text.SmallTitle>{smallTitle}</Text.SmallTitle>
       <Text.Title>{children}</Text.Title>
     </Box>

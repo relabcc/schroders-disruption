@@ -8,10 +8,10 @@ import Fund from './Fund'
 import BackToTop from './BackToTop'
 
 const HomePage = () => {
-  const { isMobile, isLaptop } = useResponsive()
+  const { isMobile } = useResponsive()
   return (
     <>
-      <Intro isLaptop={isLaptop} isMobile={isMobile} />
+      <Intro isMobile={isMobile} />
       <Sections isMobile={isMobile} />
       <Fund />
       <BackToTop zIndex={999} />
