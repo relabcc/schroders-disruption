@@ -9,7 +9,7 @@ const Table = ({ nowData, thAlign, tbodyAlign, fontSize = '1.143em', bg = 'darkG
     <Box as="table" fontSize={fontSize}>
       <Box as="thead">
         <Box as="tr">
-          {nowData.th.map((h, i, { length }) => (
+          {nowData?.th.map((h, i, { length }) => (
             <Box
               as="th"
               color={getResponsive(i ? i == length - 1 ? 'numberGreen' : 'black' : 'white', 'white')}
@@ -26,7 +26,7 @@ const Table = ({ nowData, thAlign, tbodyAlign, fontSize = '1.143em', bg = 'darkG
           ))}
         </Box>
       </Box>
-      {nowData.tbody.map((h, i) => (
+      {nowData?.tbody.map((h, i) => (
         <Box as="tbody" key={i}>
           <Box as="tr">
             {h.map((n, k) => (

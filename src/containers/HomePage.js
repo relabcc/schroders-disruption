@@ -3,19 +3,17 @@ import React, { useState } from 'react'
 import useResponsive from '../contexts/mediaQuery/useResponsive'
 
 import Intro from './Intro'
-import Sections from './Sections/Loadable'
-import Fund from './Fund/Loadable'
-import BackToTop from './BackToTop/Loadable'
+import Sections from './Sections'
+import Fund from './Fund'
+import BackToTop from './BackToTop'
 
 const HomePage = () => {
   const { isMobile, isLaptop } = useResponsive()
-  const [loaded, setLoaded] = useState(0)
-  const handleLoaded = () => setLoaded(l => l + 1)
   return (
     <>
-      <Intro isLaptop={isLaptop} isMobile={isMobile} onLoad={handleLoaded} />
-      <Sections isMobile={isMobile} onLoad={handleLoaded} />
-      {/* <Fund noSticky onLoad={handleLoaded} /> */}
+      <Intro isLaptop={isLaptop} isMobile={isMobile} />
+      <Sections isMobile={isMobile} />
+      <Fund />
       <BackToTop zIndex={999} />
     </>
   )
