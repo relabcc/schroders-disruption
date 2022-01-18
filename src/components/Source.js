@@ -12,7 +12,7 @@ const Source = ({ children, ...props }) => {
       textAlign="justify"
       {...props}
     >
-      {children}
+      資料來源：{children}
     </Box>
   )
 }
