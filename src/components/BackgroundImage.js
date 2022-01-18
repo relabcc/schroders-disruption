@@ -1,15 +1,26 @@
 import PropTypes from 'prop-types';
+import { forwardRef } from 'react';
 import styled from 'styled-components';
 import { background } from 'styled-system';
 
 import Box from './Box';
 
-const BackgroundImage = styled(Box)`
+const BgImage = styled(Box)`
   ${background}
   background-image: url(${({ src }) => src});
   background-repeat: no-repeat;
-  ${(props) => props.height ? '' : `padding-top: ${props.ratio * 100}%;`}
+  ${(props) => props.height || props.minHeight ? '' : `padding-top: ${props.ratio * 100}%;`}
 `;
+
+const BackgroundImage = forwardRef(({ children, ...props }, ref) => (
+  <BgImage {...props} ref={ref}>
+    {children && (
+      <Box.FullAbs>
+        {children}
+      </Box.FullAbs>
+    )}
+  </BgImage>
+))
 
 BackgroundImage.propTypes = {
   src: PropTypes.string,

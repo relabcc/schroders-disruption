@@ -8,9 +8,11 @@ import Title from '../../components/Title'
 import Image from '../../components/Image'
 import Source from '../../components/Source'
 import LottieAnima from '../../components/LottieAnima'
+import BackgroundImage from '../../components/BackgroundImage'
 import { responsive } from '../../components/ThemeProvider/theme'
 
 import chart_1_3 from './1-3.png'
+import Keywords from './Keywords'
 
 const secs = [
   {
@@ -22,7 +24,7 @@ const secs = [
     chart: (
       <Box mt="-28%">
         <Box width="100%">
-          <LottieAnima src={`${process.env.PUBLIC_URL}/chart-1.json`} ratio={372 / 340} />
+          <LottieAnima src={`${process.env.PUBLIC_URL}/chart-1.json`} ratio={352 / 300} />
         </Box>
       </Box>
     ),
@@ -32,6 +34,7 @@ const secs = [
     title: '敢於顛覆　創造新贏家策略',
     subTitle: '多成長時代　三大潛力關鍵字',
     desc: '歸納三大領域「智慧創新、風格生活、環境永續」，包含顛覆創新的獨角獸企業、虛實多面向的新消費力及能源轉型低碳科技的投資機會。',
+    chart: <Keywords />,
     source: '施羅德投資，2021/12/31。'
 
   },

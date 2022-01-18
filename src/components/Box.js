@@ -44,6 +44,7 @@ const Box = styled.div.withConfig(cleanConfig)`
   ${injectProps('transform')}
   ${injectProps('transition')}
   ${injectProps('pointerEvents')}
+  ${injectProps('animationDuration')}
   ${style({
     prop: 'zOrder',
     cssProperty: 'zIndex',
