@@ -1,10 +1,10 @@
 import React, { forwardRef, useEffect, useRef } from 'react'
 import loadable from '@loadable/component'
-
 import useSWR from 'swr'
 
 import AspectRatio from './AspectRatio'
 import Box from './Box'
+import withLazyload from '../utils/withLazyload'
 
 const Lottie = loadable.lib(() => import('lottie-web'))
 
@@ -35,12 +35,12 @@ const LottieAnima = forwardRef(({ src, ratio = 1, loop, ...props }, ref) => {
   return (
     <AspectRatio ratio={ratio} {...props} ref={ref}>
       <Lottie>
-        {({ default: lottie }) => data && (
+        {({ default: lottie }) => data ? (
           <LottieAnia lottie={lottie} data={data} loop={loop} />
-        )}
+        ) : null}
       </Lottie>
     </AspectRatio>
   )
 })
 
-export default LottieAnima
+export default withLazyload(LottieAnima)

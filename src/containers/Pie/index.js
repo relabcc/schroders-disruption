@@ -1,12 +1,12 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import Box from '../../components/Box'
 import LottieAnima from '../../components/LottieAnima'
 import BackgroundImage from '../../components/BackgroundImage'
 import FadeSlideshow from '../../components/FadeSlideshow'
 import withLazyload from '../../utils/withLazyload'
 
-const Pie = () => (
-  <Box position="relative">
+const Pie = forwardRef((p, ref) => (
+  <Box position="relative" ref={ref}>
     <LottieAnima src={`${process.env.PUBLIC_URL}/pie.json`} ratio={1} loop={false} />
     <Box
       position="absolute"
@@ -23,6 +23,6 @@ const Pie = () => (
       </FadeSlideshow>
     </Box>
   </Box>
-)
+))
 
 export default withLazyload(Pie)

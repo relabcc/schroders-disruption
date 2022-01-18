@@ -11,12 +11,12 @@ const Keywords = () => {
   return (
     <Box>
       <BackgroundImage ratio={240 / 340} src={base} zIndex={1}>
-        <FadeSlideshow crossfade>
+        <FadeSlideshow crossfade duration={500} timeout={1500}>
           <BackgroundImage ratio={240 / 340} src={text1} />
           <BackgroundImage ratio={240 / 340} src={text2} />
         </FadeSlideshow>
       </BackgroundImage>
-      <BackgroundImage mt="-50%" src="https://picsum.photos/250/360?grayscale" ratio={250 / 360} />
+      {/* <BackgroundImage mt="-50%" src="https://picsum.photos/250/360?grayscale" ratio={250 / 360} /> */}
     </Box>
   )
 }

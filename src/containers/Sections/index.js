@@ -1,5 +1,6 @@
 import React from 'react'
 import isString from 'lodash/isString'
+import loadable from '@loadable/component'
 
 import Box from '../../components/Box'
 import Flex from '../../components/Flex'
@@ -14,7 +15,6 @@ import { responsive } from '../../components/ThemeProvider/theme'
 import useResponsive from '../../contexts/mediaQuery/useResponsive'
 
 import Pie from '../Pie'
-import MovingRadar from '../MovingRadar'
 import Keywords from './Keywords'
 import chart_1_3 from './1-3.png'
 import chart_2_3 from './2-3.png'
@@ -22,16 +22,18 @@ import bank from './bank.png'
 import chart from './chart.png'
 import global from './global.png'
 import data from './data.png'
+import AspectRatio from '../../components/AspectRatio'
+
+const MovingRadar = loadable(() => import('../MovingRadar'), { fallback: <AspectRatio ratio={328 / 320} /> })
 
 const secs = [
   {
     title: '善變　才能領先新多頭',
     subTitle: '顛覆性創新遍地開展\n多成長時代加速來臨',
     desc: '技術破壞性爆發，市場從單一趨勢加速轉向多主題成長。\n施羅德洞析巨量數據，搶佔多成長先機。',
-    Comp: Flex.Relative,
     isFlex: true,
     chart: (
-      <Box mt={responsive('-32.5%', '-25%')} mr={responsive("-1.5em", 0)}>
+      <Box mt={responsive('-32.5%', '-25%')} mr={responsive("-1.5em", 0)} overflowY="hidden">
         <Box width="100%">
           <LottieAnima src={`${process.env.PUBLIC_URL}/chart-1.json`} ratio={352 / 300} />
         </Box>
@@ -64,7 +66,7 @@ const futures = [
     desc: '放眼全球 投資未來性產業',
     src: chart,
     text: '挖掘巨量數據下的洞見，聚焦未來投資性主題，為您準備最完善的投資組合。',
-    // chart: <Pie />,
+    chart: <Pie />,
     source: '施羅德投信整理提供，2021/12/31。',
     detail: (
       <Flex justifyContent="center" bg="brightBlue">
