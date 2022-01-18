@@ -132,10 +132,11 @@ Button.white = props => (
 
 Button.outline = props => (
   <Button
-    border="2px solid"
-    borderColor="primary"
-    bg="transparent"
-    color="primary"
+    py="0.8rem"
+    bg="white"
+    border="1px solid"
+    borderRadius="1rem"
+    color="prussianBlue"
     hoverColor="white"
     {...props}
   />

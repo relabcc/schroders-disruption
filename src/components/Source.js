@@ -6,7 +6,8 @@ import { responsive } from './ThemeProvider/theme'
 const Source = ({ children, ...props }) => {
   return (
     <Box
-      p="1em"
+      px="1.6rem"
+      py="1.4rem"
       bg="lightGray"
       whiteSpace="per-wrap"
       fontSize={responsive('1.2rem', '1.6rem')}

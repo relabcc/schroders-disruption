@@ -15,8 +15,8 @@ const HomePage = () => {
     <>
       <Intro isLaptop={isLaptop} isMobile={isMobile} onLoad={handleLoaded} />
       <Sections isMobile={isMobile} onLoad={handleLoaded} />
-      {loaded > 1 && <Fund noSticky onLoad={handleLoaded} />}
-      {loaded > 2 && <BackToTop zIndex={999} />}
+      {/* <Fund noSticky onLoad={handleLoaded} /> */}
+      <BackToTop zIndex={999} />
     </>
   )
 }

@@ -64,8 +64,9 @@ Box.Title = forwardRef(({ children , ...props}, ref) => (
     <Text.Title>{children}</Text.Title>
   </Box>
 ))
-Box.BgTitle = forwardRef(({ children, titleColor, ...props }, ref) => (
-  <Box ref={ref} bg="prussianBlue" px="1em" pb="1em" pt="3.2rem" {...props}>
+Box.BgTitle = forwardRef(({ children, titleColor, smallTitle, ...props }, ref) => (
+  <Box ref={ref} bg="prussianBlue" px="1.6rem" pb="1.6rem" pt="3.2rem" {...props}>
+    <Text.SmallTitle color={titleColor}>{smallTitle}</Text.SmallTitle>
     <Text.Title color={titleColor}>{children}</Text.Title>
   </Box>
 ))
