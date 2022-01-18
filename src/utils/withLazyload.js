@@ -7,7 +7,7 @@ const LayzLoadInjector = ({ Subcomp, ratio, ...props }) => {
   const intersection = useIntersection(intersectionRef, {
     root: null,
     rootMargin: '0px',
-    threshold: 0
+    threshold: 0.2
   });
   const [isVisible, setIsVisible] = useState(intersection && intersection.isIntersecting)
   useEffect(() => {
