@@ -65,13 +65,15 @@ const futures = [
     chart: '',
     source: '施羅德投信整理提供，2021/12/31。',
     detail: (
-      <Title
-        src={bank}
-        title={`深入瞭解\n市場矚目的技術新星`}
-        bg="brightBlue"
-        titleColor="prussianBlue"
-        button="查看資產配置"
-      />
+      <Flex justifyContent="center" bg="brightBlue">
+        <Title
+          src={bank}
+          title={`深入瞭解\n市場矚目的技術新星`}
+          bg="brightBlue"
+          titleColor="prussianBlue"
+          button="查看資產配置"
+        />
+      </Flex>
     )
   },
   {
@@ -104,7 +106,7 @@ const Sections = () => {
           <Box.BgTitle titleColor="white">
             {title}
           </Box.BgTitle>
-          <Flex mx="auto" maxWidth={responsive('48rem', '114rem')} px={responsive('1.6rem', '2rem')} pt={responsive('2em', '4.5rem')}>
+          <Flex overflowX="hidden" mx="auto" maxWidth={responsive('48rem', '114rem')} px={responsive('1.6rem', '2rem')} pt={responsive('2em', '4.5rem')}>
             <Box width={responsive('100%', '84.25%')} pr={responsive(0, "8.3rem")}>
               <Box width={isFlex ? responsive('55%', '47%') : 'auto'}>
                 <Text.SubTitle whiteSpace="pre-wrap" color="purple">{subTitle}</Text.SubTitle>
@@ -121,15 +123,14 @@ const Sections = () => {
           <Source>{source}</Source>
         </Box>
       ))}
-      <Title
-        src={bank}
-        title={`看顛覆未來團隊的\n精選主題`}
-        bg="brightBlue"
-        titleColor="prussianBlue"
-        button="基金中心"
-        display="flex"
-        justifyContent="center"
-      />
+      <Flex justifyContent="center" bg="brightBlue">
+        <Title
+          src={bank}
+          title={`看顛覆未來團隊的\n精選主題`}
+          titleColor="prussianBlue"
+          button="基金中心"
+        />
+      </Flex>
       <Box.BgTitle titleColor="white" smallTitle="施羅德環球顛覆未來股票型基金">
         三大特色為您超前部署未來
       </Box.BgTitle>

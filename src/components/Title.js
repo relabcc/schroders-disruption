@@ -11,10 +11,10 @@ import { responsive } from './ThemeProvider/theme'
 
 const Title = ({ src, step, title, desc, titleColor, titleFontSize, href, to, button, ...props }) => {
   return (
-    <Box bg="gray" py={responsive('3rem', '2rem')} px="1.6rem" {...props}>
+    <Box py={responsive('3rem', '2rem')} px="1.6rem" {...props}>
       <Flex alignItems="center">
         {src && (
-          <Box width={responsive('8.8rem', '10%')} >
+          <Box width={responsive('8.8rem', '14.8rem')} >
             <Image src={src} />
           </Box>
         )}
