@@ -5,11 +5,10 @@ import useSWR from 'swr'
 
 import AspectRatio from './AspectRatio'
 import Box from './Box'
-// import withLazyload from '../utils/withLazyload'
 
 const Lottie = loadable.lib(() => import('lottie-web'))
 
-const LottieAnia = ({ lottie, data }) => {
+const LottieAnia = ({ lottie, data, loop = true }) => {
   const ref = useRef()
 
   useEffect(() => {
@@ -18,7 +17,7 @@ const LottieAnia = ({ lottie, data }) => {
         lottie.loadAnimation({
           container: ref.current, // the dom element
           renderer: 'svg',
-          loop: true,
+          loop,
           autoplay: true,
           animationData: data, // the animation data
           // onComplete: console.log
@@ -31,17 +30,17 @@ const LottieAnia = ({ lottie, data }) => {
   )
 }
 
-const LottieAnima = forwardRef(({ src, ratio = 1, ...props }, ref) => {
+const LottieAnima = forwardRef(({ src, ratio = 1, loop, ...props }, ref) => {
   const { data } = useSWR(src)
   return (
     <AspectRatio ratio={ratio} {...props} ref={ref}>
       <Lottie>
         {({ default: lottie }) => data && (
-          <LottieAnia lottie={lottie} data={data} />
+          <LottieAnia lottie={lottie} data={data} loop={loop} />
         )}
       </Lottie>
     </AspectRatio>
   )
 })
 
-export default (LottieAnima)
+export default LottieAnima
