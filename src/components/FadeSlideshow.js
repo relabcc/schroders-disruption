@@ -34,7 +34,7 @@ const FadeSlideshow = ({ children, timeout = 3000, duration = 1000, crossfade })
       if (nextSlide + 1 > arrChildren.length) nextSlide = 0
       setNextActive(nextSlide)
     }, timeout)
-    // return clearTimeout(timer)
+    return () => clearTimeout(timer)
   }, [activeSlide, timeout, arrChildren])
   const isTransiting = typeof nextActive === 'number'
   return (
