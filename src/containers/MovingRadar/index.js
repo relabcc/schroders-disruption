@@ -24,7 +24,7 @@ const MovingRadar = () => {
     () => {
       setData(getData);
     },
-    2000
+    1000
   );
   return (
     <Box position="relative">
@@ -32,7 +32,7 @@ const MovingRadar = () => {
         <VictoryChart
           polar
           animate={{
-            duration: 1000,
+            duration: 500,
           }}
           padding={{ top: 3, left: 70, right: 66 }}
           width={328}
