@@ -34,9 +34,9 @@ const MovingRadar = () => {
           animate={{
             duration: 1000,
           }}
-          padding={{ top: 70, left: 64, right: 60, bottom: 48 }}
+          padding={{ top: 3, left: 70, right: 66 }}
           width={328}
-          height={320}
+          height={300}
           maxDomain={{ y: maxY }}
           startAngle={offset}
           endAngle={360 + offset}
@@ -56,6 +56,7 @@ const MovingRadar = () => {
             style={{
               axis: { stroke: "#002a5e" },
             }}
+            tickFormat={() => null}
           />
           <VictoryArea
             data={data}
@@ -66,7 +67,7 @@ const MovingRadar = () => {
           />
         </VictoryChart>
       </Box>
-      <BackgroundImage ratio={328 / 320} src={radarbase} />
+      <BackgroundImage ratio={300 / 328} src={radarbase} />
     </Box>
   )
 }
