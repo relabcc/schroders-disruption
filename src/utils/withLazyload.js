@@ -7,15 +7,18 @@ const LayzLoadInjector = ({ Subcomp, ratio, ...props }) => {
   const intersection = useIntersection(intersectionRef, {
     root: null,
     rootMargin: '0px',
-    threshold: 1
+    threshold: 0
   });
-  console.log(intersection && intersection.isIntersecting)
   const [isVisible, setIsVisible] = useState(intersection && intersection.isIntersecting)
   useEffect(() => {
     setIsVisible(alreadyVisible => alreadyVisible || (intersection && intersection.isIntersecting))
   }, [intersection])
 
-  return isVisible ? <Subcomp ratio={ratio} ref={intersectionRef} {...props} /> : <AspectRatio ratio={ratio} ref={intersectionRef}></AspectRatio>
+  return (
+    <AspectRatio ratio={ratio} ref={intersectionRef}>
+      {isVisible ? <Subcomp {...props} /> : null}
+    </AspectRatio>
+  )
 }
 
 const withLazyload = (Subcomp) => props => createElement(LayzLoadInjector, { Subcomp, ...props })

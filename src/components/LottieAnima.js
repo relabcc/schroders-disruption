@@ -35,9 +35,9 @@ const LottieAnima = forwardRef(({ src, ratio = 1, loop, ...props }, ref) => {
   return (
     <AspectRatio ratio={ratio} {...props} ref={ref}>
       <Lottie>
-        {({ default: lottie }) => data && (
+        {({ default: lottie }) => data ? (
           <LottieAnia lottie={lottie} data={data} loop={loop} />
-        )}
+        ) : null}
       </Lottie>
     </AspectRatio>
   )

@@ -64,7 +64,7 @@ const futures = [
     desc: '放眼全球 投資未來性產業',
     src: chart,
     text: '挖掘巨量數據下的洞見，聚焦未來投資性主題，為您準備最完善的投資組合。',
-    // chart: <Pie />,
+    chart: <Pie />,
     source: '施羅德投信整理提供，2021/12/31。',
     detail: (
       <Flex justifyContent="center" bg="brightBlue">
@@ -140,7 +140,7 @@ const Sections = () => {
         <Flex flexDirection="column" alignItems="center">
           <Flex flexDirection="column">
             {futures.map((d, k) => (
-              <Box borderTop={k && '1px solid #cccccc'}>
+              <Box borderTop={k && '1px solid #cccccc'} key={k}>
                 <Title
                   px="0"
                   bg="white"
