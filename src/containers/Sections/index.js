@@ -9,6 +9,8 @@ import Feature from './Feature/Loadable'
 import SustainEx from './SustainEx/Loadable'
 import Title from '../../components/Title'
 import LottieAnima from '../../components/LottieAnima'
+import BackgroundImage from '../../components/BackgroundImage'
+import Keywords from './Keywords'
 
 const secs = [
   {
@@ -24,7 +26,7 @@ const secs = [
   },
   {
     name: '敢於顛覆　創造新贏家策略',
-
+    chart: <Keywords />,
   },
   {
     name: '挖掘數據　佈局未來超新星',
