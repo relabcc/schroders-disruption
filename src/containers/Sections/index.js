@@ -20,7 +20,7 @@ const secs = [
     chart: (
       <Box ml={`-${5 / 4 * 50}%`} mr={`-${5 / 4 * 50}%`}>
         <Box width="100%" pr="27%">
-          <LottieAnima src={`${process.env.PUBLIC_URL}/chart-1.json`} ratio={372 / 340} />
+          <LottieAnima src={`${process.env.PUBLIC_URL}/chart-1.json`} ratio={352 / 300} />
         </Box>
       </Box>
     ),
