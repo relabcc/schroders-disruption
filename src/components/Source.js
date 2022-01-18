@@ -6,10 +6,10 @@ import { responsive } from './ThemeProvider/theme'
 const Source = ({ children, ...props }) => {
   return (
     <Box
-      mb={responsive('8.5rem', '10em')}
-      borderTop="1px solid"
-      pt="1em"
-      textAlign="justify"
+      p="1em"
+      bg="lightGray"
+      whiteSpace="per-wrap"
+      fontSize={responsive('1.2rem', '1.6rem')}
       {...props}
     >
       資料來源：{children}

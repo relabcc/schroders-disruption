@@ -22,7 +22,7 @@ export const responsive = memorize((...args) => {
   return breakpoints.map((_, i) => get(args, [responsiveMap[i]], null))
 });
 
-const lightGray = '#cccccc';
+const lightGray = '#e6e6e6';
 const gray = '#efefef';
 const darkGray = '#707070';
 const red = '#EA5204';
@@ -42,12 +42,14 @@ const darkGreen = '#18776c'
 const lightGreen = '#b7e074'
 const numberGreen = '#9ab965'
 const lime = '#BAE659'
+const purple = '#7d3787'
 
 export default {
   breakpoints,
   zOrder: range(6).map(z => 10 ** z),
   colors: {
     red,
+    purple,
     lightGray,
     darkGray,
     gray,
