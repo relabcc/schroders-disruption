@@ -17,7 +17,7 @@ const LottieAnia = ({ lottie, data }) => {
       setTimeout(() => {
         lottie.loadAnimation({
           container: ref.current, // the dom element
-          renderer: 'canvas',
+          renderer: 'svg',
           loop: true,
           autoplay: true,
           animationData: data, // the animation data
