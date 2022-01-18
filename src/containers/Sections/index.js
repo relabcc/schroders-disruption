@@ -13,6 +13,8 @@ import { responsive } from '../../components/ThemeProvider/theme'
 
 import useResponsive from '../../contexts/mediaQuery/useResponsive'
 
+import Pie from '../Pie'
+import MovingRadar from '../MovingRadar'
 import Keywords from './Keywords'
 import chart_1_3 from './1-3.png'
 import chart_2_3 from './2-3.png'
@@ -62,7 +64,7 @@ const futures = [
     desc: '放眼全球 投資未來性產業',
     src: chart,
     text: '挖掘巨量數據下的洞見，聚焦未來投資性主題，為您準備最完善的投資組合。',
-    chart: '',
+    // chart: <Pie />,
     source: '施羅德投信整理提供，2021/12/31。',
     detail: (
       <Flex justifyContent="center" bg="brightBlue">
@@ -82,7 +84,7 @@ const futures = [
     desc: '關注創新獨角獸',
     src: global,
     text: '挖掘潛力新星，聚焦顛覆性獨角獸企業。',
-    chart: '',
+    chart: <MovingRadar />,
     source: 'Lipper, 美元計價，統計過去兩年至 2021/12/31。MSCI AC World 指數。iShares megatrends ETF and Vaneck ETF。 個股僅作舉例說明，不代表任何金融商品之推介或投資建議，個股績效，不代表未來走勢或基金績效。'
   },
   {
@@ -163,7 +165,7 @@ const Sections = () => {
                 </Box>
                 <Text mt="2rem" fontSize={responsive('1.8rem', '2rem')}>{d.subTitle}</Text>
                 <Text mt="1rem" fontSize={responsive('1.3rem', '1.5rem')}>{d.text}</Text>
-                <Box pt="2rem" pb="2.4rem" mx="-1rem">{isString(d.chart) ? <Image src={d.chart} /> : d.chart}</Box>
+                <Box pt={isString(d.chart) && "2rem"} pb={isString(d.chart) && "2.4rem"} mx="-1rem">{isString(d.chart) ? <Image src={d.chart} /> : d.chart}</Box>
               </Box>
               <Source textAlign="justify">{d.source}</Source>
               {d.detail}
