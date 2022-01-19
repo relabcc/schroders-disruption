@@ -6,7 +6,6 @@ import Box from '../../../components/Box'
 import Flex from '../../../components/Flex'
 import Text from '../../../components/Text'
 import Image from '../../../components/Image'
-import DeskBlock from '../../../components/DeskBlock'
 import Source from '../../../components/Source'
 import { responsive } from '../../../components/ThemeProvider/theme'
 import Container from '../../../components/Container'
@@ -40,7 +39,6 @@ const advs = [
     desc: '歸納三大領域「智慧創新、風格生活、環境永續」，包含顛覆創新的獨角獸企業、虛實多面向的新消費力及能源轉型低碳科技的投資機會。',
     chart: <Keywords />,
     source: '施羅德投資，2021/12/31。'
-
   },
   {
     title: '挖掘數據　佈局未來超新星',
@@ -62,19 +60,11 @@ const Advantage = () => {
             {title}
           </Box.BgTitle>
           <Container pt={responsive('2em', '4.5rem')}>
-            <DeskBlock
-              background={responsive('', `url(${desk_chart}) center no-repeat`)}
-              backgroundSize={responsive('unset', '100% auto')}
-              height={responsive('auto', '514px')}
-            >
-              <Box>
-                <Box width={responsive(isFlex ? '55%' : 'auto', '40.8%')}>
-                  <Text.SubTitle whiteSpace="pre-wrap" color="purple">{subTitle}</Text.SubTitle>
-                  <Text textAlign="justify" mt="1rem" whiteSpace="pre-wrap" fontSize={responsive('1rem', '1.8rem')}>{desc}</Text>
-                </Box>
-                {isMobile && <Box>{isString(chart) ? <Image src={chart} /> : chart}</Box>}
-              </Box>
-            </DeskBlock>
+            <Box position={responsive('raletive', 'absolute')} width={responsive(isFlex ? '55%' : 'auto', '40.8%')}>
+              <Text.SubTitle whiteSpace="pre-wrap" color="purple">{subTitle}</Text.SubTitle>
+              <Text textAlign="justify" mt="1rem" whiteSpace="pre-wrap" fontSize={responsive('1rem', '1.8rem')}>{desc}</Text>
+            </Box>
+            <Box>{isString(chart) ? <Image src={isMobile ? chart : desk_chart} /> : isMobile ? chart : desk_chart}</Box>
           </Container>
           <Source bg="bgGray">{source}</Source>
         </Box>
