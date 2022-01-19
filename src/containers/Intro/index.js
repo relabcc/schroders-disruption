@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
+import { Link } from 'react-scroll'
 
 import Container from '../../components/Container'
 import Box from '../../components/Box'
@@ -7,7 +8,6 @@ import Flex from '../../components/Flex'
 import Text from '../../components/Text'
 import Image from '../../components/Image'
 import Circle from '../../components/Circle'
-import FadeSlideshow from '../../components/FadeSlideshow'
 import { responsive } from '../../components/ThemeProvider/theme'
 
 import mobile_banner from './mobile_banner.png'
@@ -81,11 +81,13 @@ const Arrow = styled(Box)`
 const features = [
   {
     icon: money,
-    title: '基金三大特色'
+    title: '基金三大特色',
+    name: 'feature'
   },
   {
     icon: hand,
-    title: '掌握顛覆趨勢'
+    title: '掌握顛覆趨勢',
+    name: 'advantage'
   },
 ]
 
@@ -112,12 +114,29 @@ const Banner = ({ url, color }) => (
           <Box className="chevron" />
         </Arrow>
         <Flex justifyContent="space-between" mt="11rem">
-          {features.map(({ icon, title }, k) => (
+          {features.map(({ icon, title, name }, k) => (
             <Box.Relative
+              as={(p) => <Link smooth {...p} />}
+              py="0.625rem"
+              ml="2.25rem"
+              pl="1.5rem"
               width="45%"
+              textAlign="center"
+              border="1px solid"
+              borderColor="prussianblue"
+              borderRadius="1.5em"
+              fontSize="1.5rem"
+              fontWeight="bold"
+              bg="lightBlue"
+              to={name}
               key={k}
             >
-              <Image src={icon} />
+              <Box.Absolute width="4.5rem" top="50%" left="0" transform="translate(-40%, -50%)">
+                <Circle border="1px solid" borderColor="prussianblue" bg="lightBlue">
+                  <Image src={icon} />
+                </Circle>
+              </Box.Absolute>
+              {title}
             </Box.Relative>
           ))}
         </Flex>

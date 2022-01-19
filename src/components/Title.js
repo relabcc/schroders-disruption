@@ -3,6 +3,7 @@ import React from 'react'
 import Box from './Box'
 import Flex from './Flex'
 import Text from './Text'
+import Link from './Link'
 import Image from './Image'
 import Button from './Button'
 import CircleArrow from './CircleArrow'
@@ -29,12 +30,12 @@ const Title = ({ src, step, title, desc, titleColor, titleFontSize, href, to, bu
           </Flex>
           {desc && <Text fontSize={responsive('1em', '1.25em')}>{desc}</Text>}
           {button && (
-            <Button.outline width="100%" mt="0.6rem" href={href} to={to}>
+            <Button.Outline width="100%" mt="0.6rem" as={Link} href={href} to={to}>
               <Flex justifyContent="center">
                 <Text fontSize="1.6rem">{button}</Text>
                 <CircleArrow ml="1rem" width="1.8rem" />
               </Flex>
-            </Button.outline>
+            </Button.Outline>
           )}
         </Box>
       </Flex>
