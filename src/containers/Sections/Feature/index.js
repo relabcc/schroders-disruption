@@ -91,7 +91,7 @@ const Feature = () => {
                       <Text.SubTitle>{d.title}</Text.SubTitle>
                     </Box>
                     <Text.Bold color="prussianBlue" mt="2rem" whiteSpace="pre-wrap" fontSize={responsive('1.8rem', '2.4rem')}>{d.subTitle}</Text.Bold>
-                    <Text mt="1rem" fontSize={responsive('1.3rem', '1.5rem')}>{d.text}</Text>
+                    <Text mt="1rem" fontSize={responsive('1em', '1.6rem')}>{d.text}</Text>
                   </Box>
                   <Box flex={1} pt={responsive('2rem', '8.2rem')} pb={responsive('2.4rem', '8.2rem')} mx={responsive('-1rem', 0)}>{isString(d.chart) ? <Image src={d.chart} /> : d.chart}</Box>
                 </Flex>
@@ -100,6 +100,8 @@ const Feature = () => {
             ))}
             <Flex justifyContent="center" bg="brightBlue">
               <Title
+                pt={responsive('2.7rem', '4.4rem')}
+                pb={responsive('3.1rem', '5.7rem')}
                 src={bank}
                 title={`深入瞭解\n市場矚目的技術新星`}
                 bg="brightBlue"

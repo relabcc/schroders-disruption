@@ -69,7 +69,7 @@ const Advantage = () => {
               <Box>{isString(chart) ? <Image src={chart} /> : chart}</Box>
             </Box>
           </Container>
-          <Source>{source}</Source>
+          <Source bg="bgGray">{source}</Source>
         </Box>
       ))}
     </div>
