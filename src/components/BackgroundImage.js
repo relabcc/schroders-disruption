@@ -9,7 +9,7 @@ const BgImage = styled(Box)`
   ${background}
   background-image: url(${({ src }) => src});
   background-repeat: no-repeat;
-  ${(props) => props.height || props.minHeight ? '' : `padding-top: ${props.ratio * 100}%;`}
+  ${(props) => props.height || props.minHeight ? '' : `padding-top: ${1 / props.ratio * 100}%;`}
 `;
 
 const BackgroundImage = forwardRef(({ children, ...props }, ref) => (

@@ -8,6 +8,7 @@ import BackgroundImage from '../../components/BackgroundImage'
 import Box from '../../components/Box'
 
 import radarbase from './moving-radar.svg'
+import { responsive } from '../../components/ThemeProvider/theme';
 
 const maxY = 4
 const count = 5
@@ -22,7 +23,7 @@ const MovingRadar = () => {
   const [data, setData] = useState(getData)
   useInterval(() => setData(getData), 1000);
   return (
-    <Box position="relative">
+    <Box position="relative" mx={responsive(0, '-5%')}>
       <Box position="absolute" width="100%">
         <VictoryChart
           polar
@@ -65,7 +66,7 @@ const MovingRadar = () => {
           />
         </VictoryChart>
       </Box>
-      <BackgroundImage ratio={300 / 328} src={radarbase} />
+      <BackgroundImage ratio={328 / 300} src={radarbase} />
     </Box>
   )
 }
