@@ -8,7 +8,7 @@ const Source = ({ children, ...props }) => {
   return (
     <Box
       py="1.4rem"
-      bg="lightGray"
+      bg="bgGray"
       whiteSpace="per-wrap"
       fontSize={responsive('1.2rem', '1.6rem')}
       {...props}

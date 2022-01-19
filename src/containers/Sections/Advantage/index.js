@@ -67,7 +67,7 @@ const Advantage = () => {
             <Box>{isString(chart) ? <Image src={isMobile ? chart : desk_chart} /> : isMobile ? chart : desk_chart}</Box>
           </Container>
           <Flex alignItems="center" bg="bgGray" height={responsive('auto', '10.4rem')}>
-            <Source width="100%" bg="bgGray">{source}</Source>
+            <Source width="100%">{source}</Source>
           </Flex>
         </Box>
       ))}

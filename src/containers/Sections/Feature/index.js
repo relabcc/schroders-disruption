@@ -92,7 +92,7 @@ const Feature = () => {
                 </Box>
                 <Box width={responsive('105%', '61%')} pt={responsive('2rem', '8.2rem')} pb={responsive('2.4rem', '8.2rem')}>{isString(d.chart) ? <Image src={d.chart} /> : d.chart}</Box>
               </Flex>
-              <Source textAlign="justify">{d.source}</Source>
+              <Source textAlign="justify" bg="lightGray">{d.source}</Source>
             </Box>
           ))}
           <Flex justifyContent="center" bg="brightBlue">
