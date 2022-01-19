@@ -13,14 +13,13 @@ import DeskBlock from '../../../components/DeskBlock'
 import { responsive } from '../../../components/ThemeProvider/theme'
 import AspectRatio from '../../../components/AspectRatio'
 
-import chart_1_3 from './1-3.png'
+import chart_1_3 from './1-3.svg'
 import chart from './chart.png'
 import global from './global.png'
 import data from './data.png'
 
 import bank from '../bank.png'
 import Pie from '../../Pie'
-import Module from '../../../components/Module'
 
 const MovingRadar = loadable(() => import('../../MovingRadar'), { fallback: <AspectRatio ratio={328 / 320} /> })
 
@@ -83,7 +82,7 @@ const Feature = () => {
             {features.map((d, i) => (
               <Box pt={responsive("3rem", 0)} key={i}>
                 <Flex alignItems="center" flexDirection={responsive('column', 'row')} px={responsive('2.6rem', '6.4rem')}>
-                  <Box width={responsive('100%', '40%')} mr={responsive(0, '3.5rem')}>
+                  <Box width={responsive('100%', '39%')} mr={responsive(0, '3.5rem')}>
                     <Box textAlign="center" borderBottom="3px solid" borderColor="prussianBlue" pb="1rem">
                       <Box width={responsive('6.6rem', '10rem')} mx="auto" mb="1rem">
                         <Image src={d.src} />
@@ -93,7 +92,7 @@ const Feature = () => {
                     <Text.Bold color="prussianBlue" mt="2rem" whiteSpace="pre-wrap" fontSize={responsive('1.8rem', '2.4rem')}>{d.subTitle}</Text.Bold>
                     <Text mt="1rem" fontSize={responsive('1em', '1.6rem')}>{d.text}</Text>
                   </Box>
-                  <Box flex={1} pt={responsive('2rem', '8.2rem')} pb={responsive('2.4rem', '8.2rem')} mx={responsive('-1rem', 0)}>{isString(d.chart) ? <Image src={d.chart} /> : d.chart}</Box>
+                  <Box width={responsive('105%', '61%')} pt={responsive('2rem', '8.2rem')} pb={responsive('2.4rem', '8.2rem')}>{isString(d.chart) ? <Image src={d.chart} /> : d.chart}</Box>
                 </Flex>
                 <Source textAlign="justify">{d.source}</Source>
               </Box>
