@@ -7,7 +7,6 @@ import Link from './Link'
 import Image from './Image'
 import Button from './Button'
 import CircleArrow from './CircleArrow'
-import Container from './Container'
 import { responsive } from './ThemeProvider/theme'
 
 const Title = ({ src, step, title, desc, titleColor, titleFontSize, href, to, button, ...props }) => {
@@ -31,9 +30,9 @@ const Title = ({ src, step, title, desc, titleColor, titleFontSize, href, to, bu
           {desc && <Text fontSize={responsive('1em', '1.25em')}>{desc}</Text>}
           {button && (
             <Button.Outline width="100%" mt="0.6rem" as={Link} href={href} to={to}>
-              <Flex justifyContent="center">
+              <Flex justifyContent="center" alignItems="center">
                 <Text fontSize="1.6rem">{button}</Text>
-                <CircleArrow ml="1rem" width="1.8rem" />
+                <CircleArrow width="1.8rem" ml="0.5rem" />
               </Flex>
             </Button.Outline>
           )}
