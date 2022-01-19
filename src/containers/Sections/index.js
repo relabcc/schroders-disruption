@@ -29,8 +29,8 @@ const MovingRadar = loadable(() => import('../MovingRadar'), { fallback: <Aspect
 const secs = [
   {
     title: '善變　才能領先新多頭',
-    subTitle: '顛覆性創新遍地開展\n多成長時代加速來臨',
-    desc: '技術破壞性爆發，市場從單一趨勢加速轉向多主題成長。\n施羅德洞析巨量數據，搶佔多成長先機。',
+    subTitle: '多主題高速成長時代來臨',
+    desc: '技術破壞性爆發，市場從單一趨勢加速轉向多主題成長。',
     isFlex: true,
     chart: (
       <Box mt={responsive('-32.5%', '-25%')} mr={responsive("-1.5em", 0)} overflowY="hidden">
@@ -42,7 +42,7 @@ const secs = [
     source: 'Lipper, USD, MSCI IT 1994/12/31~1999/12/31, MSCI BRIC 2002/12/31~2007/12/31, Bloomberg Brent 2001/12/31~2007/12/31, NYSE FANG+ 2015/12/31~2020/12/31, Schroders, March 2021.'
   },
   {
-    title: '敢於顛覆　創造新贏家策略',
+    title: '敢於顛覆　躍升未來新贏家',
     subTitle: '多成長時代　三大潛力關鍵字',
     desc: '歸納三大領域「智慧創新、風格生活、環境永續」，包含顛覆創新的獨角獸企業、虛實多面向的新消費力及能源轉型低碳科技的投資機會。',
     chart: <Keywords />,
@@ -52,7 +52,7 @@ const secs = [
   {
     title: '挖掘數據　佈局未來超新星',
     subTitle: '用大數據構築投資策略',
-    desc: '技術破壞性爆發，市場從單一趨勢加速轉向多主題成長。施羅德洞析巨量數據，搶佔多成長先機。',
+    desc: '深度挖掘多面向數據，動態監測多樣投資主題領域，結合資深產業專家洞見，建立強健穩固的投資策略。',
     chart: chart_1_3,
     source: '施羅德投資，2021/12/31。'
   },
