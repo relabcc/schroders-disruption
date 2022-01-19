@@ -83,10 +83,10 @@ const FundTabs = ({ selectedIndex, onSelect, secPt, sticky }) => {
               <StyleTab
                 key={name}
                 width={1 / sets.length}
-                onClick={() => {
-                  const mapper = window.__tabButtons?.[i]
-                  if (mapper) mapper.click()
-                }}
+                // onClick={() => {
+                //   const mapper = window.__tabButtons?.[i]
+                //   if (mapper) mapper.click()
+                // }}
               >{name}</StyleTab>
             ))}
           </StyleTabList>

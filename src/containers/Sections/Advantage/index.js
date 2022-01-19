@@ -1,6 +1,6 @@
 import React from 'react'
 import isString from 'lodash/isString'
-import loadable from '@loadable/component'
+// import loadable from '@loadable/component'
 
 import Box from '../../../components/Box'
 import Flex from '../../../components/Flex'
@@ -38,6 +38,7 @@ const advs = [
     subTitle: '多成長時代 三大潛力關鍵字',
     desc: '歸納三大領域「智慧創新、風格生活、環境永續」，包含顛覆創新的獨角獸企業、虛實多面向的新消費力及能源轉型低碳科技的投資機會。',
     chart: <Keywords />,
+    desk_chart: <Keywords />,
     source: '施羅德投資，2021/12/31。'
   },
   {
@@ -60,7 +61,7 @@ const Advantage = () => {
             {title}
           </Box.BgTitle>
           <Container pt={responsive('2em', '4.5rem')}>
-            <Box position={responsive('raletive', 'absolute')} width={responsive(isFlex ? '55%' : 'auto', '40.8%')}>
+            <Box position={responsive('raletive', 'absolute')} width={responsive(isFlex ? '55%' : 'auto', '40.8%')} zIndex={1}>
               <Text.SubTitle whiteSpace="pre-wrap" color="purple">{subTitle}</Text.SubTitle>
               <Text textAlign="justify" mt="1rem" whiteSpace="pre-wrap" fontSize={responsive('1rem', '1.8rem')}>{desc}</Text>
             </Box>

@@ -24,11 +24,11 @@ window.injectCSS = cssLink => {
   document.head.appendChild(tag)
 }
 
-const getContianer = () => {
-  const target = document.getElementById('gsg2021-tw-root');
-  window.__video = target.querySelector('[data-bynder-widget]')
+const getContainer = () => {
+  const target = document.getElementById('gd2021-tw-root');
+  // window.__video = target.querySelector('[data-bynder-widget]')
   window.__btnBackToTop = target.querySelector('#backToTop')
-  window.__tabButtons = Array.from(target.querySelectorAll('.btn-carousel'))
+  // window.__tabButtons = Array.from(target.querySelectorAll('.btn-carousel'))
   const found = find(document.querySelectorAll('.jumbotron'), (ele) => ele.contains(target));
   if (found.classList.contains('panel-white')) {
     found.classList.remove('panel-white')
@@ -37,8 +37,10 @@ const getContianer = () => {
   container.style.padding = '0';
   return container;
 };
+console.log(window.location.pathname)
 
 setTimeout(() => {
+  console.log('init render')
   ReactDOM.render(
     <React.StrictMode>
       <ThemeProvider>
@@ -49,7 +51,7 @@ setTimeout(() => {
         </MediaProvider>
       </ThemeProvider>
     </React.StrictMode>
-    , getContianer());
+    , getContainer());
 })
 
 reportWebVitals(console.log);

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
-import { Link } from 'react-scroll'
+// import { Link } from 'react-scroll'
 
 import Container from '../../components/Container'
 import Box from '../../components/Box'
@@ -113,7 +113,7 @@ const Banner = ({ url, color }) => (
           <Box className="chevron" />
           <Box className="chevron" />
         </Arrow>
-        <Flex justifyContent={responsive('space-between', 'center')} mt={responsive('11rem', '10rem')}>
+        {/* <Flex justifyContent={responsive('space-between', 'center')} mt={responsive('11rem', '10rem')}>
           {features.map(({ icon, title, name }, k) => (
             <Box.Relative
               as={(p) => <Link smooth {...p} />}
@@ -142,7 +142,7 @@ const Banner = ({ url, color }) => (
               {title}
             </Box.Relative>
           ))}
-        </Flex>
+        </Flex> */}
       </Box>
     </Container>
   </Box>
