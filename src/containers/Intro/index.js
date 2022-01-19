@@ -119,8 +119,8 @@ const Banner = ({ url, color }) => (
               as={(p) => <Link smooth {...p} />}
               py="0.625rem"
               ml="2.25rem"
-              pl="1.5rem"
-              width="45%"
+              pl="1.25rem"
+              width="40%"
               textAlign="center"
               border="1px solid"
               borderColor="prussianblue"
@@ -131,7 +131,7 @@ const Banner = ({ url, color }) => (
               to={name}
               key={k}
             >
-              <Box.Absolute width="4.5rem" top="50%" left="0" transform="translate(-40%, -50%)">
+              <Box.Absolute width="4.5rem" top="50%" left="0" transform="translate(-50%, -50%)">
                 <Circle border="1px solid" borderColor="prussianblue" bg="lightBlue">
                   <Image src={icon} />
                 </Circle>
