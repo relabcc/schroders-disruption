@@ -29,7 +29,7 @@ const BackToTop = forwardRef((props, ref) => {
           >
             <Arrow width="2em" my="0.5em" transform="rotate(180deg)" />
             <br />
-            {/* 返回頂端 */}
+            返回頂端
           </Button.transparent>
         </Box>
       </Sticky>
