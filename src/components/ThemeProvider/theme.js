@@ -23,6 +23,7 @@ export const responsive = memorize((...args) => {
 });
 
 const lightGray = '#ccd4df';
+const bgGray = '#e6e6e6';
 const gray = '#efefef';
 const brightGray='#cccccc'
 const darkGray = '#707070';
@@ -53,6 +54,7 @@ export default {
     red,
     purple,
     lightGray,
+    bgGray,
     darkGray,
     brightGray,
     gray,
