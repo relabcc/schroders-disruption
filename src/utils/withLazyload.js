@@ -16,7 +16,7 @@ const LayzLoadInjector = ({ Subcomp, ratio, ...props }) => {
 
   return (
     <AspectRatio ratio={ratio} ref={intersectionRef}>
-      {isVisible ? <Subcomp {...props} /> : null}
+      {isVisible ? <Subcomp ratio={ratio} {...props} /> : null}
     </AspectRatio>
   )
 }

@@ -25,9 +25,7 @@ const LottieAnia = ({ lottie, data, loop = true }) => {
       })
     }
   }, [data])
-  return (
-    <Box.FullAbs ref={ref} />
-  )
+  return <Box.FullAbs ref={ref} />
 }
 
 const LottieAnima = forwardRef(({ src, ratio = 1, loop, ...props }, ref) => {
