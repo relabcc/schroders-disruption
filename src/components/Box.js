@@ -56,6 +56,8 @@ const Box = styled.div.withConfig(cleanConfig)`
 Box.displayName = 'Box';
 
 Box.Inline = (props) => <Box as="span" display="inline-block" verticalAlign="middle" {...props} />;
+Box.Relative = (props) => <Box position="relative" {...props} />;
+Box.Absolute = (props) => <Box position="absolute" {...props} />;
 Box.FullAbs = forwardRef((props, ref) => <Box ref={ref} position="absolute" top="0" bottom="0" left="0" right="0" {...props} />);
 Box.AbsCenter = forwardRef((props, ref) => <Box ref={ref} position="absolute" top="50%" left="50%" {...props} />);
 Box.SubTitle = forwardRef((props, ref) => <Box ref={ref} fontWeight="bold" color="titleBlue" fontSize={responsive('1.5em', '1.875em')} {...props} />)

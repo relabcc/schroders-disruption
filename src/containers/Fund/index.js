@@ -36,7 +36,7 @@ const data = [
 const Fund = () => {
 
   return (
-    <Box pt={responsive('3.5rem', '7.143em')} pb="4rem">
+    <Box pb="4rem">
       <Box.BgTitle>基金基本資料</Box.BgTitle>
       <Box px="1.6rem" maxWidth={responsive('51.2rem', '116rem')} mx="auto">
         <Box as="table" mt="1.6rem">

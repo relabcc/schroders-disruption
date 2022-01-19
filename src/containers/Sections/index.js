@@ -60,41 +60,29 @@ const secs = [
 
 const futures = [
   {
-    title: '領先佈局\n顛覆未來新主題',
-    shortTitle: '顛覆未來新主題',
-    subTitle: '精選未來性投資主題',
+    title: '佈局未來新主題',
     desc: '放眼全球 投資未來性產業',
+    subTitle: '精選最完整投資主題',
     src: chart,
     text: '挖掘巨量數據下的洞見，聚焦未來投資性主題，為您準備最完善的投資組合。',
     chart: <Pie />,
     source: '施羅德投信整理提供，2021/12/31。',
-    detail: (
-      <Flex justifyContent="center" bg="brightBlue">
-        <Title
-          src={bank}
-          title={`深入瞭解\n市場矚目的技術新星`}
-          bg="brightBlue"
-          titleColor="prussianBlue"
-          button="查看資產配置"
-        />
-      </Flex>
-    )
   },
   {
     title: '聚焦顛覆新贏家',
-    subTitle: '關注產業前瞻技術\n精選顛覆性創新的超新星',
+    subTitle: '挖掘潛力獨角獸企業',
     desc: '關注創新獨角獸',
     src: global,
-    text: '挖掘潛力新星，聚焦顛覆性獨角獸企業。',
+    text: '挖關注產業前瞻技術，挖掘潛力新星，聚焦顛覆性獨角獸企業。掘潛力新星，聚焦顛覆性獨角獸企業。',
     chart: <MovingRadar />,
     source: 'Lipper, 美元計價，統計過去兩年至 2021/12/31。MSCI AC World 指數。iShares megatrends ETF and Vaneck ETF。 個股僅作舉例說明，不代表任何金融商品之推介或投資建議，個股績效，不代表未來走勢或基金績效。'
   },
   {
     title: '產業研究 x 大數據',
-    subTitle: '集結全球跨領域專家\n提供值得信賴的深度分析',
+    subTitle: '跨領域專家深度分析',
     desc: '六大優勢 搶佔未來契機',
     src: data,
-    text: '不僅擁有超過百位跨領域專家，更有私募股權創投專門研究未上市公司之非公開資訊，掌握即時第一手資訊，精準掌握多元消息。',
+    text: '不僅擁有超過百位跨領域專家，更有私募股權創投專門研究未上市公司之非公開資訊，精準掌握多元消息。',
     chart: chart_2_3,
     source: '施羅德投信整理提供，2021/12/31。'
   },
@@ -106,6 +94,61 @@ const Sections = () => {
   const { isMobile } = useResponsive()
   return (
     <Box id="fund-head">
+      {/* <Flex justifyContent="center" bg="brightBlue">
+        <Title
+          src={bank}
+          title={`看顛覆未來團隊的\n精選主題`}
+          titleColor="prussianBlue"
+          button="基金中心"
+        />
+      </Flex> */}
+      <Box.BgTitle smallTitle="施羅德環球顛覆未來股票型基金">
+        三大特色為您超前部署未來
+      </Box.BgTitle>
+      <Box px={responsive('1.6rem', '3.2rem')} pb="3.9rem">
+        <Flex flexDirection="column" alignItems="center">
+          <Flex flexDirection="column" width="100%" maxWidth="480px">
+            {futures.map((d, k) => (
+              <Box borderTop={k && '1px solid #cccccc'} key={k}>
+                <Title
+                  px="1.2em"
+                  bg="white"
+                  src={d.src}
+                  title={d.title}
+                  desc={d.desc}
+                />
+              </Box>
+            ))}
+          </Flex>
+        </Flex>
+        <Box mt="3.2rem" maxWidth={responsive('48rem', '112rem')} mx="auto" borderRadius="1em" overflow="hidden" bg="rgba(0, 42, 94, 0.12)">
+          {futures.map((d, i) => (
+            <Box pt="3rem" key={i}>
+              <Box px="2.6rem">
+                <Box textAlign="center" borderBottom="3px solid" borderColor="prussianBlue" pb="1rem">
+                  <Box width="6.6rem" mx="auto" mb="1rem">
+                    <Image src={d.src} />
+                  </Box>
+                  <Text.SubTitle>{d.title}</Text.SubTitle>
+                </Box>
+                <Text.Bold color="prussianBlue" mt="2rem" whiteSpace="pre-wrap" fontSize={responsive('1.8rem', '2rem')}>{d.subTitle}</Text.Bold>
+                <Text mt="1rem" fontSize={responsive('1.3rem', '1.5rem')}>{d.text}</Text>
+                <Box pt={"2rem"} pb={"2.4rem"} mx="-1rem">{isString(d.chart) ? <Image src={d.chart} /> : d.chart}</Box>
+              </Box>
+              <Source textAlign="justify">{d.source}</Source>
+            </Box>
+          ))}
+          <Flex justifyContent="center" bg="brightBlue">
+            <Title
+              src={bank}
+              title={`深入瞭解\n市場矚目的技術新星`}
+              bg="brightBlue"
+              titleColor="prussianBlue"
+              button="查看資產配置"
+            />
+          </Flex>
+        </Box>
+      </Box>
       {secs.map(({ title, chart, source, isFlex, subTitle, desc }, i) => (
         <Box key={i}>
           <Box.BgTitle>
@@ -128,53 +171,6 @@ const Sections = () => {
           <Source>{source}</Source>
         </Box>
       ))}
-      <Flex justifyContent="center" bg="brightBlue">
-        <Title
-          src={bank}
-          title={`看顛覆未來團隊的\n精選主題`}
-          titleColor="prussianBlue"
-          button="基金中心"
-        />
-      </Flex>
-      <Box.BgTitle smallTitle="施羅德環球顛覆未來股票型基金">
-        三大特色為您超前部署未來
-      </Box.BgTitle>
-      <Box px={responsive('1.6rem', '3.2rem')}>
-        <Flex flexDirection="column" alignItems="center">
-          <Flex flexDirection="column">
-            {futures.map((d, k) => (
-              <Box borderTop={k && '1px solid #cccccc'} key={k}>
-                <Title
-                  px="0"
-                  bg="white"
-                  src={d.src}
-                  title={d.title}
-                  desc={d.desc}
-                />
-              </Box>
-            ))}
-          </Flex>
-        </Flex>
-        <Box mt="3.2rem" maxWidth={responsive('48rem', '112rem')} mx="auto" borderRadius="1em" overflow="hidden" bg="rgba(0, 42, 94, 0.12)">
-          {futures.map((d, i) => (
-            <Box pt="3rem" key={i}>
-              <Box px="2.6rem">
-                <Box textAlign="center" borderBottom="3px solid" borderColor="prussianBlue" pb="1rem">
-                  <Box width="6.6rem" mx="auto" mb="1rem">
-                    <Image src={d.src} />
-                  </Box>
-                  <Text.SubTitle>{d.shortTitle || d.title}</Text.SubTitle>
-                </Box>
-                <Text.Bold color="prussianBlue" mt="2rem" whiteSpace="pre-wrap" fontSize={responsive('1.8rem', '2rem')}>{d.subTitle}</Text.Bold>
-                <Text mt="1rem" fontSize={responsive('1.3rem', '1.5rem')}>{d.text}</Text>
-                <Box pt={"2rem"} pb={"2.4rem"} mx="-1rem">{isString(d.chart) ? <Image src={d.chart} /> : d.chart}</Box>
-              </Box>
-              <Source textAlign="justify">{d.source}</Source>
-              {d.detail}
-            </Box>
-          ))}
-        </Box>
-      </Box>
     </Box>
   )
 }
