@@ -22,6 +22,7 @@ import { cleanConfig } from './utils/blacklist';
 import injectProps from './utils/injectProps';
 import { responsive } from './ThemeProvider/theme';
 import Text from './Text';
+import Container from './Container';
 
 const Box = styled.div.withConfig(cleanConfig)`
   ${space}
@@ -67,11 +68,11 @@ Box.Title = forwardRef(({ children , ...props}, ref) => (
   </Box>
 ))
 Box.BgTitle = forwardRef(({ children, smallTitle, ...props }, ref) => (
-  <Box ref={ref} bg="prussianBlue" px="1.6rem" pb="1.6rem" pt="3.2rem" {...props}>
-    <Box maxWidth={responsive('48rem', '112rem')} mx="auto">
+  <Box ref={ref} bg="prussianBlue" pb="1.6rem" pt="3.2rem" {...props}>
+    <Container>
       <Text.SmallTitle>{smallTitle}</Text.SmallTitle>
       <Text.Title>{children}</Text.Title>
-    </Box>
+    </Container>
   </Box>
 ))
 

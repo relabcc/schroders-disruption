@@ -10,6 +10,7 @@ import Image from '../../../components/Image'
 import Source from '../../../components/Source'
 import { responsive } from '../../../components/ThemeProvider/theme'
 import AspectRatio from '../../../components/AspectRatio'
+import Container from '../../../components/Container'
 import LottieAnima from '../../../components/LottieAnima'
 
 import useResponsive from '../../../contexts/mediaQuery/useResponsive'
@@ -25,7 +26,7 @@ const advs = [
     desc: '技術破壞性爆發，市場從單一趨勢加速轉向多主題成長。',
     isFlex: true,
     chart: (
-      <Box mt={responsive('-32.5%', '-25%')} mr={responsive("-1.5em", 0)} overflowY="hidden">
+      <Box mt={responsive('-22%', '-25%')} mr={responsive("-1.5em", 0)} overflowY="hidden">
         <Box width="100%">
           <LottieAnima src={`${process.env.PUBLIC_URL}/chart-1.json`} ratio={352 / 300} />
         </Box>
@@ -55,11 +56,11 @@ const Advantage = () => {
   return (
     <div>
       {advs.map(({ title, chart, source, isFlex, subTitle, desc }, i) => (
-        <Box key={i}>
+        <Box overflow="hidden" key={i}>
           <Box.BgTitle>
             {title}
           </Box.BgTitle>
-          <Flex overflowX="hidden" mx="auto" maxWidth={responsive('51.2rem', '118.4rem')} px={responsive('1.6rem', '3.2rem')} pt={responsive('2em', '4.5rem')}>
+          <Container pt={responsive('2em', '4.5rem')}>
             <Box width={responsive('100%', '84.25%')} pr={responsive(0, "8.3rem")}>
               <Box width={isFlex ? responsive('55%', '47%') : 'auto'}>
                 <Text.SubTitle whiteSpace="pre-wrap" color="purple">{subTitle}</Text.SubTitle>
@@ -67,12 +68,7 @@ const Advantage = () => {
               </Box>
               <Box>{isString(chart) ? <Image src={chart} /> : chart}</Box>
             </Box>
-            {!isMobile && (
-              <Box flex={1}>
-                段落
-              </Box>
-            )}
-          </Flex>
+          </Container>
           <Source>{source}</Source>
         </Box>
       ))}

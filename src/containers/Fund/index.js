@@ -38,7 +38,7 @@ const Fund = () => {
   return (
     <Box pb="4rem">
       <Box.BgTitle>基金基本資料</Box.BgTitle>
-      <Box px="1.6rem" maxWidth={responsive('51.2rem', '116rem')} mx="auto">
+      <Container>
         <Box as="table" mt="1.6rem">
           <tbody>
             {data.map(({ th, td }, i) => (
@@ -49,7 +49,7 @@ const Fund = () => {
             ))}
           </tbody>
         </Box>
-      </Box>
+      </Container>
     </Box>
   )
 }

@@ -9,16 +9,16 @@ import Button from './Button'
 import CircleArrow from './CircleArrow'
 import { responsive } from './ThemeProvider/theme'
 
-const Title = ({ src, step, title, desc, titleColor, titleFontSize, href, to, button, ...props }) => {
+const Title = ({ src, step, title, desc, titleColor, titleFontSize, href, to, button, hasDirection, ...props }) => {
   return (
-    <Box py={responsive('3rem', '2rem')} px="1.6rem" {...props}>
-      <Flex alignItems="center">
+    <Box py={responsive('3rem', '7rem')} px="1.6rem" {...props}>
+      <Flex alignItems="center" flexDirection={hasDirection && responsive('row', 'column')}>
         {src && (
           <Box width={responsive('8.8rem', '14.8rem')} >
             <Image src={src} />
           </Box>
         )}
-        <Box ml={src && responsive('0.86em', '1.86em')} >
+        <Box mt={hasDirection && '3.2rem'} ml={src && responsive('0.86em', hasDirection ? 0 : '1.86em')} >
           <Flex
             fontWeight="bold"
             flexDirection={responsive('column', 'row')}
@@ -27,7 +27,7 @@ const Title = ({ src, step, title, desc, titleColor, titleFontSize, href, to, bu
             {step && <Text.SubTitle color="darkBlue">特色{step}</Text.SubTitle>}
             <Text.SubTitle lineHeight="1.3" ml={step && responsive(0, '0.5em')} titleFontSize={titleFontSize} color={titleColor || "purple"} whiteSpace="pre-wrap">{title}</Text.SubTitle>
           </Flex>
-          {desc && <Text fontSize={responsive('1em', '1.25em')}>{desc}</Text>}
+          {desc && <Text mt={hasDirection && responsive(0, '0.8rem')} whiteSpace={responsive('nowrap', 'pre-wrap')} fontSize={responsive('1em', '1.25em')}>{desc}</Text>}
           {button && (
             <Button.Outline width="100%" mt="0.6rem" as={Link} href={href} to={to}>
               <Flex justifyContent="center" alignItems="center">
