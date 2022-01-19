@@ -8,33 +8,33 @@ import withLazyload from '../utils/withLazyload'
 
 const Lottie = loadable.lib(() => import('lottie-web'))
 
-const LottieAnia = ({ lottie, data, loop = true }) => {
+const LottieAnia = ({ lottie, data, loop = true, onLoad = () => {} }) => {
   const ref = useRef()
 
   useEffect(() => {
     if (!ref.current.children.length) {
       setTimeout(() => {
-        lottie.loadAnimation({
+        const anima = lottie.loadAnimation({
           container: ref.current, // the dom element
           renderer: 'svg',
           loop,
           autoplay: true,
           animationData: data, // the animation data
-          // onComplete: console.log
         });
+        anima.onEnterFrame = onLoad
       })
     }
-  }, [data])
+  }, [data, loop, lottie, onLoad])
   return <Box.FullAbs ref={ref} />
 }
 
-const LottieAnima = forwardRef(({ src, ratio = 1, loop, ...props }, ref) => {
+const LottieAnima = forwardRef(({ src, ratio = 1, loop, onLoad, ...props }, ref) => {
   const { data } = useSWR(src)
   return (
     <AspectRatio ratio={ratio} {...props} ref={ref}>
       <Lottie>
         {({ default: lottie }) => data ? (
-          <LottieAnia lottie={lottie} data={data} loop={loop} />
+          <LottieAnia lottie={lottie} data={data} loop={loop} onLoad={onLoad} />
         ) : null}
       </Lottie>
     </AspectRatio>

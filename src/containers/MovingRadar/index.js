@@ -13,19 +13,14 @@ const maxY = 4
 const count = 5
 const getData = () => {
   const randomData = range(count).map((x) => ({ x, y: random(2, maxY) }))
-  randomData[random(count - 1)] = maxY
+  randomData[random(count - 1)].y = maxY
   return randomData
 }
 
 const offset = 18
 const MovingRadar = () => {
   const [data, setData] = useState(getData)
-  useInterval(
-    () => {
-      setData(getData);
-    },
-    1000
-  );
+  useInterval(() => setData(getData), 1000);
   return (
     <Box position="relative">
       <Box position="absolute" width="100%">
@@ -33,11 +28,14 @@ const MovingRadar = () => {
           polar
           animate={{
             duration: 500,
+            onLoad: { duration: 500 },
           }}
           padding={{ top: 3, left: 70, right: 66 }}
           width={328}
           height={300}
-          maxDomain={{ y: maxY }}
+          domain={{
+            y: [0, maxY],
+          }}
           startAngle={offset}
           endAngle={360 + offset}
           theme={VictoryTheme.grayscale}
