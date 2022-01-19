@@ -1,6 +1,4 @@
 import React from 'react'
-import isString from 'lodash/isString'
-import loadable from '@loadable/component'
 import { Element } from 'react-scroll'
 
 import Box from '../../components/Box'

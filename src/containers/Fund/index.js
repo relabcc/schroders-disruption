@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 
 import Box from '../../components/Box'
-import Container from '../../components/Container'
+// import Container from '../../components/Container'
 import { responsive } from '../../components/ThemeProvider/theme'
 
-import Table from '../Charts/Table'
+// import Table from '../Charts/Table'
 
 const data = [
   {
