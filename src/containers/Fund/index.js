@@ -42,7 +42,7 @@ const Fund = () => {
         <Box as="table" mt="1.6rem">
           <tbody>
             {data.map(({ th, td }, i) => (
-              <Box as="tr" color="prussianBlue" borderBottom="0.5px solid" borderColor="prussianBlue" key={i}>
+              <Box as="tr" color="prussianBlue" borderBottom="0.5px solid" borderColor="brightGray" key={i}>
                 <Box width="6em" px="1em" py="1.4rem" textAlign="center" as="th">{th}</Box>
                 <Box px="1.8rem" fontSize="1.2rem" as="td">{td}</Box>
               </Box>
