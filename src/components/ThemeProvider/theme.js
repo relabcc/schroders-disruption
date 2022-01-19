@@ -22,12 +22,12 @@ export const responsive = memorize((...args) => {
   return breakpoints.map((_, i) => get(args, [responsiveMap[i]], null))
 });
 
-const lightGray = '#e6e6e6';
+const lightGray = '#ccd4df';
 const gray = '#efefef';
 const darkGray = '#707070';
 const red = '#EA5204';
 const prussianBlue = '#002A5E';
-const brightBlue='#9d9fbf'
+const brightBlue='#babcd2'
 const ceruleanBlue = '#13E6F0';
 const darkViolet = '#7D3787';
 const vividViolet = '#A446BA'
@@ -36,7 +36,7 @@ const mustard = '#FFDC53'
 const pinkSalmon = '#FF90A1'
 const mandy = '#df536A'
 const disco = '#B71962'
-const lightBlue = '#d7e4f3'
+const lightBlue = '#e6f1ff'
 const titleBlue = '#19376d'
 const bgGreen = '#00796D'
 const darkGreen = '#18776c'

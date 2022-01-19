@@ -130,19 +130,20 @@ Button.white = props => (
   />
 );
 
-Button.outline = props => (
+Button.Outline = props => (
   <Button
     py="0.8rem"
     bg="white"
     border="1px solid"
     borderRadius="1rem"
     color="prussianBlue"
-    hoverColor="white"
+    hoverBg="white"
+    hoverBorder="prussianBlue"
     {...props}
   />
 );
 
-Button.outline.danger = props => (
+Button.Outline.danger = props => (
   <Button.danger
     border="2px solid"
     borderColor="danger"
