@@ -59,7 +59,7 @@ const Advantage = () => {
           <Container position="relative" pt={responsive('2em', '4.5rem')}>
             <Box position={responsive('raletive', 'absolute')} width={responsive(isFlex ? '52.5%' : 'auto', '32.4%')} zIndex={1}>
               <Text.SubTitle whiteSpace="nowrap" color="purple">{subTitle}</Text.SubTitle>
-              <Text textAlign="justify" mt="0.25rem" whiteSpace="pre-wrap" fontSize={responsive('1rem', '1.8rem')}>{desc}</Text>
+              <Text textAlign="justify" mt="0.25rem" whiteSpace="pre-wrap" fontSize={responsive('1.2rem', '1.8rem')}>{desc}</Text>
             </Box>
             <Box>{isString(chart) ? <Image src={isMobile ? chart : desk_chart} /> : isMobile ? chart : desk_chart}</Box>
           </Container>
