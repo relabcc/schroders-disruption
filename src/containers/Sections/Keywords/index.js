@@ -31,7 +31,7 @@ const Keywords = () => {
       mt={responsive('1.5em', 0)}
       pt={responsive(0, `${474 / 960 * 100}%`)}
       position={responsive('static', 'relative')}
-      overflowY={responsive('vivible', 'hidden')}
+      // overflowY={responsive('vivible', 'hidden')}
     >
       {/* <BackgroundImage ratio={240 / 340} src={base} zIndex={1}>
         <FadeSlideshow crossfade duration={500} timeout={1500}>

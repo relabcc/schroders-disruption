@@ -40,7 +40,7 @@ const Sticky = ({
     }
   }, [])
   return (
-    <Box className={className} zOrder={2} left={0} right={0}>
+    <Box className={className} left={0} right={0}>
       {children}
     </Box>
   );

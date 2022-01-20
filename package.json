@@ -3,7 +3,6 @@
   "version": "0.4.0",
   "private": true,
   "_homepage": "https://www.schroders.com/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2021-GSG/",
-  "homepage": ".",
   "dependencies": {
     "@loadable/component": "^5.15.2",
     "@styled-system/theme-get": "^5.1.2",
@@ -38,7 +37,7 @@
     "postbuild": "node after-build.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "node deploy"
+    "deploy": "firebase deploy --only hosting"
   },
   "eslintConfig": {
     "extends": [

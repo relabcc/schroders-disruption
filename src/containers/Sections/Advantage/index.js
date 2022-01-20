@@ -1,6 +1,6 @@
 import React from 'react'
 import isString from 'lodash/isString'
-import loadable from '@loadable/component'
+// import loadable from '@loadable/component'
 
 import Box from '../../../components/Box'
 import Flex from '../../../components/Flex'
@@ -17,6 +17,7 @@ import chart_2_3 from './2-3.svg'
 import chart_2_3_desk from './chart-2-3-desk.svg'
 
 import Keywords from '../Keywords'
+import Chart1 from './Chart1'
 
 const advs = [
   {
@@ -24,13 +25,8 @@ const advs = [
     subTitle: '多主題高速成長時代來臨',
     desc: '技術破壞性爆發，市場從單一趨勢加速轉向多主題成長。',
     isFlex: true,
-    chart: (
-      <Box mt={responsive('-22%', '-25%')} mr={responsive("-1.5em", 0)} overflowY="hidden">
-        <Box width="100%">
-          <LottieAnima src={`${process.env.PUBLIC_URL}/chart-1.json`} ratio={352 / 300} />
-        </Box>
-      </Box>
-    ),
+    chart: <Chart1 />,
+    desk_chart: <Chart1 />,
     source: 'Lipper, USD, MSCI IT 1994/12/31~1999/12/31, MSCI BRIC 2002/12/31~2007/12/31, Bloomberg Brent 2001/12/31~2007/12/31, NYSE FANG+ 2015/12/31~2020/12/31, Schroders, March 2021.'
   },
   {
@@ -38,6 +34,7 @@ const advs = [
     subTitle: '多成長時代 三大潛力關鍵字',
     desc: '歸納三大領域「智慧創新、風格生活、環境永續」，包含顛覆創新的獨角獸企業、虛實多面向的新消費力及能源轉型低碳科技的投資機會。',
     chart: <Keywords />,
+    desk_chart: <Keywords />,
     source: '施羅德投資，2021/12/31。'
   },
   {
@@ -60,7 +57,7 @@ const Advantage = () => {
             {title}
           </Box.BgTitle>
           <Container pt={responsive('2em', '4.5rem')}>
-            <Box position={responsive('raletive', 'absolute')} width={responsive(isFlex ? '55%' : 'auto', '40.8%')}>
+            <Box position={responsive('raletive', 'absolute')} width={responsive(isFlex ? '55%' : 'auto', '40.8%')} zIndex={1}>
               <Text.SubTitle whiteSpace="pre-wrap" color="purple">{subTitle}</Text.SubTitle>
               <Text textAlign="justify" mt="1rem" whiteSpace="pre-wrap" fontSize={responsive('1rem', '1.8rem')}>{desc}</Text>
             </Box>
