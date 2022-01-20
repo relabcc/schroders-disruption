@@ -88,7 +88,7 @@ const Feature = () => {
                     <Text.SubTitle>{d.title}</Text.SubTitle>
                   </Box>
                   <Text.Bold color="prussianBlue" mt="2rem" whiteSpace="pre-wrap" fontSize={responsive('1.8rem', '2.4rem')}>{d.subTitle}</Text.Bold>
-                  <Text mt="1rem" fontSize={responsive('1em', '1.6rem')}>{d.text}</Text>
+                  <Text mt="0.25rem" fontSize={responsive('1em', '1.6rem')}>{d.text}</Text>
                 </Box>
                 <Box width={responsive('105%', '47%')} pt={responsive('2rem', '8.2rem')} pb={responsive('2.4rem', '8.2rem')}>{isString(d.chart) ? <Image src={d.chart} /> : d.chart}</Box>
               </Flex>

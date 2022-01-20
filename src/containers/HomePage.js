@@ -22,13 +22,13 @@ const HomePage = () => {
   return isSecondPage ? (
     <div>
       <Advantage />
-      <Fund />
       <BackToTop zIndex={99} />
     </div>
   ) : (
     <div>
       <Intro isMobile={isMobile} />
       <Feature />
+      <Fund />
       <BackToTop zIndex={99} />
     </div>
   )
