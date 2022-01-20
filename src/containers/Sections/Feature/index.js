@@ -26,27 +26,27 @@ const features = [
   {
     title: '佈局未來新主題',
     desc: '放眼全球\n投資未來性產業',
-    subTitle: '精選最完整投資主題',
+    subTitle: '精選多元投資主題',
     src: chart,
-    text: '挖掘巨量數據下的洞見，聚焦未來投資性主題，為您準備最完善的投資組合。',
+    text: '挖掘巨量數據下的洞見，聚焦多面向投資主題。',
     chart: <Pie />,
-    source: '施羅德投資，2021/12/31。',
+    source: '施羅德投資，2021/12/31，個股僅作舉例說明，不代表任何金融商品之推薦或投資建議。',
   },
   {
     title: '聚焦顛覆新贏家',
     desc: '關注創新獨角獸',
     subTitle: '挖掘潛力獨角獸企業',
     src: global,
-    text: '挖關注產業前瞻技術，挖掘潛力新星，聚焦顛覆性獨角獸企業。掘潛力新星，聚焦顛覆性獨角獸企業。',
+    text: '關注產業前瞻技術，挖掘潛力新星。',
     chart: <MovingRadar />,
-    source: 'Lipper, 美元計價，統計過去兩年至 2021/12/31。MSCI AC World 指數。iShares megatrends ETF and Vaneck ETF。 個股僅作舉例說明，不代表任何金融商品之推介或投資建議，個股績效，不代表未來走勢或基金績效。'
+    source: '施羅德投資，2021/12/31。'
   },
   {
     title: '產業研究 x 大數據',
     desc: '六大優勢\n搶佔未來契機',
     subTitle: '跨領域專家深度分析',
     src: data,
-    text: '不僅擁有超過百位跨領域專家，更有私募股權創投專門研究未上市公司之非公開資訊，精準掌握多元消息。',
+    text: '擁有超過百位跨領域專家，藉由私募股權創投專門研究未上市公司之非公開資訊，精準掌握潛力標的。',
     chart: chart_1_3,
     source: '施羅德投資，2021/12/31。'
   },
@@ -55,7 +55,7 @@ const features = [
 const Feature = () => {
   return (
     <div>
-      <Box.BgTitle smallTitle="施羅德環球顛覆未來股票型基金">
+      <Box.BgTitle>
         三大特色為您超前部署未來
       </Box.BgTitle>
       <Container pb="3.9rem">
@@ -95,7 +95,7 @@ const Feature = () => {
               <Source textAlign="justify" bg="lightGray">{d.source}</Source>
             </Box>
           ))}
-          <Flex justifyContent="center" bg="brightBlue">
+          {/* <Flex justifyContent="center" bg="brightBlue">
             <Title
               pt={responsive('2.7rem', '4.4rem')}
               pb={responsive('3.1rem', '5.7rem')}
@@ -106,7 +106,7 @@ const Feature = () => {
               href="https://www.schroders.com/zh-tw/tw/asset-management/funds/fund-centre/fund/schdr_f000011o7z/schroder-international-selection-fund-global-disruption-a-accumulation-usd/lu1910165726/profile/"
               button="查看資產配置"
             />
-          </Flex>
+          </Flex> */}
         </Box>
       </Container>
     </div>

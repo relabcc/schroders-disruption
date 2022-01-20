@@ -95,24 +95,24 @@ const Banner = ({ url, color }) => (
   <Box
     background={`url(${url}) center no-repeat`}
     backgroundSize={responsive('768px auto', '2560px auto')}
-    height={responsive('447px', '650px')}
+    height={responsive('360px', '650px')}
     bg="lightBlue"
   >
     <Container
-      pt={responsive('3.8rem', '10rem')}
+      pt={responsive('6.7rem', '13rem')}
       px={15}
       color={color}
       position="relative"
     >
       <Box>
-        <Text.Bold fontSize={responsive('3.4rem', '6rem')} lineHeight={1.2}>
-          顛覆未來即刻啟動
+        <Text.Bold textAlign="center" fontSize={responsive('3.4rem', '6rem')} lineHeight={1.2}>
+          顛覆未來 即刻啟動
         </Text.Bold>
-        <Arrow>
+        {/* <Arrow>
           <Box className="chevron" />
           <Box className="chevron" />
           <Box className="chevron" />
-        </Arrow>
+        </Arrow> */}
         {/* <Flex justifyContent={responsive('space-between', 'center')} mt={responsive('11rem', '10rem')}>
           {features.map(({ icon, title, name }, k) => (
             <Box.Relative
