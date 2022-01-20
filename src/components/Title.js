@@ -18,7 +18,7 @@ const Title = ({ src, step, title, desc, titleColor, titleFontSize, href, to, bu
             <Image src={src} />
           </Box>
         )}
-        <Box mt={hasDirection && '3.2rem'} ml={src && responsive('0.86em', hasDirection ? 0 : '3.1rem')} >
+        <Box mt={hasDirection && responsive(0, '3.2rem')} ml={src && responsive('0.86em', hasDirection ? 0 : '3.1rem')} >
           <Flex
             fontWeight="bold"
             flexDirection={responsive('column', 'row')}

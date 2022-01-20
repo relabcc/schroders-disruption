@@ -10,7 +10,6 @@ const Source = ({ children, ...props }) => {
       py="1.4rem"
       bg="bgGray"
       whiteSpace="per-wrap"
-      fontSize={responsive('1.2rem', '1.6rem')}
       color="gray"
       {...props}
     >

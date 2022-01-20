@@ -11,7 +11,7 @@ import LottieAnima from '../../../components/LottieAnima'
 const Chart1 = () => {
   // const { isMobile } = useResponsive()
   return (
-    <Box mt={responsive('-7.5%', '0')} mr={responsive("-1.5em", 0)} overflowY="hidden">
+    <Box mt={responsive('-7.5%', '0')} overflowY="hidden">
       <Box width="100%">
         <Media at="mobile">
           <LottieAnima src={`${process.env.PUBLIC_URL}/lottie/chart-1.json`} ratio={352 / 300} />

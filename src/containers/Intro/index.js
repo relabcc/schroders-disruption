@@ -105,7 +105,7 @@ const Banner = ({ url, color }) => {
         position="relative"
       >
         <Box>
-          <Text.Bold textAlign="center" fontSize={responsive('3.4rem', '6rem')} lineHeight={1.2}>
+          <Text.Bold textAlign="center" fontSize={responsive('2.4rem', '6rem')} lineHeight={1.2}>
             顛覆未來 即刻啟動
           </Text.Bold>
           {/* <Arrow>
