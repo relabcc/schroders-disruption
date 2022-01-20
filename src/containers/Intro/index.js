@@ -4,92 +4,89 @@ import styled, { keyframes } from 'styled-components'
 
 import Container from '../../components/Container'
 import Box from '../../components/Box'
-import Flex from '../../components/Flex'
 import Text from '../../components/Text'
-import Image from '../../components/Image'
-import Circle from '../../components/Circle'
-import { responsive } from '../../components/ThemeProvider/theme'
+import { Media, responsive } from '../../components/ThemeProvider/theme'
 
 import mobile_banner from './mobile_banner.png'
 import desk_banner from './desk_banner.png'
-import money from './money.png'
-import hand from './hand.png'
+// import money from './money.png'
+// import hand from './hand.png'
 
-const base = 10
+// const base = 10
 
-const move = keyframes`
-  25% {
-    opacity: 1;
-  }
-  33.3% {
-    opacity: 1;
-    transform: translateY(${`${base * 3.8}px`});
-  }
-  66.6% {
-    opacity: 0;
-    transform: translateY(${`${base * 5.2}px`});
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(${`${base * 8}px scale(0.8)`});
-  }
-`
+// const move = keyframes`
+//   25% {
+//     opacity: 1;
+//   }
+//   33.3% {
+//     opacity: 1;
+//     transform: translateY(${`${base * 3.8}px`});
+//   }
+//   66.6% {
+//     opacity: 0;
+//     transform: translateY(${`${base * 5.2}px`});
+//   }
+//   100% {
+//     opacity: 0;
+//     transform: translateY(${`${base * 8}px scale(0.8)`});
+//   }
+// `
 
-const Arrow = styled(Box)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  .chevron {
-    position: absolute;
-    width: ${`${base * 3.5}px`};
-    height: ${`${base * 1.25}px`};
-    opacity: 0;
-    transform: scale(0.3);
-    animation: ${move} 3s ease-out infinite;
-  }
+// const Arrow = styled(Box)`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 100%;
+//   .chevron {
+//     position: absolute;
+//     width: ${`${base * 3.5}px`};
+//     height: ${`${base * 1.25}px`};
+//     opacity: 0;
+//     transform: scale(0.3);
+//     animation: ${move} 3s ease-out infinite;
+//   }
 
-  .chevron:first-child {
-    animation: ${move} 3s ease-out 1s infinite;
-  }
+//   .chevron:first-child {
+//     animation: ${move} 3s ease-out 1s infinite;
+//   }
 
-  .chevron:nth-child(2) {
-    animation: ${move} 3s ease-out 2s infinite;
-  }
+//   .chevron:nth-child(2) {
+//     animation: ${move} 3s ease-out 2s infinite;
+//   }
 
-  .chevron:before,
-  .chevron:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 50%;
-    background: rgba(255, 255, 255, 0.5);
-  }
+//   .chevron:before,
+//   .chevron:after {
+//     content: '';
+//     position: absolute;
+//     top: 0;
+//     height: 100%;
+//     width: 50%;
+//     background: rgba(255, 255, 255, 0.5);
+//   }
 
-  .chevron:before {
-    left: 0;
-    transform: skewY(40deg);
-  }
+//   .chevron:before {
+//     left: 0;
+//     transform: skewY(40deg);
+//   }
 
-  .chevron:after {
-    right: 0;
-    transform: skewY(-40deg);
-  }
-`
+//   .chevron:after {
+//     right: 0;
+//     transform: skewY(-40deg);
+//   }
+// `
 
-const features = [
-  {
-    icon: money,
-    title: '基金三大特色',
-    name: 'feature'
-  },
-  {
-    icon: hand,
-    title: '掌握顛覆趨勢',
-    name: 'advantage'
-  },
-]
+// const features = [
+//   {
+//     icon: money,
+//     title: '基金三大特色',
+//     name: 'feature'
+//   },
+//   {
+//     icon: hand,
+//     title: '掌握顛覆趨勢',
+//     name: 'advantage'
+//   },
+// ]
 
 const Banner = ({ url, color }) => (
   <Box
@@ -148,9 +145,16 @@ const Banner = ({ url, color }) => (
   </Box>
 )
 
-const Intro = ({ isMobile }) => {
+const Intro = () => {
   return (
-    <Banner url={isMobile ? mobile_banner : desk_banner} color="prussianBlue" />
+    <>
+      <Media at="mobile">
+        <Banner url={mobile_banner} color="prussianBlue" />
+      </Media>
+      <Media greaterThan="mobile">
+        <Banner url={desk_banner} color="prussianBlue" />
+      </Media>
+    </>
   )
 }
 

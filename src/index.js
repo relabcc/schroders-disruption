@@ -10,7 +10,7 @@ import { render } from 'react-snapshot';
 
 import ThemeProvider from './components/ThemeProvider'
 
-import MediaProvider from './contexts/mediaQuery/MediaProvider'
+// import MediaProvider from './contexts/mediaQuery/MediaProvider'
 import DataProvider from './contexts/data/DataProvider'
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
@@ -30,7 +30,7 @@ const getContainer = () => {
   window.__btnBackToTop = target.querySelector('#backToTop')
   // window.__tabButtons = Array.from(target.querySelectorAll('.btn-carousel'))
   const found = find(document.querySelectorAll('.jumbotron'), (ele) => ele.contains(target));
-  if (found.classList.contains('panel-white')) {
+  if (found?.classList.contains('panel-white')) {
     found.classList.remove('panel-white')
   }
   const container = found || target;
@@ -38,18 +38,22 @@ const getContainer = () => {
   return container;
 };
 
-setTimeout(() => {
+const init = () => {
+  const container = getContainer()
   render(
     <React.StrictMode>
       <ThemeProvider>
-        <MediaProvider>
-          <DataProvider>
-            <App />
-          </DataProvider>
-        </MediaProvider>
+        {/* <MediaProvider> */}
+        <DataProvider>
+          <App />
+        </DataProvider>
+        {/* </MediaProvider> */}
       </ThemeProvider>
     </React.StrictMode>
-    , getContainer());
-})
+    , container);
+}
+
+// setTimeout(init)
+init()
 
 // reportWebVitals(console.log);

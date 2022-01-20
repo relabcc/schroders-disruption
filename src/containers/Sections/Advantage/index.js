@@ -7,11 +7,11 @@ import Flex from '../../../components/Flex'
 import Text from '../../../components/Text'
 import Image from '../../../components/Image'
 import Source from '../../../components/Source'
-import { responsive } from '../../../components/ThemeProvider/theme'
+import { Media, responsive } from '../../../components/ThemeProvider/theme'
 import Container from '../../../components/Container'
 // import LottieAnima from '../../../components/LottieAnima'
 
-import useResponsive from '../../../contexts/mediaQuery/useResponsive'
+// import useResponsive from '../../../contexts/mediaQuery/useResponsive'
 
 import chart_2_3 from './2-3.svg'
 import chart_2_3_desk from './2-3-desk.svg'
@@ -48,9 +48,9 @@ const advs = [
 ]
 
 const Advantage = () => {
-  const { isMobile } = useResponsive()
+  // const { isMobile } = useResponsive()
   return (
-    <div>
+    <>
       {advs.map(({ title, chart, desk_chart, source, isFlex, subTitle, desc }, i) => (
         <Box overflow="hidden" key={i}>
           <Box.BgTitle>
@@ -61,14 +61,26 @@ const Advantage = () => {
               <Text.SubTitle whiteSpace="nowrap" color="purple">{subTitle}</Text.SubTitle>
               <Text textAlign="justify" mt="0.25rem" whiteSpace="pre-wrap" fontSize={responsive('1em', '1.8rem')}>{desc}</Text>
             </Box>
-            <Box>{isString(chart) ? <Image src={isMobile ? chart : desk_chart} /> : isMobile ? chart : desk_chart}</Box>
+            <Box>
+              {isString(chart) ? (
+                <>
+                  <Media at="mobile"><Image src={chart} /></Media>
+                  <Media greaterThan="mobile"><Image src={desk_chart} /></Media>
+                </>
+              ) : (
+                <>
+                  <Media at="mobile">{chart}</Media>
+                  <Media greaterThan="mobile">{desk_chart}</Media>
+                </>
+              )}
+            </Box>
           </Container>
           <Flex alignItems="center" bg="bgGray" height={responsive('auto', '10.4rem')}>
             <Source width="100%">{source}</Source>
           </Flex>
         </Box>
       ))}
-    </div>
+    </>
   )
 }
 

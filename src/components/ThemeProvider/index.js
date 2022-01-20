@@ -3,13 +3,15 @@ import { ThemeProvider } from 'styled-components';
 
 import GlobalStyles from './global-styles';
 
-import theme from './theme';
+import theme, { MediaContextProvider } from './theme';
 
 export default ({ children }) => (
   <ThemeProvider theme={theme}>
-    <>
-      {children}
-      <GlobalStyles />
-    </>
+    <MediaContextProvider>
+      <>
+        {children}
+        <GlobalStyles />
+      </>
+    </MediaContextProvider>
   </ThemeProvider>
 );

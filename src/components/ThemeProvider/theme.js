@@ -1,18 +1,28 @@
 import get from 'lodash/get'
 import range from 'lodash/range'
+import { createMedia } from "@artsy/fresnel"
 
 import memorize from '../../utils/memorize'
 
 export const breakpoints = [352, 769, 1024, 1280, 1920, 2400].map(n => `${n}px`);
 
 export const responsiveIndex = [
-  2, // mobile
-  4, // laptop
-  5,
+  [2, 'mobile'], // mobile
+  [4, 'laptop'], // laptop
+  [5, 'desktop'],
 ]
 
+const mediaBreak = responsiveIndex.slice(1).reduce((obj, [, name], j) => {
+  obj[name] = +breakpoints[responsiveIndex[j][0] - 1].replace('px', '')
+  return obj
+}, { mobile: 0 })
+
+const AppMedia = createMedia({ breakpoints: mediaBreak })
+export const mediaStyle = AppMedia.createMediaStyle()
+export const { Media, MediaContextProvider } = AppMedia
+
 const responsiveMap = breakpoints.map((_, i) => {
-  const id = responsiveIndex.findIndex(ri => ri > i)
+  const id = responsiveIndex.findIndex(([ri]) => ri > i)
   return id >= 0 ? id : responsiveIndex.length
 })
 
