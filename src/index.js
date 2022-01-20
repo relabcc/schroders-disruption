@@ -5,15 +5,15 @@ import 'abortcontroller-polyfill'
 import smoothscroll from 'smoothscroll-polyfill';
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 import find from 'lodash/find'
+import { render } from 'react-snapshot';
 
 import ThemeProvider from './components/ThemeProvider'
 
 import MediaProvider from './contexts/mediaQuery/MediaProvider'
 import DataProvider from './contexts/data/DataProvider'
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+// import reportWebVitals from './reportWebVitals';
 
 smoothscroll.polyfill();
 
@@ -37,11 +37,9 @@ const getContainer = () => {
   container.style.padding = '0';
   return container;
 };
-console.log(window.location.pathname)
 
 setTimeout(() => {
-  console.log('init render')
-  ReactDOM.render(
+  render(
     <React.StrictMode>
       <ThemeProvider>
         <MediaProvider>
@@ -54,4 +52,4 @@ setTimeout(() => {
     , getContainer());
 })
 
-reportWebVitals(console.log);
+// reportWebVitals(console.log);

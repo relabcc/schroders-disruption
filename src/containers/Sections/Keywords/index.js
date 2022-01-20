@@ -22,14 +22,34 @@ const GradientBg = styled(BackgroundImage)`
   bottom: 0;
   background-image: linear-gradient(0deg, transparent, white);
 }
+@media screen and (min-width: 769px) {
+  ::after {
+    background-image: linear-gradient(53deg, transparent 40%, white 55%);
+  }
+
+  ::before {
+  content: "";
+  display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-image: linear-gradient(270deg, transparent 60%, white 97%);
+  }
+}
+
 `
 
+const w = 1120
+const h = 484
+
 const Keywords = () => {
-  const { isMobile } = useResponsive()
   return (
     <Box
       mt={responsive('1.5em', 0)}
-      pt={responsive(0, `${474 / 960 * 100}%`)}
+      pt={responsive(0, `${h / w * 100}%`)}
       position={responsive('static', 'relative')}
       // overflowY={responsive('vivible', 'hidden')}
     >
@@ -41,9 +61,9 @@ const Keywords = () => {
       </BackgroundImage> */}
       <Box
         position={responsive('static', 'absolute')}
-        left="43%"
-        top="16.28%"
-        width={responsive('100%', '51.16%')}
+        left={`${475 / w * 100}%`}
+        top={`${55 / h * 100}%`}
+        width={responsive('100%', `${560 / w * 100}%`)}
       >
         <LottieAnima
           src={`${process.env.PUBLIC_URL}/keywords.json`}
@@ -51,17 +71,20 @@ const Keywords = () => {
           zIndex={1}
         />
       </Box>
-      <GradientBg
-        src={skate}
-        ratio={720 / 505}
-        mx={responsive('-1.6rem', 0)}
-        mt={responsive("-33%", 0)}
+      <Box
         position={responsive('relative', 'absolute')}
-        width={responsive('auto', '82.3%')}
+        width={responsive('auto', '80%')}
         left={responsive("0%", "13%")}
         bottom="0%"
         transform={responsive('none', 'translateX(-50%)')}
-      />
+        mx={responsive('-1.6rem', 0)}
+        mt={responsive("-33%", 0)}
+      >
+        <GradientBg
+          src={skate}
+          ratio={720 / 505}
+        />
+      </Box>
     </Box>
   )
 }

@@ -9,7 +9,7 @@ import Image from '../../../components/Image'
 import Source from '../../../components/Source'
 import { responsive } from '../../../components/ThemeProvider/theme'
 import Container from '../../../components/Container'
-import LottieAnima from '../../../components/LottieAnima'
+// import LottieAnima from '../../../components/LottieAnima'
 
 import useResponsive from '../../../contexts/mediaQuery/useResponsive'
 
