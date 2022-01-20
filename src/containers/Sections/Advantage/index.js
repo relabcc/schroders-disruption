@@ -14,7 +14,7 @@ import LottieAnima from '../../../components/LottieAnima'
 import useResponsive from '../../../contexts/mediaQuery/useResponsive'
 
 import chart_2_3 from './2-3.svg'
-import chart_2_3_desk from './chart-2-3-desk.svg'
+import chart_2_3_desk from './2-3-desk.svg'
 
 import Keywords from '../Keywords'
 import Chart1 from './Chart1'
@@ -56,8 +56,8 @@ const Advantage = () => {
           <Box.BgTitle>
             {title}
           </Box.BgTitle>
-          <Container pt={responsive('2em', '4.5rem')}>
-            <Box position={responsive('raletive', 'absolute')} width={responsive(isFlex ? '55%' : 'auto', '40.8%')} zIndex={1}>
+          <Container position="relative" pt={responsive('2em', '4.5rem')}>
+            <Box position={responsive('raletive', 'absolute')} width={responsive(isFlex ? '55%' : 'auto', '32.4%')} zIndex={1}>
               <Text.SubTitle whiteSpace="pre-wrap" color="purple">{subTitle}</Text.SubTitle>
               <Text textAlign="justify" mt="1rem" whiteSpace="pre-wrap" fontSize={responsive('1rem', '1.8rem')}>{desc}</Text>
             </Box>

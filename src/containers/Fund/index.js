@@ -41,19 +41,17 @@ const Fund = () => {
   return (
     <Box pb="4rem">
       <Box.BgTitle>基金基本資料</Box.BgTitle>
-      <Container>
-        <DeskBlock>
-          <Box as="table" mt="1.6rem">
-            <tbody>
-              {data.map(({ th, td }, i) => (
-                <Box as="tr" color="prussianBlue" fontWeight="500"  borderBottom="0.5px solid" borderColor="brightGray" key={i}>
-                  <Box width="6em" px={responsive('1rem', '2.5rem')} py="1.4rem" textAlign="center" as="th" fontSize={responsive('1em', '3.2rem')}>{th}</Box>
-                  <Box px={responsive('1.8rem', '5rem')} fontSize={responsive('1.2rem', '2.4rem')} as="td">{td}</Box>
-                </Box>
-              ))}
-            </tbody>
-          </Box>
-        </DeskBlock>
+      <Container pt={responsive('2.4rem', '4.5rem')}>
+        <Box as="table">
+          <tbody>
+            {data.map(({ th, td }, i) => (
+              <Box as="tr" color="prussianBlue" fontWeight="500"  borderBottom="0.5px solid" borderColor="brightGray" key={i}>
+                <Box width="6em" px={responsive('1rem', '2.5rem')} py="1.4rem" textAlign="center" as="th" fontSize={responsive('1em', '3.2rem')}>{th}</Box>
+                <Box px={responsive('1.8rem', '5rem')} fontSize={responsive('1.2rem', '2.4rem')} as="td">{td}</Box>
+              </Box>
+            ))}
+          </tbody>
+        </Box>
       </Container>
     </Box>
   )
