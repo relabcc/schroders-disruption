@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import isString from 'lodash/isString'
 import loadable from '@loadable/component'
 
@@ -16,6 +16,8 @@ import chart_1_3 from './1-3.svg'
 import chart from './chart.png'
 import global from './global.png'
 import data from './data.png'
+
+import Fund from '../../Fund'
 
 // import bank from '../bank.png'
 import Pie from '../../Pie'
@@ -52,7 +54,10 @@ const features = [
   },
 ]
 
-const Feature = () => {
+const Feature = ({ onLoad }) => {
+  useEffect(() => {
+    if (onLoad) onLoad()
+  }, [])
   return (
     <div>
       <Box.BgTitle>
@@ -109,6 +114,7 @@ const Feature = () => {
           </Flex> */}
         </Box>
       </Container>
+      <Fund />
     </div>
   )
 }
