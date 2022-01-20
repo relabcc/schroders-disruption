@@ -1,14 +1,14 @@
 import React from 'react'
+
 import MediaContext from './mediaContext'
-import { responsiveIndex } from '../../components/ThemeProvider/theme';
+import getResponsiveHelper from './getResponsiveHelper'
 
 export default (WrappedComp) => props => (
   <MediaContext.Consumer>
     {q => (
       <WrappedComp
         {...props}
-        isMobile={!q[responsiveIndex[0] - 1]}
-        isLaptop={!q[responsiveIndex[1] - 1]}
+        {...getResponsiveHelper(q)}
       />
     )}
   </MediaContext.Consumer>
