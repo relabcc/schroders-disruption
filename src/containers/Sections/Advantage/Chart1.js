@@ -15,7 +15,7 @@ const Chart1 = () => {
       <Box width="100%">
         {isMobile
           ? <LottieAnima src={`${process.env.PUBLIC_URL}/chart-1.json`} ratio={352 / 300} />
-          : <LottieAnima src={`${process.env.PUBLIC_URL}/chart-1-desktop.json`} ratio={960 / 474} />}
+          : <LottieAnima src={`${process.env.PUBLIC_URL}/chart-1-desktop.json`} ratio={1120 / 482} />}
       </Box>
     </Box>
   )

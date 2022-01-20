@@ -17,7 +17,7 @@ import chart from './chart.png'
 import global from './global.png'
 import data from './data.png'
 
-import bank from '../bank.png'
+// import bank from '../bank.png'
 import Pie from '../../Pie'
 
 const MovingRadar = loadable(() => import('../../MovingRadar'), { fallback: <AspectRatio ratio={328 / 320} /> })

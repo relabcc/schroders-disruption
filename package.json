@@ -1,8 +1,8 @@
 {
-  "name": "schroders-gci-2020",
+  "name": "schroders-gd-2021",
   "version": "0.4.0",
   "private": true,
-  "_homepage": "https://www.schroders.com/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2021-GSG/",
+  "_homepage": "https://www.schroders.com/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2022-global-disruption/",
   "dependencies": {
     "@loadable/component": "^5.15.2",
     "@styled-system/theme-get": "^5.1.2",
@@ -34,6 +34,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:schroders": "react-scripts build && react-snapshot",
     "postbuild": "node after-build.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -63,6 +64,7 @@
     "gh-pages": "^3.2.3",
     "glob": "^7.2.0",
     "mini-css-extract-plugin": "2.4.5",
+    "react-snapshot": "^1.3.0",
     "resize-observer-polyfill": "^1.5.1"
   }
 }
