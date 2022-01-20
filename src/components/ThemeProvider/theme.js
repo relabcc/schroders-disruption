@@ -34,7 +34,7 @@ export const responsive = memorize((...args) => {
 
 const lightGray = '#ccd4df';
 const bgGray = '#e6e6e6';
-const gray = '#efefef';
+const gray = '#666666';
 const brightGray='#cccccc'
 const darkGray = '#707070';
 const red = '#EA5204';

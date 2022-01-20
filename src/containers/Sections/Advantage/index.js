@@ -21,7 +21,7 @@ import Chart1 from './Chart1'
 
 const advs = [
   {
-    title: '善變　才能領先新多頭',
+    title: '善變　才能掌握新多頭契機',
     subTitle: '多主題高速成長時代來臨',
     desc: '技術破壞性爆發，市場從單一趨勢加速轉向多主題成長。',
     isFlex: true,
