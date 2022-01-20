@@ -60,11 +60,11 @@ const Feature = () => {
       </Box.BgTitle>
       <Container pb="3.9rem">
         <Flex flexDirection="column" alignItems="center">
-          <Flex width={responsive('auto', '100%')} flexDirection={responsive('column', 'row')} justifyContent={responsive('auto', 'space-between')}>
+          <Flex width={responsive('auto', '100%')} px={responsive(0, '9.6rem')} flexDirection={responsive('column', 'row')} justifyContent={responsive('auto', 'space-between')}>
             {features.map((d, k) => (
               <Box borderTop={k && responsive('1px solid #cccccc', 'none')} key={k}>
                 <Title
-                  px="1.2em"
+                  px={responsive("1.2em", 0)}
                   bg="white"
                   src={d.src}
                   title={d.title}
@@ -79,8 +79,8 @@ const Feature = () => {
         <Box mt={responsive("3.2rem", 0)} borderRadius="1em" overflow="hidden" bg="rgba(0, 42, 94, 0.12)">
           {features.map((d, i) => (
             <Box pt={responsive("3rem", 0)} key={i}>
-              <Flex alignItems="center" flexDirection={responsive('column', 'row')} px={responsive('2.6rem', '6.4rem')}>
-                <Box width={responsive('100%', '39%')} mr={responsive(0, '3.5rem')}>
+              <Flex alignItems="center" flexDirection={responsive('column', 'row')} px={responsive('2.6rem', '9.6rem')}>
+                <Box width={responsive('100%', '38%')} mr={responsive(0, '14rem')}>
                   <Box textAlign="center" borderBottom="3px solid" borderColor="prussianBlue" pb="1rem">
                     <Box width={responsive('6.6rem', '10rem')} mx="auto" mb="1rem">
                       <Image src={d.src} />
@@ -90,7 +90,7 @@ const Feature = () => {
                   <Text.Bold color="prussianBlue" mt="2rem" whiteSpace="pre-wrap" fontSize={responsive('1.8rem', '2.4rem')}>{d.subTitle}</Text.Bold>
                   <Text mt="1rem" fontSize={responsive('1em', '1.6rem')}>{d.text}</Text>
                 </Box>
-                <Box width={responsive('105%', '61%')} pt={responsive('2rem', '8.2rem')} pb={responsive('2.4rem', '8.2rem')}>{isString(d.chart) ? <Image src={d.chart} /> : d.chart}</Box>
+                <Box width={responsive('105%', '47%')} pt={responsive('2rem', '8.2rem')} pb={responsive('2.4rem', '8.2rem')}>{isString(d.chart) ? <Image src={d.chart} /> : d.chart}</Box>
               </Flex>
               <Source textAlign="justify" bg="lightGray">{d.source}</Source>
             </Box>
