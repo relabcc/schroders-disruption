@@ -17,20 +17,22 @@ const BackToTop = forwardRef((props, ref) => {
           ref={ref}
           {...props}
         >
-          <Button.transparent
+          <Button.Transparent
             fontSize={responsive('1em', '1.5em')}
             px="0"
             onClick={() => {
               window.scrollTo({ top: 0, behavior: 'smooth' })
-              if (window.__btnBackToTop) {
-                window.__btnBackToTop.click()
-              }
+              // if (window.__btnBackToTop) {
+              //   window.__btnBackToTop.click()
+              // }
             }}
+            title="返回頂端"
+            data-label="返回頂端"
           >
             <Arrow width="2em" my="0.5em" transform="rotate(180deg)" />
             <br />
             返回頂端
-          </Button.transparent>
+          </Button.Transparent>
         </Box>
       </Sticky>
     </Box>

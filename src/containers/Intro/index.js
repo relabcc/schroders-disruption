@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { keyframes } from 'styled-components'
+// import styled, { keyframes } from 'styled-components'
 // import { Link } from 'react-scroll'
 
 import Container from '../../components/Container'
@@ -88,73 +88,70 @@ import desk_banner from './desk_banner.png'
 //   },
 // ]
 
-const Banner = ({ url, color }) => (
-  <Box
-    background={`url(${url}) center no-repeat`}
-    backgroundSize={responsive('768px auto', '2560px auto')}
-    height={responsive('360px', '650px')}
-    bg="lightBlue"
-  >
-    <Container
-      pt={responsive('6.7rem', '13rem')}
-      px={15}
-      color={color}
-      position="relative"
+const Banner = ({ url, color }) => {
+  return (
+    <Box
+      backgroundImage={url}
+      backgroundPosition="center"
+      backgroundRepeat="center"
+      backgroundSize={responsive('768px auto', '2560px auto')}
+      height={responsive('360px', '650px')}
+      bgColor="lightBlue"
     >
-      <Box>
-        <Text.Bold textAlign="center" fontSize={responsive('3.4rem', '6rem')} lineHeight={1.2}>
-          顛覆未來 即刻啟動
-        </Text.Bold>
-        {/* <Arrow>
-          <Box className="chevron" />
-          <Box className="chevron" />
-          <Box className="chevron" />
-        </Arrow> */}
-        {/* <Flex justifyContent={responsive('space-between', 'center')} mt={responsive('11rem', '10rem')}>
-          {features.map(({ icon, title, name }, k) => (
-            <Box.Relative
-              as={(p) => <Link smooth {...p} />}
-              py={responsive('0.625rem', '1.3rem')}
-              ml={responsive('2.25rem', '4.7rem')}
-              mr={!k && responsive(0, '3.2rem')}
-              pl={responsive('1.25rem', '3rem')}
-              width={responsive('40%', '27.5rem')}
-              textAlign="center"
-              border={responsive('1px solid', '2px solid')}
-              borderColor="prussianblue"
-              borderRadius="1.5em"
-              fontSize={responsive("1.5rem", '3.2rem')}
-              fontWeight="bold"
-              bg="rgba(255,255,255,0.6)"
-              to={name}
-              key={k}
-            >
-              <Box.Absolute width={responsive('4.5rem', '9.4rem')} top="50%" left="0" transform="translate(-50%, -50%)">
-                <Circle border={responsive('1px solid', '2px solid')} borderColor="prussianblue" bg="lightBlue">
-                  <Box width={responsive('2.6rem', '5.5rem')}>
-                    <Image src={icon} />
-                  </Box>
-                </Circle>
-              </Box.Absolute>
-              {title}
-            </Box.Relative>
-          ))}
-        </Flex> */}
-      </Box>
-    </Container>
-  </Box>
-)
+      <Container
+        pt={responsive('6.7rem', '13rem')}
+        px={15}
+        color={color}
+        position="relative"
+      >
+        <Box>
+          <Text.Bold textAlign="center" fontSize={responsive('3.4rem', '6rem')} lineHeight={1.2}>
+            顛覆未來 即刻啟動
+          </Text.Bold>
+          {/* <Arrow>
+            <Box className="chevron" />
+            <Box className="chevron" />
+            <Box className="chevron" />
+          </Arrow> */}
+          {/* <Flex justifyContent={responsive('space-between', 'center')} mt={responsive('11rem', '10rem')}>
+            {features.map(({ icon, title, name }, k) => (
+              <Box.Relative
+                as={(p) => <Link smooth {...p} />}
+                py={responsive('0.625rem', '1.3rem')}
+                ml={responsive('2.25rem', '4.7rem')}
+                mr={!k && responsive(0, '3.2rem')}
+                pl={responsive('1.25rem', '3rem')}
+                width={responsive('40%', '27.5rem')}
+                textAlign="center"
+                border={responsive('1px solid', '2px solid')}
+                borderColor="prussianblue"
+                borderRadius="1.5em"
+                fontSize={responsive("1.5rem", '3.2rem')}
+                fontWeight="bold"
+                bg="rgba(255,255,255,0.6)"
+                to={name}
+                key={k}
+              >
+                <Box.Absolute width={responsive('4.5rem', '9.4rem')} top="50%" left="0" transform="translate(-50%, -50%)">
+                  <Circle border={responsive('1px solid', '2px solid')} borderColor="prussianblue" bg="lightBlue">
+                    <Box width={responsive('2.6rem', '5.5rem')}>
+                      <Image src={icon} />
+                    </Box>
+                  </Circle>
+                </Box.Absolute>
+                {title}
+              </Box.Relative>
+            ))}
+          </Flex> */}
+        </Box>
+      </Container>
+    </Box>
+  )
+}
 
 const Intro = () => {
   return (
-    <>
-      <Media at="mobile">
-        <Banner url={mobile_banner} color="prussianBlue" />
-      </Media>
-      <Media greaterThan="mobile">
-        <Banner url={desk_banner} color="prussianBlue" />
-      </Media>
-    </>
+    <Banner url={responsive(mobile_banner, desk_banner).map(url => url && `url(${url})`)} color="prussianBlue" />
   )
 }
 

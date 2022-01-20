@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo } from 'react';
 import stickybits from 'stickybits'
-import { nanoid } from 'nanoid'
+import { nanoid } from 'nanoid/non-secure'
 
 import Box from './Box'
 

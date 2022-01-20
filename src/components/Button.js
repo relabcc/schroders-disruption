@@ -97,7 +97,7 @@ Button.defaultProps = {
 
 Button.displayName = 'Button';
 
-Button.danger = props => (
+Button.Danger = props => (
   <Button
     bg="danger"
     borderColor="danger"
@@ -107,7 +107,7 @@ Button.danger = props => (
   />
 );
 
-Button.secondary = props => (
+Button.Secondary = props => (
   <Button
     bg="secondary"
     border="2px solid"
@@ -118,7 +118,7 @@ Button.secondary = props => (
   />
 );
 
-Button.white = props => (
+Button.White = props => (
   <Button
     bg="white"
     color="primary"
@@ -143,8 +143,8 @@ Button.Outline = props => (
   />
 );
 
-Button.Outline.danger = props => (
-  <Button.danger
+Button.Outline.Danger = props => (
+  <Button.Danger
     border="2px solid"
     borderColor="danger"
     bg="transparent"
@@ -154,7 +154,7 @@ Button.Outline.danger = props => (
   />
 );
 
-Button.transparent = forwardRef((props, ref) => (
+Button.Transparent = forwardRef((props, ref) => (
   <Button
     border="1px solid"
     borderColor="transparent"
@@ -168,7 +168,7 @@ Button.transparent = forwardRef((props, ref) => (
   />
 ));
 
-Button.darkGreen = props => (
+Button.DarkGreen = props => (
   <Button
     bg="darkGreen"
     color="white"

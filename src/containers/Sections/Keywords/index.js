@@ -66,7 +66,7 @@ const Keywords = () => {
         width={responsive('100%', `${560 / w * 100}%`)}
       >
         <LottieAnima
-          src={`${process.env.PUBLIC_URL}/keywords.json`}
+          src={`${process.env.PUBLIC_URL}/lottie/keywords.json`}
           ratio={340 / 240}
           zIndex={1}
         />

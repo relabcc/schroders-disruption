@@ -3,12 +3,12 @@ import { useLocation } from 'react-use'
 import loadable from '@loadable/component'
 
 import Intro from './Intro'
-import Advantage from './Sections/Advantage'
+// import Advantage from './Sections/Advantage'
 // import Fund from './Fund'
-// import BackToTop from './BackToTop'
+import BackToTop from './BackToTop'
 const Feature = loadable(() => import('./Sections/Feature'))
-// const Advantage = loadable(() => import('./Sections/Advantage'))
-const BackToTop = loadable(() => import('./BackToTop'))
+const Advantage = loadable(() => import('./Sections/Advantage'))
+// const BackToTop = loadable(() => import('./BackToTop'))
 const Fund = loadable(() => import('./Fund'))
 // const Intro = loadable(() => import('./Intro'))
 

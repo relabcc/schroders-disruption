@@ -17,17 +17,17 @@ import App from './App';
 
 smoothscroll.polyfill();
 
-window.injectCSS = cssLink => {
-  const tag = document.createElement('link')
-  tag.href = cssLink
-  tag.rel = 'stylesheet'
-  document.head.appendChild(tag)
-}
+// window.injectCSS = cssLink => {
+//   const tag = document.createElement('link')
+//   tag.href = cssLink
+//   tag.rel = 'stylesheet'
+//   document.head.appendChild(tag)
+// }
 
 const getContainer = () => {
   const target = document.getElementById('gd2021-tw-root');
   // window.__video = target.querySelector('[data-bynder-widget]')
-  window.__btnBackToTop = target.querySelector('#backToTop')
+  // window.__btnBackToTop = target.querySelector('#backToTop')
   // window.__tabButtons = Array.from(target.querySelectorAll('.btn-carousel'))
   const found = find(document.querySelectorAll('.jumbotron'), (ele) => ele.contains(target));
   if (found?.classList.contains('panel-white')) {

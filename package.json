@@ -35,7 +35,7 @@
   "scripts": {
     "start": "ncp html/schroders.html public/index.html && react-scripts start",
     "build": "ncp html/schroders.html public/index.html && react-scripts build",
-    "build:schroders": "ncp html/cra.html public/index.html &&react-scripts build && react-snapshot",
+    "build:snapshot": "ncp html/cra.html public/index.html &&react-scripts build && react-snapshot && npm run postbuild",
     "postbuild": "node after-build.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

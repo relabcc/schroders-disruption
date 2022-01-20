@@ -9,7 +9,7 @@ const Pie = forwardRef((p, ref) => {
   const [loaded, setLoaded] = useState(0)
   return (
     <Box position="relative" ref={ref}>
-      <LottieAnima src={`${process.env.PUBLIC_URL}/pie.json`} ratio={1} loop={false} onLoad={() => setLoaded(1)} />
+      <LottieAnima src={`${process.env.PUBLIC_URL}/lottie/pie.json`} ratio={1} loop={false} onLoad={() => setLoaded(1)} />
       <Box
         position="absolute"
         borderRadius="100%"
