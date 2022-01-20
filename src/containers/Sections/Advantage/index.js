@@ -17,6 +17,7 @@ import chart_2_3 from './2-3.svg'
 import chart_2_3_desk from './chart-2-3-desk.svg'
 
 import Keywords from '../Keywords'
+import Chart1 from './Chart1'
 
 const advs = [
   {
@@ -24,13 +25,8 @@ const advs = [
     subTitle: '多主題高速成長時代來臨',
     desc: '技術破壞性爆發，市場從單一趨勢加速轉向多主題成長。',
     isFlex: true,
-    chart: (
-      <Box mt={responsive('-22%', '-25%')} mr={responsive("-1.5em", 0)} overflowY="hidden">
-        <Box width="100%">
-          <LottieAnima src={`${process.env.PUBLIC_URL}/chart-1.json`} ratio={352 / 300} />
-        </Box>
-      </Box>
-    ),
+    chart: <Chart1 />,
+    desk_chart: <Chart1 />,
     source: 'Lipper, USD, MSCI IT 1994/12/31~1999/12/31, MSCI BRIC 2002/12/31~2007/12/31, Bloomberg Brent 2001/12/31~2007/12/31, NYSE FANG+ 2015/12/31~2020/12/31, Schroders, March 2021.'
   },
   {

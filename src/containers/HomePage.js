@@ -17,10 +17,8 @@ const Intro = loadable(() => import('./Intro'))
 const HomePage = () => {
   const { isMobile } = useResponsive()
   const { pathname } = useLocation()
-  console.log(pathname)
   const cleanPathname = pathname.replace(process.env.PUBLIC_URL, '')
   const isSecondPage = /disruption-trend/.test(cleanPathname)
-  console.log(cleanPathname)
   return isSecondPage ? (
     <div>
       <Advantage />
