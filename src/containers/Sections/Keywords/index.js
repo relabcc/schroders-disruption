@@ -24,7 +24,7 @@ const GradientBg = styled(BackgroundImage)`
 }
 @media screen and (min-width: 769px) {
   ::after {
-    background-image: linear-gradient(53deg, transparent 40%, white 55%);
+    background-image: linear-gradient(53deg, rgba(255,255,255,0) 40%, rgba(255,255,255,1) 55%);
   }
 
   ::before {
@@ -36,7 +36,7 @@ const GradientBg = styled(BackgroundImage)`
     right: 0;
     bottom: 0;
     z-index: 1;
-    background-image: linear-gradient(270deg, transparent 60%, white 97%);
+    background-image: linear-gradient(270deg, rgba(255,255,255,0) 60%, rgba(255,255,255,1) 97%);
   }
 }
 
