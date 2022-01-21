@@ -5,6 +5,12 @@ import BackgroundImage from '../../components/BackgroundImage'
 import FadeSlideshow from '../../components/FadeSlideshow'
 // import withLazyload from '../../utils/withLazyload'
 
+const pics = [
+  require('./01.jpg'),
+  require('./02.jpg'),
+  require('./03.jpg'),
+]
+
 const Pie = forwardRef((p, ref) => {
   const [loaded, setLoaded] = useState(0)
   return (
@@ -21,8 +27,7 @@ const Pie = forwardRef((p, ref) => {
         opacity={loaded}
       >
         <FadeSlideshow>
-          <BackgroundImage ratio={1} src="https://picsum.photos/seed/happy/512/512" />
-          <BackgroundImage ratio={1} src="https://picsum.photos/seed/sad/512/512" />
+          {pics.map((src, i) => <BackgroundImage ratio={1} src={src} key={i} />)}
         </FadeSlideshow>
       </Box>
     </Box>
