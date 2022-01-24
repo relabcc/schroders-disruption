@@ -96,7 +96,7 @@ const Banner = ({ url, color }) => {
       backgroundRepeat="center"
       backgroundSize={responsive('768px auto', '2560px auto')}
       height={responsive('360px', '650px')}
-      bgColor="lightBlue"
+      bg="lightBlue"
     >
       <Container
         pt={responsive('6.7rem', '13rem')}

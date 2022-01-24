@@ -6,7 +6,7 @@ import { responsive } from './ThemeProvider/theme';
 const DeskBlock = (props) => <Box {...props} />;
 
 DeskBlock.defaultProps = {
-  maxWidth: responsive('auto', '93rem'),
+  maxWidth: responsive('auto', '92.8rem'),
 };
 
 export default DeskBlock;
