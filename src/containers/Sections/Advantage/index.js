@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import isString from 'lodash/isString'
 // import loadable from '@loadable/component'
 
@@ -47,7 +47,10 @@ const advs = [
   },
 ]
 
-const Advantage = () => {
+const Advantage = ({ onLoad }) => {
+  useEffect(() => {
+    if (onLoad) onLoad()
+  }, [])
   // const { isMobile } = useResponsive()
   return (
     <>

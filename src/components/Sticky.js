@@ -1,10 +1,10 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { forwardRef, useEffect, useMemo } from 'react';
 import stickybits from 'stickybits'
 import { nanoid } from 'nanoid/non-secure'
 
 import Box from './Box'
 
-const Sticky = ({
+const Sticky = forwardRef(({
   children,
   useStickyClasses,
   verticalPosition = 'top',
@@ -16,10 +16,10 @@ const Sticky = ({
   stuckClass,
   useFixed,
   useGetBoundingClientRect,
-}) => {
+}, ref) => {
   const className = useMemo(() => `sticky-${nanoid()}`, [])
   useEffect(() => {
-    window[className] = stickybits(`.${className}`, {
+    const sticky = stickybits(`.${className}`, {
       useStickyClasses,
       verticalPosition,
       scrollEl,
@@ -31,6 +31,10 @@ const Sticky = ({
       useFixed,
       useGetBoundingClientRect,
     });
+    window[className] = sticky
+    if (ref) {
+      ref.current = sticky
+    }
 
     return function cleanup() {
       if (window[className]) {
@@ -44,6 +48,6 @@ const Sticky = ({
       {children}
     </Box>
   );
-};
+});
 
 export default Sticky;
