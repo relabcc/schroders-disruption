@@ -95,7 +95,7 @@ const Banner = ({ url, color }) => {
       backgroundPosition="center"
       backgroundRepeat="center"
       backgroundSize={responsive('768px auto', '2560px auto')}
-      height={responsive('360px', '650px')}
+      height={responsive('360px', '584px')}
       bg="lightBlue"
     >
       <Container
@@ -105,9 +105,9 @@ const Banner = ({ url, color }) => {
         position="relative"
       >
         <Box>
-          <Text.Bold textAlign="center" fontSize={responsive('2.4rem', '6rem')} lineHeight={1.2}>
+          {/* <Text.Bold textAlign="center" fontSize={responsive('2.4rem', '6rem')} lineHeight={1.2}>
             顛覆未來 即刻啟動
-          </Text.Bold>
+          </Text.Bold> */}
           {/* <Arrow>
             <Box className="chevron" />
             <Box className="chevron" />
