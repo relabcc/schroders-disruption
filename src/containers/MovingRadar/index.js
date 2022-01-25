@@ -6,9 +6,12 @@ import { useInterval } from 'react-use';
 import { VictoryArea, VictoryChart, VictoryPolarAxis, VictoryTheme } from 'victory'
 import BackgroundImage from '../../components/BackgroundImage'
 import Box from '../../components/Box'
+import FadeSlideshow from '../../components/FadeSlideshow';
+import { responsive } from '../../components/ThemeProvider/theme';
 
 import radarbase from './moving-radar.svg'
-import { responsive } from '../../components/ThemeProvider/theme';
+import radarcorner from './radarcorner.svg'
+
 
 const maxY = 4
 const count = 5
@@ -18,13 +21,31 @@ const getData = () => {
   return randomData
 }
 
+const pics = [
+  require('./1.png'),
+  require('./2.png'),
+  require('./3.png'),
+]
+
 const offset = 18
 const MovingRadar = () => {
   const [data, setData] = useState(getData)
   useInterval(() => setData(getData), 1000);
   return (
-    <Box position="relative" mx={responsive(0, '-5%')}>
-      <Box position="absolute" width="100%">
+    <Box position="relative">
+      <Box
+        position="absolute"
+        width="65%"
+        overflow="hidden"
+        left="50%"
+        top="50.25%"
+        transform="translate(-50%,-50%)"
+      >
+        <FadeSlideshow>
+          {pics.map((src, i) => <BackgroundImage ratio={1} src={src} key={i} />)}
+        </FadeSlideshow>
+      </Box>
+      {/* <Box position="absolute" width="100%">
         <VictoryChart
           polar
           animate={{
@@ -65,8 +86,8 @@ const MovingRadar = () => {
             }}
           />
         </VictoryChart>
-      </Box>
-      <BackgroundImage ratio={328 / 300} src={radarbase} />
+      </Box> */}
+      <BackgroundImage ratio={329 / 270} src={radarcorner} />
     </Box>
   )
 }
