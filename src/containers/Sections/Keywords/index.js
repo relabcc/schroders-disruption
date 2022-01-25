@@ -71,20 +71,6 @@ const Keywords = () => {
           zIndex={1}
         />
       </Box>
-      <Box
-        position={responsive('relative', 'absolute')}
-        width={responsive('auto', '80%')}
-        left={responsive("0%", "13%")}
-        bottom="0%"
-        transform={responsive('none', 'translateX(-50%)')}
-        mx={responsive('-1.6rem', 0)}
-        mt={responsive("-33%", 0)}
-      >
-        <GradientBg
-          src={skate}
-          ratio={720 / 505}
-        />
-      </Box>
     </Box>
   )
 }

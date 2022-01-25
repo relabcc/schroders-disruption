@@ -15,9 +15,11 @@ import Container from '../../../components/Container'
 
 import chart_2_3 from './2-3.svg'
 import chart_2_3_desk from './2-3-desk.svg'
+import bg_2_2 from './pic-bg.png'
 
 import Keywords from '../Keywords'
 import Chart1 from './Chart1'
+import BackgroundImage from '../../../components/BackgroundImage'
 
 const advs = [
   {
@@ -35,6 +37,7 @@ const advs = [
     desc: '找出潛力三大主題「創新翻轉、生活新風格、環境永續」，尋找顛覆未來新贏家。',
     chart: <Keywords />,
     desk_chart: <Keywords />,
+    bgImg: bg_2_2,
     source: '施羅德投資，2021/12/31。'
   },
   {
@@ -54,7 +57,7 @@ const Advantage = ({ onLoad }) => {
   // const { isMobile } = useResponsive()
   return (
     <>
-      {advs.map(({ title, chart, desk_chart, source, isFlex, subTitle, desc }, i) => (
+      {advs.map(({ title, chart, desk_chart, source, isFlex, subTitle, desc, bgImg }, i) => (
         <Box overflow="hidden" key={i}>
           <Box.BgTitle>
             {title}
@@ -78,7 +81,7 @@ const Advantage = ({ onLoad }) => {
               )}
             </Box>
           </Container>
-          <Flex alignItems="center" bg="bgGray" height={responsive('auto', '10.4rem')}>
+          <Flex position="relative" alignItems="center" bg="bgGray" height={responsive('auto', '10.4rem')}>
             <Source width="100%">{source}</Source>
           </Flex>
         </Box>
