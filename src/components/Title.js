@@ -14,7 +14,7 @@ const Title = ({ src, step, title, desc, titleColor, titleFontSize, href, to, bu
     <Box py={responsive('3rem', '7rem')} px="1.6rem" {...props}>
       <Flex alignItems="center" flexDirection={hasDirection && responsive('row', 'column')}>
         {src && (
-          <Box width={responsive('8.8rem', '17.8rem')} >
+          <Box width={responsive('5.5rem', '17.8rem')} >
             <Image src={src} />
           </Box>
         )}

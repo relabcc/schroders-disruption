@@ -41,7 +41,8 @@ const features = [
     src: global,
     text: '關注新興產業與前瞻技術，尋找顛覆結構的超新星，提前掌握未來新贏家。',
     chart: <MovingRadar />,
-    source: '施羅德投資，2021/12/31。'
+    source: '施羅德投資，2021/12/31。',
+    mx: '1.2rem',
   },
   {
     title: '產業研究 x 大數據',
@@ -65,12 +66,11 @@ const Feature = ({ onLoad }) => {
       </Box.BgTitle>
       <Container pb="3.9rem">
         <Flex flexDirection="column" alignItems="center">
-          <Flex width={responsive('auto', '100%')} px={responsive(0, '8rem')} flexDirection={responsive('column', 'row')} justifyContent={responsive('auto', 'space-between')}>
+          <Flex width="100%" px={responsive(0, '8rem')} flexDirection={responsive('column', 'row')} justifyContent={responsive('auto', 'space-between')}>
             {features.map((d, k) => (
-              <Box borderTop={k && responsive('1px solid #cccccc', 'none')} key={k}>
+              <Box borderTop={k && responsive('1px solid #cccccc', 'none')} mx={responsive(0, d.mx)} key={k}>
                 <Title
-                  px={responsive('1.2em', '1.6rem')}
-                  bg="white"
+                  px="0"
                   src={d.src}
                   title={d.title}
                   desc={d.desc}
