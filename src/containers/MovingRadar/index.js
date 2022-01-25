@@ -1,7 +1,6 @@
 // import range from 'lodash/range'
 // import random from 'lodash/random'
 import React, { useState } from 'react'
-// import { useInterval } from 'react-use';
 
 // import { VictoryArea, VictoryChart, VictoryPolarAxis, VictoryTheme } from 'victory'
 import BackgroundImage from '../../components/BackgroundImage'
@@ -28,6 +27,8 @@ const pics = [
 ]
 
 const MovingRadar = () => {
+  // const [data, setData] = useState(getData)
+  // useInterval(() => setData(getData), 1000);
   return (
     <Box position="relative">
       <Box
