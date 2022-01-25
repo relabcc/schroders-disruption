@@ -26,7 +26,7 @@ const Pie = forwardRef((p, ref) => {
         transform="translate(-50%,-50%)"
         opacity={loaded}
       >
-        <FadeSlideshow>
+        <FadeSlideshow duration={500} timeout={1000}>
           {pics.map((src, i) => <BackgroundImage ratio={1} src={src} key={i} />)}
         </FadeSlideshow>
       </Box>
