@@ -85,7 +85,7 @@ const Feature = ({ onLoad }) => {
           {features.map((d, i) => (
             <Box pt={responsive("3rem", 0)} key={i}>
               <Flex alignItems="center" pt={responsive('0', '8rem')} pb={responsive('0', '8.2rem')} flexDirection={responsive('column', 'row')} px={responsive('2.6rem', '9.6rem')}>
-                <Box width={responsive('100%', '38%')} mr={responsive(0, '14rem')}>
+                <Box width={responsive('100%', '38%')} mr={responsive(0, '15.1%')}>
                   <Box textAlign="center" borderBottom="3px solid" borderColor="prussianBlue" pb="1rem">
                     <Box width={responsive('6.6rem', '10rem')} mx="auto" mb="1rem">
                       <Image src={d.src} />
@@ -93,7 +93,7 @@ const Feature = ({ onLoad }) => {
                     <Text.SubTitle>{d.title}</Text.SubTitle>
                   </Box>
                   <Text.Bold color="prussianBlue" mt="2rem" whiteSpace="pre-wrap" fontSize={responsive('1.8rem', '2.4rem')}>{d.subTitle}</Text.Bold>
-                  <Text mt="0.25rem" fontSize={responsive('1em', '1.6rem')}>{d.text}</Text>
+                  <Text fontSize={responsive('1em', '1.6rem')}>{d.text}</Text>
                 </Box>
                 <Box width={responsive('105%', '47%')} pt={responsive('2rem', 0)} pb={responsive('2.4rem', 0)}>{isString(d.chart) ? <Image src={d.chart} /> : d.chart}</Box>
               </Flex>

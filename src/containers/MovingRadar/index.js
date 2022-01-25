@@ -1,7 +1,6 @@
 import range from 'lodash/range'
 import random from 'lodash/random'
 import React, { useState } from 'react'
-import { useInterval } from 'react-use';
 
 import { VictoryArea, VictoryChart, VictoryPolarAxis, VictoryTheme } from 'victory'
 import BackgroundImage from '../../components/BackgroundImage'
@@ -15,11 +14,11 @@ import radarcorner from './radarcorner.svg'
 
 const maxY = 4
 const count = 5
-const getData = () => {
-  const randomData = range(count).map((x) => ({ x, y: random(2, maxY) }))
-  randomData[random(count - 1)].y = maxY
-  return randomData
-}
+// const getData = () => {
+//   const randomData = range(count).map((x) => ({ x, y: random(2, maxY) }))
+//   randomData[random(count - 1)].y = maxY
+//   return randomData
+// }
 
 const pics = [
   require('./1.png'),
@@ -29,8 +28,8 @@ const pics = [
 
 const offset = 18
 const MovingRadar = () => {
-  const [data, setData] = useState(getData)
-  useInterval(() => setData(getData), 1000);
+  // const [data, setData] = useState(getData)
+  // useInterval(() => setData(getData), 1000);
   return (
     <Box position="relative">
       <Box
