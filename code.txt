@@ -1,16 +1,25 @@
-<div id="gsg2021-tw-root">
-<div>
-<div data-bynder-widget="video-item" data-media-id="FDFB91AE-A713-4392-8B1C820CDF226311" data-width="" data-autoplay="true"><script id="bynder-widgets-js" data-account-url="mybrand.schroders.com" data-language="en" src="https://d8ejoa1fys2rk.cloudfront.net/bynder-embed/latest/bynder-embed.js"></script></div>
-</div>
-<button style="display:none;" class="btn" id="backToTop">返回頂端</button>
-<button style="display:none;" class="btn btn-carousel">投資組合</button>
-<button style="display:none;" class="btn btn-carousel">基金績效</button>
-
-<script src="/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2021-GSG/static/js/runtime-main.fb01c97a.js"></script>
-<script src="/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2021-GSG/static/js/3.411e3605.chunk.js"></script>
-<script src="/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2021-GSG/static/js/main.6c293391.chunk.js"></script>
-<script>
-setTimeout(function() { window.injectCSS("/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2021-GSG/static/css/4.5c17b9f1.chunk.css") })
-</script>
-<div>　</div>
-</div>
+<div id="gd2021-tw-root">
+    <div>
+      <div class="sc-gsDKAQ croPxz">
+        <div class="sc-gsDKAQ hYooDw"><button title="返回頂端" data-label="返回頂端" class="sc-dkPtRN fhvxFw"><span
+              class="sc-gsDKAQ eHCyOR"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.184 28.906"
+                class="sc-gsDKAQ euPmki">
+                <g>
+                  <g transform="translate(16.582)">
+                    <path d="M25,2.693a11.925,11.925,0,0,1,0,23.52v2.693A14.589,14.589,0,0,0,25,0Z"
+                      transform="translate(-25)" fill="currentColor"></path>
+                  </g>
+                  <g>
+                    <path d="M12.6,28.906V26.213a11.925,11.925,0,0,1,0-23.52V0a14.589,14.589,0,0,0,0,28.906Z"
+                      fill="currentColor"></path>
+                  </g>
+                </g>
+                <g transform="translate(7.349 10.964)">
+                  <path d="M18.615,25.385,11.08,18.148l1.38-1.433,6.135,5.9,6.168-6.082,1.393,1.419Z"
+                    transform="translate(-11.08 -16.53)" fill="currentColor"></path>
+                </g>
+              </svg><br>返回頂端</span></button></div>
+      </div>
+    </div>
+    <script src="/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2022-global-disruption/static/js/main.5daec6df.js"></script>
+  </div>
