@@ -6,6 +6,7 @@ import React, { useState } from 'react'
 import BackgroundImage from '../../components/BackgroundImage'
 import Box from '../../components/Box'
 import FadeSlideshow from '../../components/FadeSlideshow';
+import { responsive } from '../../components/ThemeProvider/theme';
 // import { responsive } from '../../components/ThemeProvider/theme';
 
 // import radarbase from './moving-radar.svg'
@@ -30,7 +31,7 @@ const MovingRadar = () => {
   // const [data, setData] = useState(getData)
   // useInterval(() => setData(getData), 1000);
   return (
-    <Box position="relative">
+    <Box position="relative" mx={responsive(0, '-5%')}>
       <Box
         position="absolute"
         width="65%"
