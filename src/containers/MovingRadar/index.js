@@ -1,25 +1,25 @@
-import range from 'lodash/range'
-import random from 'lodash/random'
+// import range from 'lodash/range'
+// import random from 'lodash/random'
 import React, { useState } from 'react'
-import { useInterval } from 'react-use';
+// import { useInterval } from 'react-use';
 
-import { VictoryArea, VictoryChart, VictoryPolarAxis, VictoryTheme } from 'victory'
+// import { VictoryArea, VictoryChart, VictoryPolarAxis, VictoryTheme } from 'victory'
 import BackgroundImage from '../../components/BackgroundImage'
 import Box from '../../components/Box'
 import FadeSlideshow from '../../components/FadeSlideshow';
-import { responsive } from '../../components/ThemeProvider/theme';
+// import { responsive } from '../../components/ThemeProvider/theme';
 
-import radarbase from './moving-radar.svg'
+// import radarbase from './moving-radar.svg'
 import radarcorner from './radarcorner.svg'
 
 
-const maxY = 4
-const count = 5
-const getData = () => {
-  const randomData = range(count).map((x) => ({ x, y: random(2, maxY) }))
-  randomData[random(count - 1)].y = maxY
-  return randomData
-}
+// const maxY = 4
+// const count = 5
+// const getData = () => {
+//   const randomData = range(count).map((x) => ({ x, y: random(2, maxY) }))
+//   randomData[random(count - 1)].y = maxY
+//   return randomData
+// }
 
 const pics = [
   require('./1.png'),
@@ -27,10 +27,7 @@ const pics = [
   require('./3.png'),
 ]
 
-const offset = 18
 const MovingRadar = () => {
-  const [data, setData] = useState(getData)
-  useInterval(() => setData(getData), 1000);
   return (
     <Box position="relative">
       <Box
@@ -41,7 +38,7 @@ const MovingRadar = () => {
         top="50.25%"
         transform="translate(-50%,-50%)"
       >
-        <FadeSlideshow>
+        <FadeSlideshow duration={500} timeout={1000}>
           {pics.map((src, i) => <BackgroundImage ratio={1} src={src} key={i} />)}
         </FadeSlideshow>
       </Box>

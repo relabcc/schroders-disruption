@@ -24,9 +24,28 @@ smoothscroll.polyfill();
 //   document.head.appendChild(tag)
 // }
 
+const getParentContainer = (child) => {
+  let parentCotainer = child
+  while (parentCotainer = parentCotainer.parentNode) {
+    if (parentCotainer.classList.contains('jumbotron') && parentCotainer.classList.contains('bg')) {
+      return parentCotainer
+    }
+  }
+}
+
 const getContainer = () => {
   const target = document.getElementById('gd2021-tw-root');
-  // window.__video = target.querySelector('[data-bynder-widget]')
+  const video = document.querySelector('.flexible-media video')
+  if (video) {
+    const parentCotainer = getParentContainer(video)
+    if (parentCotainer) {
+      parentCotainer.style.backgroundSize = 'auto 100%'
+      parentCotainer.style.backgroundPosition = 'center'
+    }
+    setTimeout(() => {
+      video.play();
+    })
+  }
   // window.__btnBackToTop = target.querySelector('#backToTop')
   // window.__tabButtons = Array.from(target.querySelectorAll('.btn-carousel'))
   const found = find(document.querySelectorAll('.jumbotron'), (ele) => ele.contains(target));

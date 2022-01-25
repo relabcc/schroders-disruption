@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react'
 import { useLocation } from 'react-use'
 import loadable from '@loadable/component'
 
-import Intro from './Intro'
+// import Intro from './Intro'
 // import Advantage from './Sections/Advantage'
 // import Fund from './Fund'
 import BackToTop from './BackToTop'
@@ -24,7 +24,7 @@ const HomePage = () => {
     </div>
   ) : (
     <div>
-      <Intro />
+      {/* <Intro /> */}
       <Feature onLoad={() => setLoaded(true)} />
       <BackToTop loaded={loaded} zIndex={99} />
     </div>
