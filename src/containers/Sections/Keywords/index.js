@@ -12,19 +12,16 @@ import skate from './skate.jpg'
 // import text2 from './fields-text-2.svg'
 
 const GradientBg = styled(BackgroundImage)`
-::after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-image: linear-gradient(0deg, transparent, white);
-}
 @media screen and (min-width: 769px) {
   ::after {
-    background-image: linear-gradient(53deg, rgba(255,255,255,0) 40%, rgba(255,255,255,1) 55%);
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(80deg, rgba(255,255,255,0) 70%, rgba(255,255,255,1) 85%);
   }
 
   ::before {
@@ -73,12 +70,12 @@ const Keywords = () => {
       </Box>
       <Box
         position={responsive('relative', 'absolute')}
-        width={responsive('auto', '80%')}
-        left={responsive("0%", "13%")}
+        width={responsive('auto', '60%')}
+        left={responsive("0%", "18%")}
         bottom="0%"
         transform={responsive('none', 'translateX(-50%)')}
         mx={responsive('-1.6rem', 0)}
-        mt={responsive("-33%", 0)}
+        mt={responsive("-23%", 0)}
       >
         <GradientBg
           src={skate}
