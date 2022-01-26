@@ -27,7 +27,7 @@ const Title = ({ src, step, title, desc, titleColor, titleFontSize, href, to, bu
             {step && <Text.SubTitle color="darkBlue">特色{step}</Text.SubTitle>}
             <Text.SubTitle lineHeight="1.3" ml={step && responsive(0, '0.5em')} titleFontSize={titleFontSize} color={titleColor || "purple"} whiteSpace="pre-wrap">{title}</Text.SubTitle>
           </Flex>
-          {desc && <Text mt={hasDirection && responsive(0, '0.8rem')} whiteSpace={responsive('nowrap', 'pre-wrap')} fontSize={responsive('1em', '2rem')}>{desc}</Text>}
+          {desc && <Text mt={hasDirection && responsive(0, '0.8rem')} whiteSpace={responsive('nowrap', 'pre-wrap')}>{desc}</Text>}
           {button && (
             <Button.Outline width="100%" mt="0.6rem" as={Link} href={href} to={to}>
               <Flex justifyContent="center" alignItems="center">
