@@ -47,8 +47,8 @@ const Fund = () => {
             <tbody>
               {data.map(({ th, td }, i) => (
                 <Box as="tr" color="prussianBlue" fontWeight="500" key={i}>
-                  <Box borderBottom="1px solid" borderColor="brightGray" width="6em" px={responsive('1rem', '2.5rem')} py="1.4rem" textAlign="center" as="th" fontSize={responsive('1em', '3.2rem')}>{th}</Box>
-                  <Box borderBottom="1px solid" borderColor="brightGray" px={responsive('1.8rem', '5rem')} fontSize={responsive('1.2rem', '2.4rem')} as="td">{td}</Box>
+                  <Box borderBottom="1px solid" borderColor="brightGray" width="7em" px={responsive('1rem', '2.5rem')} py="1.4rem" textAlign="center" as="th" fontSize={responsive('1em', '2.4rem')}>{th}</Box>
+                  <Box borderBottom="1px solid" borderColor="brightGray" px={responsive('1.8rem', '5rem')} fontSize={responsive('1.2rem', '2rem')} as="td">{td}</Box>
                 </Box>
               ))}
             </tbody>
