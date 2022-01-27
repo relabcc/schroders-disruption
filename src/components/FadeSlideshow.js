@@ -39,6 +39,9 @@ const FadeSlideshow = ({ children, timeout = 3000, duration = 1000, crossfade })
   const isTransiting = typeof nextActive === 'number'
   return (
     <Box position="relative">
+      <Box position="absolute" opacity="0" width="1px" height="1px" overflow="hidden">
+        {children}
+      </Box>
       {crossfade ? (
         <Box opacity={isTransiting ? 0 : 1} transition={isTransiting && `opacity ${duration}ms`}>{arrChildren[activeSlide]}</Box>
       ) : arrChildren[activeSlide]}

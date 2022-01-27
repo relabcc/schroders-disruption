@@ -37,6 +37,9 @@ const getContainer = () => {
   const target = document.getElementById('gd2021-tw-root');
   const video = document.querySelector('.flexible-media video')
   if (video) {
+    video.autoplay = true
+    video.muted = true
+
     const parentCotainer = getParentContainer(video)
     if (parentCotainer) {
       parentCotainer.style.backgroundSize = 'auto 100%'
@@ -44,7 +47,7 @@ const getContainer = () => {
     }
     setTimeout(() => {
       video.play();
-    })
+    }, 2000)
   }
   // window.__btnBackToTop = target.querySelector('#backToTop')
   // window.__tabButtons = Array.from(target.querySelectorAll('.btn-carousel'))
