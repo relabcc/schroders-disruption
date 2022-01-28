@@ -44,7 +44,7 @@ const Sticky = forwardRef(({
     }
   }, [])
   return (
-    <Box className={className} left={0} right={0}>
+    <Box className={className} left={0} right={0} style={{ pointerEvents: 'none' }}>
       {children}
     </Box>
   );

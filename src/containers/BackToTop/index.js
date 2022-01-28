@@ -33,6 +33,7 @@ const BackToTop = forwardRef(({ loaded ,...props }, ref) => {
           }}
           title="返回頂端"
           data-label="返回頂端"
+          style={{ pointerEvents: 'all' }}
         >
           <Arrow width="2em" my="0.5em" transform="rotate(180deg)" />
           <br />
