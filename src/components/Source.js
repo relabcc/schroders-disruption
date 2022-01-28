@@ -4,7 +4,7 @@ import Box from './Box'
 import Container from './Container'
 import { responsive } from './ThemeProvider/theme'
 
-const Source = ({ children, ...props }) => {
+const Source = ({ children, prefix = '資料來源：', ...props }) => {
   return (
     <Box
       py="1.4rem"
@@ -15,7 +15,7 @@ const Source = ({ children, ...props }) => {
       {...props}
     >
       <Container>
-        資料來源：{children}
+        {prefix}{children}
       </Container>
     </Box>
   )

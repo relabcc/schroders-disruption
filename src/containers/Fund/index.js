@@ -7,7 +7,9 @@ import { responsive } from '../../components/ThemeProvider/theme'
 // import Table from '../Charts/Table'
 
 import Container from '../../components/Container'
-import DeskBlock from '../../components/DeskBlock'
+// import DeskBlock from '../../components/DeskBlock'
+import Flex from '../../components/Flex'
+import Source from '../../components/Source'
 
 const data = [
   {
@@ -42,19 +44,22 @@ const Fund = () => {
     <Box pb="4rem">
       <Box.BgTitle>基金基本資料</Box.BgTitle>
       <Container pt={responsive('2.4rem', '4.5rem')}>
-        <DeskBlock>
-          <Box as="table">
-            <tbody>
-              {data.map(({ th, td }, i) => (
-                <Box as="tr" color="prussianBlue" fontWeight="500" key={i}>
-                  <Box borderBottom="1px solid" borderColor="brightGray" width="7em" px={responsive('1rem', '2.5rem')} py="1.4rem" textAlign="center" as="th" fontSize={responsive('1em', '2.4rem')}>{th}</Box>
-                  <Box borderBottom="1px solid" borderColor="brightGray" px={responsive('1.8rem', '5rem')} fontSize={responsive('1.2rem', '2rem')} as="td">{td}</Box>
-                </Box>
-              ))}
-            </tbody>
-          </Box>
-        </DeskBlock>
+        <Box as="table">
+          <tbody>
+            {data.map(({ th, td }, i) => (
+              <Box as="tr" color="prussianBlue" fontWeight="500" key={i}>
+                <Box borderBottom="1px solid" borderColor="brightGray" width="7em" px={responsive('1rem', '2.5rem')} py="1.4rem" textAlign="center" as="th" fontSize={responsive('1em', '2.4rem')}>{th}</Box>
+                <Box borderBottom="1px solid" borderColor="brightGray" px={responsive('1.8rem', '5rem')} fontSize={responsive('1.2rem', '2rem')} as="td">{td}</Box>
+              </Box>
+            ))}
+          </tbody>
+        </Box>
       </Container>
+      <Flex position="relative" alignItems="center" bg="bgGray" height={responsive('auto', '10.4rem')} mt={responsive('1em', '2em')}>
+        <Source width="100%" prefix="">
+          本基金具有（歐盟）2019/2088號法規（關於永續金融揭露規範中有關永續的揭露）第8條所定義的環境和/或社會特點。
+        </Source>
+      </Flex>
     </Box>
   )
 }

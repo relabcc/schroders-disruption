@@ -39,6 +39,7 @@ const getContainer = () => {
   if (video) {
     video.autoplay = true
     video.muted = true
+    video.setAttribute('playsinline', 'playsinline');
 
     const parentCotainer = getParentContainer(video)
     if (parentCotainer) {

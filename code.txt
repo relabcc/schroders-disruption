@@ -21,5 +21,5 @@
               </svg><br>返回頂端</span></button></div>
       </div>
     </div>
-    <script src="/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2022-global-disruption/static/js/main.ca8ab431.js"></script>
+    <script src="/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2022-global-disruption/static/js/main.682ffacf.js"></script>
   </div>

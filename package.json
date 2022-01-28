@@ -2,7 +2,7 @@
   "name": "schroders-gd-2021",
   "version": "0.4.0",
   "private": true,
-  "_homepage": "https://www.schroders.com/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2022-global-disruption/",
+  "homepage": "https://www.schroders.com/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2022-global-disruption/",
   "dependencies": {
     "@artsy/fresnel": "^3.2.1",
     "@loadable/component": "^5.15.2",
