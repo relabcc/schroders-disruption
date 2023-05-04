@@ -41,7 +41,7 @@ const data = [
 const Fund = () => {
 
   return (
-    <Box pb="4rem">
+    <Box>
       <Box.BgTitle>基金基本資料</Box.BgTitle>
       <Container pt={responsive('2.4rem', '4.5rem')}>
         <Box as="table">

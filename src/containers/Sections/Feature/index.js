@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import isString from 'lodash/isString'
-import loadable from '@loadable/component'
 
 import Box from '../../../components/Box'
 import Flex from '../../../components/Flex'
@@ -10,7 +9,6 @@ import Image from '../../../components/Image'
 import Source from '../../../components/Source'
 import Container from '../../../components/Container'
 import { responsive } from '../../../components/ThemeProvider/theme'
-import AspectRatio from '../../../components/AspectRatio'
 
 import chart_1_3 from './1-3.svg'
 import chart from './chart.png'
@@ -21,8 +19,7 @@ import Fund from '../../Fund'
 
 // import bank from '../bank.png'
 import Pie from '../../Pie'
-
-const MovingRadar = loadable(() => import('../../MovingRadar'), { fallback: <AspectRatio ratio={328 / 320} /> })
+import MovingRadar from '../../MovingRadar'
 
 const features = [
   {

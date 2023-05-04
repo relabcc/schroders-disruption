@@ -2,7 +2,6 @@ import 'react-app-polyfill/ie11'
 import 'react-app-polyfill/stable'
 import 'proxy-polyfill'
 import 'abortcontroller-polyfill'
-import smoothscroll from 'smoothscroll-polyfill';
 
 import React from 'react';
 import find from 'lodash/find'
@@ -10,19 +9,8 @@ import { render } from 'react-snapshot';
 
 import ThemeProvider from './components/ThemeProvider'
 
-// import MediaProvider from './contexts/mediaQuery/MediaProvider'
 import DataProvider from './contexts/data/DataProvider'
 import App from './App';
-// import reportWebVitals from './reportWebVitals';
-
-smoothscroll.polyfill();
-
-// window.injectCSS = cssLink => {
-//   const tag = document.createElement('link')
-//   tag.href = cssLink
-//   tag.rel = 'stylesheet'
-//   document.head.appendChild(tag)
-// }
 
 const getParentContainer = (child) => {
   let parentCotainer = child
@@ -50,8 +38,6 @@ const getContainer = () => {
       video.play();
     }, 2000)
   }
-  // window.__btnBackToTop = target.querySelector('#backToTop')
-  // window.__tabButtons = Array.from(target.querySelectorAll('.btn-carousel'))
   const found = find(document.querySelectorAll('.jumbotron'), (ele) => ele.contains(target));
   if (found?.classList.contains('panel-white')) {
     found.classList.remove('panel-white')
@@ -66,11 +52,9 @@ const init = () => {
   render(
     <React.StrictMode>
       <ThemeProvider>
-        {/* <MediaProvider> */}
         <DataProvider>
           <App />
         </DataProvider>
-        {/* </MediaProvider> */}
       </ThemeProvider>
     </React.StrictMode>
     , container);

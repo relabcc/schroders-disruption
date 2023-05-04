@@ -19,7 +19,6 @@ import bg_2_2 from './pic-bg.png'
 
 import Keywords from '../Keywords'
 import Chart1 from './Chart1'
-import BackgroundImage from '../../../components/BackgroundImage'
 
 const advs = [
   {

@@ -4,7 +4,6 @@ import BackgroundImage from '../../../components/BackgroundImage'
 import Box from '../../../components/Box'
 import LottieAnima from '../../../components/LottieAnima'
 import { responsive } from '../../../components/ThemeProvider/theme'
-import useResponsive from '../../../contexts/mediaQuery/useResponsive'
 import skate from './skate.jpg'
 
 // import base from './fields-base.svg'
