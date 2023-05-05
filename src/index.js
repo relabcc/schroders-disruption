@@ -53,20 +53,17 @@ const getContainer = () => {
 };
 
 const init = () => {
-  if (!window._RE_INITED_) {
-    const container = getContainer();
-    ReactDOM.render(
-      <React.StrictMode>
-        <ThemeProvider>
-          <DataProvider>
-            <App />
-          </DataProvider>
-        </ThemeProvider>
-      </React.StrictMode>,
-      container
-    );
-    window._RE_INITED_ = true;
-  }
+  const container = getContainer();
+  ReactDOM.render(
+    <React.StrictMode>
+      <ThemeProvider>
+        <DataProvider>
+          <App />
+        </DataProvider>
+      </ThemeProvider>
+    </React.StrictMode>,
+    container
+  );
 };
 
 // setTimeout(init)
