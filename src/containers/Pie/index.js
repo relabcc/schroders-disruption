@@ -4,6 +4,7 @@ import LottieAnima from '../../components/LottieAnima'
 import BackgroundImage from '../../components/BackgroundImage'
 import FadeSlideshow from '../../components/FadeSlideshow'
 // import withLazyload from '../../utils/withLazyload'
+import pie from '../../lottie/pie.json'
 
 const pics = [
   require('./01.jpg'),
@@ -15,7 +16,7 @@ const Pie = forwardRef((p, ref) => {
   const [loaded, setLoaded] = useState(0)
   return (
     <Box position="relative" ref={ref}>
-      <LottieAnima src={`${process.env.PUBLIC_URL}/lottie/pie.json`} ratio={1} loop={false} onLoad={() => setLoaded(1)} />
+      <LottieAnima data={pie} ratio={1} loop={false} onLoad={() => setLoaded(1)} />
       <Box
         position="absolute"
         borderRadius="100%"

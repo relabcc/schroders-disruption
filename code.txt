@@ -1,25 +1,2 @@
-<div id="gd2021-tw-root" style="padding: 0px;">
-    <div>
-      <div class="sc-gsDKAQ croPxz" style="pointer-events:none">
-        <div class="sc-gsDKAQ hYooDw"><button title="返回頂端" data-label="返回頂端" style="pointer-events:all"
-            class="sc-dkPtRN fhvxFw"><span class="sc-gsDKAQ eHCyOR"><svg xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 29.184 28.906" class="sc-gsDKAQ euPmki">
-                <g>
-                  <g transform="translate(16.582)">
-                    <path d="M25,2.693a11.925,11.925,0,0,1,0,23.52v2.693A14.589,14.589,0,0,0,25,0Z"
-                      transform="translate(-25)" fill="currentColor"></path>
-                  </g>
-                  <g>
-                    <path d="M12.6,28.906V26.213a11.925,11.925,0,0,1,0-23.52V0a14.589,14.589,0,0,0,0,28.906Z"
-                      fill="currentColor"></path>
-                  </g>
-                </g>
-                <g transform="translate(7.349 10.964)">
-                  <path d="M18.615,25.385,11.08,18.148l1.38-1.433,6.135,5.9,6.168-6.082,1.393,1.419Z"
-                    transform="translate(-11.08 -16.53)" fill="currentColor"></path>
-                </g>
-              </svg><br>返回頂端</span></button></div>
-      </div>
-    </div>
-    <script src="/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2022-global-disruption/static/js/main.97d0513b.js"></script>
-  </div>
+<div id="gd2021-tw-root">
+</div>

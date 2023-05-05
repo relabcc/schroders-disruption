@@ -12,9 +12,8 @@ import Container from '../../../components/Container'
 // import LottieAnima from '../../../components/LottieAnima'
 
 // import useResponsive from '../../../contexts/mediaQuery/useResponsive'
-
-import chart_2_3 from './2-3.svg'
-import chart_2_3_desk from './2-3-desk.svg'
+import Chart23 from './Chart23'
+import Chart23d from './Chart23d'
 import bg_2_2 from './pic-bg.png'
 
 import Keywords from '../Keywords'
@@ -43,8 +42,8 @@ const advs = [
     title: '挖掘數據　佈局未來超新星',
     subTitle: '用大數據構築投資策略',
     desc: '深度挖掘多面向數據，監測多種領域，以獨家洞見搜尋投資新星。',
-    chart: chart_2_3,
-    desk_chart: chart_2_3_desk,
+    chart: <Chart23 />,
+    desk_chart: <Chart23d />,
     source: '施羅德投資，2021/12/31。'
   },
 ]

@@ -1,14 +1,11 @@
 import React, { forwardRef, useEffect, useRef } from 'react'
-import loadable from '@loadable/component'
-import useSWR from 'swr'
+import lottie from 'lottie-web'
 
 import AspectRatio from './AspectRatio'
 import Box from './Box'
 import withLazyload from '../utils/withLazyload'
 
-const Lottie = loadable.lib(() => import('lottie-web'))
-
-const LottieAnia = ({ lottie, data, loop = true, onLoad = () => {} }) => {
+const LottieAnia = ({ data, loop = true, onLoad = () => {} }) => {
   const ref = useRef()
 
   useEffect(() => {
@@ -28,15 +25,10 @@ const LottieAnia = ({ lottie, data, loop = true, onLoad = () => {} }) => {
   return <Box.FullAbs ref={ref} />
 }
 
-const LottieAnima = forwardRef(({ src, ratio = 1, loop, onLoad, ...props }, ref) => {
-  const { data } = useSWR(src)
+const LottieAnima = forwardRef(({ data, ratio = 1, loop, onLoad, ...props }, ref) => {
   return (
     <AspectRatio ratio={ratio} {...props} ref={ref}>
-      <Lottie>
-        {({ default: lottie }) => data ? (
-          <LottieAnia lottie={lottie} data={data} loop={loop} onLoad={onLoad} />
-        ) : null}
-      </Lottie>
+      <LottieAnia data={data} loop={loop} onLoad={onLoad} />
     </AspectRatio>
   )
 })

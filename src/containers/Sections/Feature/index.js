@@ -10,7 +10,7 @@ import Source from '../../../components/Source'
 import Container from '../../../components/Container'
 import { responsive } from '../../../components/ThemeProvider/theme'
 
-import chart_1_3 from './1-3.svg'
+import Chart13 from './Chart13'
 import chart from './chart.png'
 import global from './global.png'
 import data from './data.png'
@@ -47,7 +47,7 @@ const features = [
     subTitle: '跨領域專家深度分析',
     src: data,
     text: '超過百位產業分析師，並有私募股權創投經驗分享，精準掌握顛覆新星以及獨角獸企業契機。',
-    chart: chart_1_3,
+    chart: <Chart13 />,
     source: '施羅德投資，2021/12/31。'
   },
 ]

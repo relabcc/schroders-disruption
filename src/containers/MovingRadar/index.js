@@ -9,9 +9,7 @@ import FadeSlideshow from '../../components/FadeSlideshow';
 import { responsive } from '../../components/ThemeProvider/theme';
 // import { responsive } from '../../components/ThemeProvider/theme';
 
-// import radarbase from './moving-radar.svg'
-import radarcorner from './radarcorner.svg'
-
+import RadarCorner from './RadarCorner'
 
 // const maxY = 4
 // const count = 5
@@ -87,7 +85,9 @@ const MovingRadar = () => {
           />
         </VictoryChart>
       </Box> */}
-      <BackgroundImage ratio={329 / 270} src={radarcorner} />
+      <BackgroundImage ratio={329 / 270}>
+        <RadarCorner />
+      </BackgroundImage>
     </Box>
   )
 }

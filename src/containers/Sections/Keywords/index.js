@@ -6,9 +6,7 @@ import LottieAnima from '../../../components/LottieAnima'
 import { responsive } from '../../../components/ThemeProvider/theme'
 import skate from './skate.jpg'
 
-// import base from './fields-base.svg'
-// import text1 from './fields-text-1.svg'
-// import text2 from './fields-text-2.svg'
+import keywords from '../../../lottie/keywords.json'
 
 const GradientBg = styled(BackgroundImage)`
 @media screen and (min-width: 769px) {
@@ -62,7 +60,7 @@ const Keywords = () => {
         width={responsive('100%', `${560 / w * 100}%`)}
       >
         <LottieAnima
-          src={`${process.env.PUBLIC_URL}/lottie/keywords.json`}
+          data={keywords}
           ratio={340 / 240}
           zIndex={1}
         />

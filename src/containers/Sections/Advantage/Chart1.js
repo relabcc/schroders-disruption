@@ -6,6 +6,9 @@ import Box from '../../../components/Box'
 import { Media, responsive } from '../../../components/ThemeProvider/theme'
 import LottieAnima from '../../../components/LottieAnima'
 
+import chart1 from '../../../lottie/chart-1.json'
+import chart1d from '../../../lottie/chart-1-desktop.json'
+
 // import useResponsive from '../../../contexts/mediaQuery/useResponsive'
 
 const Chart1 = () => {
@@ -14,10 +17,10 @@ const Chart1 = () => {
     <Box mt={responsive('-7.5%', '0')} overflowY="hidden">
       <Box width="100%">
         <Media at="mobile">
-          <LottieAnima src={`${process.env.PUBLIC_URL}/lottie/chart-1.json`} ratio={352 / 300} />
+          <LottieAnima data={chart1} ratio={352 / 300} />
         </Media>
         <Media greaterThan="mobile">
-          <LottieAnima src={`${process.env.PUBLIC_URL}/lottie/chart-1-desktop.json`} ratio={1120 / 482} />
+          <LottieAnima data={chart1d} ratio={1120 / 482} />
         </Media>
       </Box>
     </Box>
