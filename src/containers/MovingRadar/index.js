@@ -1,6 +1,6 @@
 // import range from 'lodash/range'
 // import random from 'lodash/random'
-import React, { useState } from 'react'
+import React from 'react'
 
 // import { VictoryArea, VictoryChart, VictoryPolarAxis, VictoryTheme } from 'victory'
 import BackgroundImage from '../../components/BackgroundImage'

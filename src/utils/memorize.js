@@ -1,5 +1,5 @@
 // memorization for performance; don't use this for mutable function
-export default function(fun) {
+function memorize(fun) {
   const cache = {};
 
   return function(...args){
@@ -23,3 +23,5 @@ export default function(fun) {
       : result
   }
 }
+
+export default memorize;

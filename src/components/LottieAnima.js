@@ -21,7 +21,7 @@ const LottieAnia = ({ data, loop = true, onLoad = () => {} }) => {
         anima.onEnterFrame = onLoad
       })
     }
-  }, [data, loop, lottie, onLoad])
+  }, [data, loop, onLoad])
   return <Box.FullAbs ref={ref} />
 }
 

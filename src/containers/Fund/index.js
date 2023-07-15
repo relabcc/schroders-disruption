@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import Box from "../../components/Box";
 // import Container from '../../components/Container'

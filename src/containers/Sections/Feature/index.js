@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import isString from 'lodash/isString'
 
 import Box from '../../../components/Box'
@@ -52,10 +52,7 @@ const features = [
   },
 ]
 
-const Feature = ({ onLoad }) => {
-  useEffect(() => {
-    if (onLoad) onLoad()
-  }, [])
+const Feature = () => {
   return (
     <div>
       <Box.BgTitle>

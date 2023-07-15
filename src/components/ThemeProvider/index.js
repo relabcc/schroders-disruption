@@ -1,11 +1,11 @@
-import React from 'react';
-import { ThemeProvider } from 'styled-components';
+import React from "react";
+import { ThemeProvider } from "styled-components";
 
-import GlobalStyles from './global-styles';
+import GlobalStyles from "./global-styles";
 
-import theme, { MediaContextProvider } from './theme';
+import theme, { MediaContextProvider } from "./theme";
 
-export default ({ children }) => (
+const Provider = ({ children }) => (
   <ThemeProvider theme={theme}>
     <MediaContextProvider>
       <>
@@ -15,3 +15,5 @@ export default ({ children }) => (
     </MediaContextProvider>
   </ThemeProvider>
 );
+
+export default Provider;
