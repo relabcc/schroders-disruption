@@ -71,7 +71,7 @@ const Keywords = () => {
         left={responsive("0%", "18%")}
         bottom="0%"
         transform={responsive('none', 'translateX(-50%)')}
-        mx={responsive('-1.6rem', 0)}
+        mx={responsive('-1.6em', 0)}
         mt={responsive("-23%", 0)}
       >
         <GradientBg

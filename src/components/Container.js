@@ -6,8 +6,8 @@ import { responsive } from './ThemeProvider/theme';
 const Container = (props) => <Box {...props} />;
 
 Container.defaultProps = {
-  maxWidth: responsive('51.2rem', '118.4rem'),
-  px: responsive('1.6rem', '3.2rem'),
+  maxWidth: responsive('51.2em', '118.4em'),
+  px: responsive('1.6em', '3.2em'),
   mx: 'auto'
 };
 

@@ -1,5 +1,5 @@
-import React, { forwardRef } from 'react';
-import styled from 'styled-components';
+import React, { forwardRef } from "react";
+import styled from "styled-components";
 import {
   space,
   layout,
@@ -16,13 +16,13 @@ import {
   backgroundImage,
   backgroundPosition,
   backgroundSize,
-} from 'styled-system';
+} from "styled-system";
 
-import { cleanConfig } from './utils/blacklist';
-import injectProps from './utils/injectProps';
-import { responsive } from './ThemeProvider/theme';
-import Text from './Text';
-import Container from './Container';
+import { cleanConfig } from "./utils/blacklist";
+import injectProps from "./utils/injectProps";
+import { responsive } from "./ThemeProvider/theme";
+import Text from "./Text";
+import Container from "./Container";
 
 const Box = styled.div.withConfig(cleanConfig)`
   ${space}
@@ -40,40 +40,78 @@ const Box = styled.div.withConfig(cleanConfig)`
   ${flex}
   ${borderRadius}
   ${opacity}
-  ${injectProps('whiteSpace')}
-  ${injectProps('overflow')}
-  ${injectProps('transform')}
-  ${injectProps('transition')}
-  ${injectProps('pointerEvents')}
-  ${injectProps('animationDuration')}
+  ${injectProps("whiteSpace")}
+  ${injectProps("overflow")}
+  ${injectProps("transform")}
+  ${injectProps("transition")}
+  ${injectProps("pointerEvents")}
+  ${injectProps("animationDuration")}
   ${style({
-    prop: 'zOrder',
-    cssProperty: 'zIndex',
-    key: 'zOrder',
+    prop: "zOrder",
+    cssProperty: "zIndex",
+    key: "zOrder",
   })}
-  ${({ onClick }) => onClick && 'cursor: pointer;'}
+  ${({ onClick }) => onClick && "cursor: pointer;"}
 `;
 
-Box.displayName = 'Box';
+Box.displayName = "Box";
 
-Box.Inline = (props) => <Box as="span" display="inline-block" verticalAlign="middle" {...props} />;
+Box.Inline = (props) => (
+  <Box as="span" display="inline-block" verticalAlign="middle" {...props} />
+);
 Box.Relative = (props) => <Box position="relative" {...props} />;
 Box.Absolute = (props) => <Box position="absolute" {...props} />;
-Box.FullAbs = forwardRef((props, ref) => <Box ref={ref} position="absolute" top="0" bottom="0" left="0" right="0" {...props} />);
-Box.AbsCenter = forwardRef((props, ref) => <Box ref={ref} position="absolute" top="50%" left="50%" {...props} />);
-Box.SubTitle = forwardRef((props, ref) => <Box ref={ref} fontWeight="bold" color="titleBlue" fontSize={responsive('1.5em', '1.875em')} {...props} />)
-Box.Title = forwardRef(({ children , ...props}, ref) => (
-  <Box ref={ref} pb="0.25em" mb="2rem" borderBottom={responsive('5px solid', '10px solid')} color="titleBlue" {...props}>
+Box.FullAbs = forwardRef((props, ref) => (
+  <Box
+    ref={ref}
+    position="absolute"
+    top="0"
+    bottom="0"
+    left="0"
+    right="0"
+    {...props}
+  />
+));
+Box.AbsCenter = forwardRef((props, ref) => (
+  <Box ref={ref} position="absolute" top="50%" left="50%" {...props} />
+));
+Box.SubTitle = forwardRef((props, ref) => (
+  <Box
+    ref={ref}
+    fontWeight="bold"
+    color="titleBlue"
+    fontSize={responsive("1.5em", "1.875em")}
+    {...props}
+  />
+));
+Box.Title = forwardRef(({ children, ...props }, ref) => (
+  <Box
+    ref={ref}
+    pb="0.25em"
+    mb="2em"
+    borderBottom={responsive("5px solid", "10px solid")}
+    color="titleBlue"
+    {...props}
+  >
     <Text.Title>{children}</Text.Title>
   </Box>
-))
+));
+
 Box.BgTitle = forwardRef(({ children, smallTitle, ...props }, ref) => (
-  <Box ref={ref} bg="prussianBlue" py="2.2rem" position="relative" zIndex={1} {...props}>
+  <Box
+    ref={ref}
+    bg="prussianBlue"
+    py="6em"
+    position="relative"
+    zIndex={1}
+    borderRadius="12px"
+    {...props}
+  >
     <Container>
       <Text.SmallTitle>{smallTitle}</Text.SmallTitle>
       <Text.Title>{children}</Text.Title>
     </Container>
   </Box>
-))
+));
 
 export default Box;

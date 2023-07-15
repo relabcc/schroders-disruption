@@ -39,7 +39,7 @@ const features = [
     text: '關注新興產業與前瞻技術，尋找顛覆結構的超新星，提前掌握未來新贏家。',
     chart: <MovingRadar />,
     source: '施羅德投資，2021/12/31。',
-    mx: '1.2rem',
+    mx: '1.2em',
   },
   {
     title: '產業研究 x 大數據',
@@ -61,9 +61,9 @@ const Feature = ({ onLoad }) => {
       <Box.BgTitle>
         三大特色為您超前部署未來
       </Box.BgTitle>
-      <Container pb="3.9rem">
+      <Container pb="3.9em">
         <Flex flexDirection="column" alignItems="center">
-          <Flex width="100%" px={responsive(0, '8rem')} flexDirection={responsive('column', 'row')} justifyContent={responsive('auto', 'space-between')}>
+          <Flex width="100%" px={responsive(0, '8em')} flexDirection={responsive('column', 'row')} justifyContent={responsive('auto', 'space-between')}>
             {features.map((d, k) => (
               <Box borderTop={k && responsive('1px solid #cccccc', 'none')} mx={responsive(0, d.mx)} key={k}>
                 <Title
@@ -78,29 +78,29 @@ const Feature = ({ onLoad }) => {
             ))}
           </Flex>
         </Flex>
-        <Box mt={responsive("3.2rem", 0)} borderRadius="1em" overflow="hidden" bg="rgba(0, 42, 94, 0.12)">
+        <Box mt={responsive("3.2em", 0)} borderRadius="1em" overflow="hidden" bg="rgba(0, 42, 94, 0.12)">
           {features.map((d, i) => (
-            <Box pt={responsive("3rem", 0)} key={i}>
-              <Flex alignItems="center" pt={responsive('0', '8rem')} pb={responsive('0', '8.2rem')} flexDirection={responsive('column', 'row')} px={responsive('2.6rem', '9.6rem')}>
+            <Box pt={responsive("3em", 0)} key={i}>
+              <Flex alignItems="center" pt={responsive('0', '8em')} pb={responsive('0', '8.2em')} flexDirection={responsive('column', 'row')} px={responsive('2.6em', '9.6em')}>
                 <Box width={responsive('100%', '38%')} mr={responsive(0, '15.1%')}>
-                  <Box textAlign="center" borderBottom="3px solid" borderColor="prussianBlue" pb="1rem">
-                    <Box width={responsive('6.6rem', '10rem')} mx="auto" mb="1rem">
+                  <Box textAlign="center" borderBottom="3px solid" borderColor="prussianBlue" pb="1em">
+                    <Box width={responsive('6.6em', '10em')} mx="auto" mb="1em">
                       <Image src={d.src} />
                     </Box>
                     <Text.SubTitle>{d.title}</Text.SubTitle>
                   </Box>
-                  <Text.Bold color="prussianBlue" mt="2rem" whiteSpace="pre-wrap" fontSize={responsive('1.8rem', '2.4rem')}>{d.subTitle}</Text.Bold>
-                  <Text mt="0.5rem">{d.text}</Text>
+                  <Text.Bold color="prussianBlue" mt="2em" whiteSpace="pre-wrap" fontSize={responsive('1.8em', '2.4em')}>{d.subTitle}</Text.Bold>
+                  <Text mt="0.5em">{d.text}</Text>
                 </Box>
-                <Box width={responsive('105%', '47%')} pt={responsive('2rem', 0)} pb={responsive('2.4rem', 0)}>{isString(d.chart) ? <Image src={d.chart} /> : d.chart}</Box>
+                <Box width={responsive('105%', '47%')} pt={responsive('2em', 0)} pb={responsive('2.4em', 0)}>{isString(d.chart) ? <Image src={d.chart} /> : d.chart}</Box>
               </Flex>
               <Source textAlign="justify" bg="lightGray">{d.source}</Source>
             </Box>
           ))}
           {/* <Flex justifyContent="center" bg="brightBlue">
             <Title
-              pt={responsive('2.7rem', '4.4rem')}
-              pb={responsive('3.1rem', '5.7rem')}
+              pt={responsive('2.7em', '4.4em')}
+              pb={responsive('3.1em', '5.7em')}
               src={bank}
               title={`深入瞭解\n市場矚目的技術新星`}
               bg="brightBlue"

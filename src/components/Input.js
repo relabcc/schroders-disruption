@@ -63,7 +63,7 @@ const Input = ({
         step,
       })}
       {error && (
-        <Text fontSize="0.8em" align="left" color="red" mt="0.25rem">{error}</Text>
+        <Text fontSize="0.8em" align="left" color="red" mt="0.25em">{error}</Text>
       )}
     </Box>
   </Flex>

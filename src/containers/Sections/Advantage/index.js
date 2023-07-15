@@ -56,14 +56,14 @@ const Advantage = ({ onLoad }) => {
   return (
     <>
       {advs.map(({ title, chart, desk_chart, source, isFlex, subTitle, desc, bgImg }, i) => (
-        <Box overflow="hidden" key={i}>
+        <Box overflow="hidden" key={i} mt="2em">
           <Box.BgTitle>
             {title}
           </Box.BgTitle>
-          <Container position="relative" pt={responsive('2em', '4.5rem')}>
+          <Container position="relative" pt={responsive('2em', '4.5em')}>
             <Box position={responsive('raletive', 'absolute')} width={responsive(isFlex ? '52.5%' : 'auto', '32.4%')} zIndex={1}>
               <Text.SubTitle whiteSpace="nowrap" color="purple">{subTitle}</Text.SubTitle>
-              <Text textAlign="justify" mt={responsive('0.6rem', '2rem')} whiteSpace="pre-wrap">{desc}</Text>
+              <Text textAlign="justify" mt={responsive('0.6em', '2em')} whiteSpace="pre-wrap">{desc}</Text>
             </Box>
             <Box>
               {isString(chart) ? (
@@ -79,7 +79,7 @@ const Advantage = ({ onLoad }) => {
               )}
             </Box>
           </Container>
-          <Flex position="relative" alignItems="center" bg="bgGray" height={responsive('auto', '10.4rem')}>
+          <Flex position="relative" alignItems="center" bg="bgGray" height={responsive('auto', '10.4em')}>
             <Source width="100%">{source}</Source>
           </Flex>
         </Box>

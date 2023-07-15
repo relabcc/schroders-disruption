@@ -99,13 +99,13 @@ const Banner = ({ url, color }) => {
       bg="lightBlue"
     >
       <Container
-        pt={responsive('6.7rem', '13rem')}
+        pt={responsive('6.7em', '13em')}
         px={15}
         color={color}
         position="relative"
       >
         <Box>
-          {/* <Text.Bold textAlign="center" fontSize={responsive('2.4rem', '6rem')} lineHeight={1.2}>
+          {/* <Text.Bold textAlign="center" fontSize={responsive('2.4em', '6em')} lineHeight={1.2}>
             顛覆未來 即刻啟動
           </Text.Bold> */}
           {/* <Arrow>
@@ -113,28 +113,28 @@ const Banner = ({ url, color }) => {
             <Box className="chevron" />
             <Box className="chevron" />
           </Arrow> */}
-          {/* <Flex justifyContent={responsive('space-between', 'center')} mt={responsive('11rem', '10rem')}>
+          {/* <Flex justifyContent={responsive('space-between', 'center')} mt={responsive('11em', '10em')}>
             {features.map(({ icon, title, name }, k) => (
               <Box.Relative
                 as={(p) => <Link smooth {...p} />}
-                py={responsive('0.625rem', '1.3rem')}
-                ml={responsive('2.25rem', '4.7rem')}
-                mr={!k && responsive(0, '3.2rem')}
-                pl={responsive('1.25rem', '3rem')}
-                width={responsive('40%', '27.5rem')}
+                py={responsive('0.625em', '1.3em')}
+                ml={responsive('2.25em', '4.7em')}
+                mr={!k && responsive(0, '3.2em')}
+                pl={responsive('1.25em', '3em')}
+                width={responsive('40%', '27.5em')}
                 textAlign="center"
                 border={responsive('1px solid', '2px solid')}
                 borderColor="prussianblue"
                 borderRadius="1.5em"
-                fontSize={responsive("1.5rem", '3.2rem')}
+                fontSize={responsive("1.5em", '3.2em')}
                 fontWeight="bold"
                 bg="rgba(255,255,255,0.6)"
                 to={name}
                 key={k}
               >
-                <Box.Absolute width={responsive('4.5rem', '9.4rem')} top="50%" left="0" transform="translate(-50%, -50%)">
+                <Box.Absolute width={responsive('4.5em', '9.4em')} top="50%" left="0" transform="translate(-50%, -50%)">
                   <Circle border={responsive('1px solid', '2px solid')} borderColor="prussianblue" bg="lightBlue">
-                    <Box width={responsive('2.6rem', '5.5rem')}>
+                    <Box width={responsive('2.6em', '5.5em')}>
                       <Image src={icon} />
                     </Box>
                   </Circle>

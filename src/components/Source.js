@@ -2,15 +2,14 @@ import React from 'react'
 
 import Box from './Box'
 import Container from './Container'
-import { responsive } from './ThemeProvider/theme'
 
 const Source = ({ children, prefix = '資料來源：', ...props }) => {
   return (
     <Box
-      py="1.4rem"
+      py="1.4em"
       bg="bgGray"
       whiteSpace="per-wrap"
-      fontSize={responsive('1rem', '1em')}
+      fontSize="1.25em"
       color="gray"
       {...props}
     >

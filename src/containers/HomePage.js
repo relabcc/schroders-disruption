@@ -1,15 +1,20 @@
-import React from 'react'
+import React from "react";
 
-import Feature from './Sections/Feature'
-import Advantage from './Sections/Advantage'
+import Feature from "./Sections/Feature";
+import Advantage from "./Sections/Advantage";
+import Box from "../components/Box";
 
 const HomePage = () => {
   return (
-    <div>
+    <Box
+      color="#002a5e"
+      fontSize="10px"
+      fontFamily={`"Microsoft JhengHei", "Noto Sans", Arial, sans-serif`}
+    >
       <Feature />
       <Advantage />
-    </div>
-  )
-}
+    </Box>
+  );
+};
 
-export default HomePage
+export default HomePage;

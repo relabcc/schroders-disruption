@@ -132,10 +132,10 @@ Button.White = props => (
 
 Button.Outline = props => (
   <Button
-    py="0.8rem"
+    py="0.8em"
     bg="white"
     border="1px solid"
-    borderRadius="1rem"
+    borderRadius="1em"
     color="prussianBlue"
     hoverBg="white"
     hoverBorder="prussianBlue"
@@ -177,8 +177,8 @@ Button.DarkGreen = props => (
     borderRadius="0"
     hoverBorder="primary"
     hoverColor="ceruleanBlue"
-    fontSize={responsive('2rem', '2.6rem')}
-    py="1.875rem"
+    fontSize={responsive('2em', '2.6em')}
+    py="1.875em"
     hoverBg="primary"
     {...props}
   />
