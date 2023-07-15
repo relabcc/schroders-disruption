@@ -37,7 +37,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "build:snapshot": "ncp html/cra.html public/index.html &&react-scripts build && react-snapshot && npm run postbuild",
-    "postbuild": "node after-build.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "firebase deploy --only hosting"
