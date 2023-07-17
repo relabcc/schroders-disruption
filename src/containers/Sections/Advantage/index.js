@@ -53,7 +53,7 @@ const Advantage = () => {
   return (
     <>
       {advs.map(({ title, chart, desk_chart, source, isFlex, subTitle, desc, bgImg }, i) => (
-        <Box overflow="hidden" key={i} mt="2em">
+        <Box overflow="hidden" key={i} mb="2em">
           <Box.BgTitle>
             {title}
           </Box.BgTitle>

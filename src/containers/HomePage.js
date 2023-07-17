@@ -11,8 +11,8 @@ const HomePage = () => {
       fontSize="10px"
       fontFamily={`"Microsoft JhengHei", "Noto Sans", Arial, sans-serif`}
     >
-      <Feature />
       <Advantage />
+      <Feature />
     </Box>
   );
 };

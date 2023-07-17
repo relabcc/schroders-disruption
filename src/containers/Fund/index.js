@@ -50,7 +50,7 @@ const Fund = () => {
                 <Box
                   borderBottom="1px solid"
                   borderColor="brightGray"
-                  width="7em"
+                  width="9em"
                   px={responsive("1em", "2.5em")}
                   py="1.4em"
                   textAlign="center"
